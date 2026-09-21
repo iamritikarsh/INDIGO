@@ -463,9 +463,9 @@ body {
 }
 
 .spec-left-text p {
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.5;
   color: #333;
   font-family: 'Jost', sans-serif;
 }
