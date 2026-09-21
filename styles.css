@@ -390,7 +390,8 @@ body {
 /* ===== FULL IMAGE ===== */
 .full-image img {
   width: 100%;
-  height: 700px;
+  height: 45vw;
+  max-height: 550px;
   object-fit: cover;
   display: block;
 }
@@ -398,30 +399,30 @@ body {
 /* ===== MILL DIRECT ===== */
 .mill-direct {
   background-color: var(--bg-dark);
-  padding: 140px 20px;
+  padding: 80px 20px 90px;
   text-align: center;
 }
 
 .mill-title {
-  font-size: 26px;
-  font-weight: 200;
-  letter-spacing: 1px;
-  color: #ccc;
-  margin-bottom: 70px;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: #b8b8b4;
+  margin-bottom: 50px;
 }
 
 .mill-sub {
-  font-size: 20px;
-  font-weight: 300;
-  color: #bbb;
-  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: 200;
+  color: #d8d8d4;
+  margin-bottom: 35px;
 }
 
 .mill-desc {
-  font-size: 16px;
-  font-weight: 300;
-  color: #888;
-  line-height: 1.7;
+  font-size: 17px;
+  font-weight: 200;
+  color: #a8a8a4;
+  line-height: 1.6;
 }
 
 /* ===== SPEC GRID CONTAINER ===== */
