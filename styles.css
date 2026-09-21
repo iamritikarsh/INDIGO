@@ -279,7 +279,7 @@ body {
   font-weight: 200;
   color: #a8a8a4;
   letter-spacing: 2px;
-  padding-right: 40px;
+  padding-right: 0;
   white-space: nowrap;
   text-transform: uppercase;
   font-family: 'Jost', sans-serif;
