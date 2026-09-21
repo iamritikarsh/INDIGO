@@ -444,26 +444,27 @@ body {
 }
 
 .spec-left-text {
-  padding: 80px 60px;
+  padding: 80px 50px 60px 50px;
   flex-grow: 1;
 }
 
 .spec-left-text h2 {
-  font-size: 44px;
+  font-size: 38px;
   font-weight: 200;
-  line-height: 1.1;
-  margin-bottom: 70px;
+  line-height: 1.05;
+  color: #1a1a1a;
+  margin-bottom: 60px;
 }
 
 .spec-left-text .mb {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .spec-left-text p {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.5;
-  color: #222;
+  color: #2a2a2a;
 }
 
 .spec-list {
@@ -472,12 +473,17 @@ body {
 }
 
 .spec-list-item {
-  padding: 24px 60px;
-  border-top: 1px solid #ccc;
+  padding: 20px 50px;
+  border-top: 1px solid #bcb9af;
   font-size: 14px;
   font-weight: 300;
-  letter-spacing: 1px;
-  color: #333;
+  color: #2a2a2a;
+  display: flex;
+  align-items: center;
+}
+
+.spec-list-item:last-child {
+  border-bottom: 1px solid #bcb9af;
 }
 
 .spec-right {
