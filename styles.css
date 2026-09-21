@@ -512,14 +512,14 @@ body {
 .how-we-work-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 140px 140px 170px 120px 220px 110px;
+  grid-template-rows: 90px 45px 125px 45px 125px 90px;
   gap: 1px;
-  background-color: var(--border-color);
-  border-top: 1px solid var(--border-color);
+  background-color: #3a3832;
+  border-top: 1px solid #3a3832;
 }
 
 .how-we-work-grid > div {
-  background-color: var(--bg-dark);
+  background-color: #1c1c1a;
   overflow: hidden;
 }
 
@@ -535,14 +535,16 @@ body {
   grid-row: 1 / 4;
   display: flex;
   align-items: flex-end;
-  padding: 60px;
+  padding: 50px 40px;
 }
 
 .cell-how-title h2 {
-  font-size: 52px;
+  font-size: 40px;
   font-weight: 200;
-  color: #eee;
+  color: #e0dfd5;
   line-height: 1.1;
+  font-family: 'Jost', sans-serif;
+  letter-spacing: 0.5px;
 }
 
 .cell-img-stacked {
@@ -562,22 +564,23 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 11px;
-  color: #888;
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
+  font-weight: 300;
+  color: #c4c3b9;
+  border-top: 1px solid #3a3832;
+  border-bottom: 1px solid #3a3832;
   letter-spacing: 0.5px;
+  font-family: 'Jost', sans-serif;
 }
 
 .cell-under-text {
   grid-column: 4 / 5;
   grid-row: 3 / 4;
-  padding: 40px;
-  font-size: 12px;
-  font-weight: 300;
-  color: #777;
+  padding: 30px 40px;
+  font-size: 11px;
+  font-weight: 200;
+  color: #a8a79d;
   line-height: 1.5;
-  display: flex;
-  align-items: center;
+  font-family: 'Jost', sans-serif;
 }
 
 .cell-source-title {
@@ -587,8 +590,11 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 11px;
-  color: #888;
+  font-weight: 300;
+  color: #c4c3b9;
   letter-spacing: 0.5px;
+  font-family: 'Jost', sans-serif;
+  border-bottom: 1px solid #3a3832;
 }
 
 .cell-img-rolls {
@@ -603,8 +609,11 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 11px;
-  color: #888;
+  font-weight: 300;
+  color: #c4c3b9;
   letter-spacing: 0.5px;
+  font-family: 'Jost', sans-serif;
+  border-bottom: 1px solid #3a3832;
 }
 
 .cell-img-colour {
@@ -615,21 +624,23 @@ body {
 .cell-source-text {
   grid-column: 1 / 2;
   grid-row: 5 / 6;
-  padding: 40px;
-  font-size: 12px;
-  font-weight: 300;
-  color: #777;
+  padding: 30px 40px;
+  font-size: 11px;
+  font-weight: 200;
+  color: #a8a79d;
   line-height: 1.5;
+  font-family: 'Jost', sans-serif;
 }
 
 .cell-deliver-text {
   grid-column: 3 / 4;
   grid-row: 5 / 6;
-  padding: 40px;
-  font-size: 12px;
-  font-weight: 300;
-  color: #777;
+  padding: 30px 40px;
+  font-size: 11px;
+  font-weight: 200;
+  color: #a8a79d;
   line-height: 1.5;
+  font-family: 'Jost', sans-serif;
 }
 
 .cell-empty-bl {
