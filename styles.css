@@ -433,6 +433,7 @@ body {
 
 .spec-top {
   display: flex;
+  min-height: 480px;
 }
 
 .spec-left {
@@ -444,26 +445,27 @@ body {
 }
 
 .spec-left-text {
-  padding: 65px 55px 45px 55px;
+  padding: 48px 50px 36px 45px;
   flex-grow: 1;
 }
 
 .spec-left-text h2 {
-  font-size: 44px;
-  font-weight: 300;
-  line-height: 1.05;
+  font-size: 32px;
+  font-weight: 200;
+  line-height: 1.08;
   color: #1a1a1a;
-  margin-bottom: 45px;
+  margin-bottom: 36px;
+  letter-spacing: 0.3px;
 }
 
 .spec-left-text .mb {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .spec-left-text p {
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 300;
-  line-height: 1.45;
+  line-height: 1.55;
   color: #333;
 }
 
@@ -473,14 +475,15 @@ body {
 }
 
 .spec-list-item {
-  padding: 18px 55px;
+  padding: 16px 45px;
   border-top: 1px solid #c2bfb5;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 300;
-  color: #333;
+  color: #222;
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
+  letter-spacing: 0.5px;
 }
 
 .spec-list-item:last-child {
