@@ -234,21 +234,21 @@ body {
 /* ===== PAGE 2 — INTRO SECTION ===== */
 .intro-section {
   background-color: var(--bg-dark);
-  padding: 140px 20px;
+  padding: 110px 20px 90px;
 }
 
 .intro-content {
-  max-width: 740px;
+  max-width: 580px;
   margin: 0 auto;
   text-align: center;
 }
 
 .intro-text {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 200;
-  color: #c8c8c4;
-  line-height: 1.55;
-  letter-spacing: 0.2px;
+  color: #b8b8b4;
+  line-height: 1.6;
+  letter-spacing: 0.1px;
 }
 
 /* ===== MARQUEE / TICKER ===== */
@@ -292,11 +292,11 @@ body {
 /* ===== COLLECTIONS SECTION ===== */
 .collections {
   background-color: var(--bg-dark);
-  padding: 60px 5% 100px;
+  padding: 50px 5% 90px;
 }
 
 .collections-inner {
-  max-width: 760px;
+  max-width: 625px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -307,7 +307,7 @@ body {
 .collection-card {
   display: flex;
   border: 1px solid var(--border-color);
-  height: 200px;
+  height: 155px;
   /* collapse shared border */
   margin-bottom: -1px;
 }
@@ -318,7 +318,7 @@ body {
 
 /* TEXT panel */
 .coll-text {
-  background-color: #1e1f1c;
+  background-color: #1c1d1a;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -332,47 +332,47 @@ body {
 }
 
 .coll-inner {
-  padding: 28px 32px;
+  padding: 22px 26px;
   width: 100%;
 }
 
 .coll-num {
   display: block;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 300;
-  color: #555;
-  margin-bottom: 18px;
+  color: #4a4a46;
+  margin-bottom: 14px;
   letter-spacing: 0.5px;
 }
 
 .coll-title {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 300;
-  letter-spacing: 1.5px;
-  color: #ccc;
-  margin-bottom: 14px;
+  letter-spacing: 1.2px;
+  color: #b8b8b4;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
 
 .coll-desc {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 300;
-  color: #777;
-  line-height: 1.65;
-  margin-bottom: 22px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 .coll-link {
-  font-size: 10px;
-  font-weight: 400;
-  letter-spacing: 1.5px;
-  color: #aaa;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 1.2px;
+  color: #888;
   text-decoration: none;
   text-transform: uppercase;
 }
 
 .coll-link:hover {
-  color: #e0e0dc;
+  color: #d0d0cc;
 }
 
 /* IMAGE panel */
