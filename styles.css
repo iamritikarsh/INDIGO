@@ -292,7 +292,7 @@ body {
 /* ===== COLLECTIONS SECTION ===== */
 .collections {
   background-color: var(--bg-dark);
-  padding: 50px 5% 90px;
+  padding: 60px 5% 110px;
 }
 
 .collections-inner {
@@ -307,7 +307,7 @@ body {
 .collection-card {
   display: flex;
   border: 1px solid var(--border-color);
-  height: 155px;
+  height: 220px;
   /* collapse shared border */
   margin-bottom: -1px;
 }
@@ -332,7 +332,7 @@ body {
 }
 
 .coll-inner {
-  padding: 22px 26px;
+  padding: 30px 32px;
   width: 100%;
 }
 
@@ -341,7 +341,7 @@ body {
   font-size: 10px;
   font-weight: 300;
   color: #4a4a46;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
   letter-spacing: 0.5px;
 }
 
@@ -350,7 +350,7 @@ body {
   font-weight: 300;
   letter-spacing: 1.2px;
   color: #b8b8b4;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
   text-transform: uppercase;
 }
 
@@ -358,8 +358,8 @@ body {
   font-size: 11px;
   font-weight: 300;
   color: #666;
-  line-height: 1.6;
-  margin-bottom: 16px;
+  line-height: 1.65;
+  margin-bottom: 24px;
 }
 
 .coll-link {
