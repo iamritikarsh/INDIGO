@@ -512,7 +512,7 @@ body {
 .how-we-work-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 90px 45px 125px 45px 125px 90px;
+  grid-template-rows: 100px 50px 140px 50px 140px 100px;
   gap: 1px;
   background-color: #3a3832;
   border-top: 1px solid #3a3832;
@@ -564,7 +564,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 300;
   color: #c4c3b9;
   border-top: 1px solid #3a3832;
@@ -577,11 +577,12 @@ body {
   grid-column: 4 / 5;
   grid-row: 3 / 4;
   padding: 30px 40px;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 200;
   color: #a8a79d;
   line-height: 1.5;
   font-family: 'Jost', sans-serif;
+  text-align: justify;
 }
 
 .cell-source-title {
@@ -590,7 +591,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 300;
   color: #c4c3b9;
   letter-spacing: 0.5px;
@@ -609,7 +610,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 300;
   color: #c4c3b9;
   letter-spacing: 0.5px;
@@ -626,22 +627,24 @@ body {
   grid-column: 1 / 2;
   grid-row: 5 / 6;
   padding: 30px 40px;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 200;
   color: #a8a79d;
   line-height: 1.5;
   font-family: 'Jost', sans-serif;
+  text-align: justify;
 }
 
 .cell-deliver-text {
   grid-column: 3 / 4;
   grid-row: 5 / 6;
   padding: 30px 40px;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 200;
   color: #a8a79d;
   line-height: 1.5;
   font-family: 'Jost', sans-serif;
+  text-align: justify;
 }
 
 .cell-empty-bl {
