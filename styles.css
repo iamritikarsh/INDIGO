@@ -433,7 +433,6 @@ body {
 
 .spec-top {
   display: flex;
-  min-height: 500px;
 }
 
 .spec-left {
@@ -442,7 +441,6 @@ body {
   color: #1a1a1a;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .spec-left-text {
@@ -451,7 +449,7 @@ body {
 
 .spec-left-text h2 {
   font-size: 36px;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1.08;
   color: #1a1a1a;
   margin-bottom: 40px;
@@ -495,9 +493,13 @@ body {
 
 .spec-right {
   width: 50%;
+  position: relative;
 }
 
 .spec-right img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
