@@ -427,88 +427,103 @@ body {
   line-height: 1.6;
 }
 
-/* ===== SPEC GRID CONTAINER ===== */
+
 .spec-grid-container {
   width: 100%;
-  border-top: 1px solid var(--border-color);
 }
 
 .spec-top {
   display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .spec-left {
   width: 50%;
-  background-color: var(--bg-beige);
-  color: #1a1a1a;
+  background-color: #D6D2C8;
+  color: #1C1C1C;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 4rem 3.5rem;
 }
 
 .spec-left-text {
-  padding: 50px 50px 40px 45px;
+  margin-bottom: 4rem;
 }
 
 .spec-left-text h2 {
-  font-size: 36px;
-  font-weight: 300;
-  line-height: 1.08;
-  color: #1a1a1a;
-  margin-bottom: 40px;
-  letter-spacing: 0.2px;
-  font-family: 'Jost', sans-serif;
+  font-size: 38px;
+  font-weight: 200;
+  line-height: 1.05;
+  color: #1C1C1C;
+  margin-bottom: 30px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
-.spec-left-text .mb {
-  margin-bottom: 18px;
-}
-
-.spec-left-text p {
+.spec-subtitle {
   font-size: 17px;
   font-weight: 300;
+  font-style: italic;
+  color: #1C1C1C;
+  margin-bottom: 25px;
+}
+
+.spec-body {
+  font-size: 17px;
+  font-weight: 200;
   line-height: 1.5;
-  color: #333;
-  font-family: 'Jost', sans-serif;
+  color: #1C1C1C;
 }
 
 .spec-list {
   display: flex;
   flex-direction: column;
+  margin: 0 -3.5rem -4rem -3.5rem; /* pull list out to edges to match full width borders */
 }
 
 .spec-list-item {
-  padding: 17px 45px;
-  border-top: 1px solid #bbb8ae;
-  font-size: 13px;
+  padding: 20px 3.5rem;
+  border-top: 1px solid #1C1C1C;
+  font-size: 14px;
   font-weight: 300;
-  color: #222;
+  color: #1C1C1C;
   display: flex;
   align-items: center;
-  gap: 20px;
-  letter-spacing: 0.5px;
-  font-family: 'Jost', sans-serif;
+  gap: 25px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
-.spec-list-item:last-child {
-  border-bottom: none;
+.spec-num {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.spec-label {
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .spec-right {
   width: 50%;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
-.spec-right img {
+.spec-video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center;
   display: block;
 }
-
 /* ===== HOW WE WORK GRID ===== */
 .how-we-work-grid {
   display: grid;
@@ -668,6 +683,9 @@ body {
 
 /* ===== SPEC VIDEO ===== */
 .spec-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
