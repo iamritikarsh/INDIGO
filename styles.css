@@ -269,6 +269,15 @@ body {
   border-top: 1px solid var(--border-color);
 }
 
+.marquee-container.border-t .marquee-text {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 35px;
+  letter-spacing: -0.02em;
+  color: #c4c3b9;
+}
+
 .marquee-track {
   display: inline-flex;
   animation: marquee 50s linear infinite;
@@ -454,27 +463,32 @@ body {
 }
 
 .spec-left-text h2 {
-  font-size: 38px;
-  font-weight: 200;
-  line-height: 1.05;
+  font-family: 'Raleway', sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 40px;
   color: #1C1C1C;
   margin-bottom: 30px;
-  letter-spacing: 0.15em;
+  letter-spacing: 0px;
   text-transform: uppercase;
 }
 
 .spec-subtitle {
-  font-size: 17px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
   font-weight: 300;
-  font-style: italic;
+  line-height: 30px;
+  letter-spacing: -0.02em;
   color: #1C1C1C;
   margin-bottom: 25px;
 }
 
 .spec-body {
-  font-size: 17px;
-  font-weight: 200;
-  line-height: 1.5;
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: -0.02em;
   color: #1C1C1C;
 }
 
@@ -692,14 +706,8 @@ body {
   display: block;
 }
 
-.spec-subtitle {
-  margin-bottom: 18px;
-  font-size: 17px;
-}
-.spec-body {
-  font-size: 17px;
-  line-height: 1.6;
-}
+
+
 .spec-num {
   font-weight: 300;
   margin-right: 15px;
