@@ -92,9 +92,8 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: flex-start;
-  padding: 60px 34px 60px;
+  padding: 0 34px 60px;
   box-sizing: border-box;
 }
 
@@ -114,11 +113,12 @@ body {
 
 /* ===== SWATCH CARD ===== */
 .swatch-card {
-  width: 200px;
+  width: 220px;
   height: auto;
   display: block;
   align-self: flex-start;
   margin-left: 70px;
+  margin-top: 30px;
   flex-shrink: 0;
 }
 
@@ -150,6 +150,7 @@ body {
 
 /* ===== HERO TEXT ===== */
 .hero-text {
+  margin-top: auto;
   align-self: flex-start;
 }
 
