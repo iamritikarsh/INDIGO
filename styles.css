@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Jost:wght@200;300;400;500&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Jost:wght@200;300;400;500&display=swap');
 
 /* ===== CSS VARIABLES ===== */
 :root {
@@ -426,25 +426,24 @@ body {
 }
 
 .mill-title {
-  font-size: 18px;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-  color: #b8b8b4;
+  font-family: 'Raleway', sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0px;
+  color: #D3D1C8;
   margin-bottom: 50px;
 }
 
-.mill-sub {
-  font-size: 18px;
-  font-weight: 200;
-  color: #d8d8d4;
-  margin-bottom: 35px;
-}
+
 
 .mill-desc {
-  font-size: 17px;
-  font-weight: 200;
-  color: #a8a8a4;
-  line-height: 1.6;
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+  color: #D3D1C8;
 }
 
 
