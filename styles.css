@@ -114,10 +114,11 @@ body {
 
 /* ===== SWATCH CARD ===== */
 .swatch-card {
-  width: 280px;
+  width: 200px;
   height: auto;
   display: block;
-  align-self: center;
+  align-self: flex-start;
+  margin-left: 70px;
   flex-shrink: 0;
 }
 
