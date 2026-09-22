@@ -265,6 +265,16 @@ body {
   border-bottom: 1px solid var(--border-color);
 }
 
+.marquee-container.border-y .marquee-text {
+  font-family: 'Raleway', sans-serif;
+  font-size: 35px;
+  font-weight: 300;
+  line-height: 45px;
+  letter-spacing: -0.02em;
+  color: #D3D1C8;
+  padding-right: 20px;
+}
+
 .marquee-container.border-t {
   border-top: 1px solid var(--border-color);
 }
