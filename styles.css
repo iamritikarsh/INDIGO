@@ -92,6 +92,10 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 34px 60px;
+  box-sizing: border-box;
 }
 
 /* RIGHT — fabric image */
@@ -110,14 +114,11 @@ body {
 
 /* ===== SWATCH CARD ===== */
 .swatch-card {
-  position: absolute;
-  width: 384px;
-  height: 501px;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  object-position: center;
+  width: 280px;
+  height: auto;
+  display: block;
+  align-self: center;
+  flex-shrink: 0;
 }
 
 
@@ -148,9 +149,7 @@ body {
 
 /* ===== HERO TEXT ===== */
 .hero-text {
-  position: absolute;
-  bottom: 80px;
-  left: 34px;
+  align-self: flex-start;
 }
 
 .hero-text h1 {
