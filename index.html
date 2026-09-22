@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Jost:wght@200;300;400;500&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -148,56 +148,139 @@
       <div class="spec-left">
         <div class="spec-left-text">
           <h2>DEVELOPED TO<br>SPECIFICATION</h2>
-          <p class="mb">When the fabric doesn't exist yet.</p>
-          <p>If a requirement can't be met from existing<br>production, we develop it with our mill partners —<br>from yarn selection and sampling through to final<br>production.</p>
+          <p class="spec-subtitle">When the fabric doesn't exist yet.</p>
+          <p class="spec-body">If a requirement can't be met from existing<br>production, we develop it with our mill partners —<br>from yarn selection and sampling through to final<br>production.</p>
         </div>
         <div class="spec-list">
-          <div class="spec-list-item"><span>01</span><span>YARN SELECTION</span></div>
-          <div class="spec-list-item"><span>02</span><span>SAMPLING</span></div>
-          <div class="spec-list-item"><span>03</span><span>PRODUCTION</span></div>
+          <div class="spec-list-item"><span class="spec-num">01</span><span class="spec-label">YARN SELECTION</span></div>
+          <div class="spec-list-item"><span class="spec-num">02</span><span class="spec-label">SAMPLING</span></div>
+          <div class="spec-list-item"><span class="spec-num">03</span><span class="spec-label">PRODUCTION</span></div>
         </div>
       </div>
       <div class="spec-right">
-        <img src="yarn-machine.jpg" alt="Yarn Machine">
+        <video
+          class="spec-video"
+          autoplay
+          loop
+          muted
+          playsinline
+          poster="yarn-machine.jpg"
+        >
+          <!-- Drop a yarn-machine.mp4 (or .webm) file in the project folder to activate -->
+          <source src="yarn-machine.mp4" type="video/mp4">
+          <source src="yarn-machine.webm" type="video/webm">
+          <!-- Graceful fallback to the static image -->
+          <img src="yarn-machine.jpg" alt="Yarn Machine">
+        </video>
       </div>
     </div>
 
     <div class="how-we-work-grid">
-      <div class="cell-how-title">
+      <!-- Col 1-2, rows 1-3: title --><div class="hww-title-cell">
         <h2>HOW WE<br>WORK</h2>
       </div>
-      <div class="cell-img-stacked">
-        <img src="img-stacked.jpg" alt="Stacked dark fabric">
+      <!-- Col 3, rows 1-3: draped fabric image --><div class="hww-drape-img">
+        <img src="img-stacked.jpg" alt="Draped fabric">
       </div>
-      <div class="cell-empty-tr"></div>
-      <div class="cell-under">
-        <div class="cell-under-title">01 / UNDERSTAND</div>
-        <div class="cell-under-text">Every requirement is reviewed by our<br>technical team, who recommend the<br>right construction, weight, composition<br>and finish for the garment.</div>
-      </div>
+      <!-- Col 4, row 1: empty spacer --><div class="hww-spacer-tr"></div>
+      <!-- Col 4, row 2: 01 / UNDERSTAND label --><div class="hww-understand-label">01 / UNDERSTAND</div><!-- Col 4, row 3: UNDERSTAND body text --><div class="hww-understand-text">
+        <p>Every requirement is reviewed by our<br>technical team, who recommend the<br>right construction, weight, composition<br>and finish for the garment.</p></div>
 
-      <div class="cell-source">
-        <div class="cell-source-title">02 / SOURCE</div>
-        <div class="cell-source-text">We find the best available option<br>across our mill network in India<br>and China — or develop it with our<br>mill partners when nothing<br>existing fits.</div>
-      </div>
+      <!-- Col 1, row 4: 02 / SOURCE label --><div class="hww-source-label">02 / SOURCE</div>
+        <!-- Col 1, row 5: SOURCE body text --><div class="hww-source-text"><p>We find the best available option<br>across our mill network in India<br>and China — or develop it with our<br>mill partners when nothing<br>existing fits.</p></div>
       
-      <div class="cell-img-rolls">
+      <!-- Col 2, rows 4-6: fabric rolls image --><div class="hww-rolls-img">
         <img src="img-rolls.jpg" alt="Fabric rolls">
       </div>
       
-      <div class="cell-deliver">
-        <div class="cell-deliver-title">03 / DELIVER</div>
-        <div class="cell-deliver-text">From sampling to bulk<br>production, we manage supply<br>through to delivery, with ready<br>stock available for common<br>fabrics.</div>
-      </div>
+      <!-- Col 3, row 4: 03 / DELIVER label --><div class="hww-deliver-label">03 / DELIVER</div>
+        <!-- Col 3, row 5: DELIVER body text --><div class="hww-deliver-text"><p>From sampling to bulk<br>production, we manage supply<br>through to delivery, with ready<br>stock available for common<br>fabrics.</p></div>
       
-      <div class="cell-img-colour">
-        <img src="img-folded.jpg" alt="Colourful folded fabric">
+      <!-- Col 4, rows 4-6: stacked fabric image --><div class="hww-folded-img">
+        <img src="img-folded.jpg" alt="Stacked folded fabric">
       </div>
 
-      <div class="cell-empty-bl"></div>
-      <div class="cell-empty-bm"></div>
+      <!-- Col 1, row 6: bottom spacer --><div class="hww-spacer-bl"></div>
+      <!-- Col 3, row 6: bottom spacer --><div class="hww-spacer-bm"></div>
     </div>
 
   </section>
 
+  <!-- ===== QUOTE SECTION ===== -->
+  <section class="quote-section">
+    <p class="quote-text">Every garment begins as a decision about cloth �<br>the weight it carries, the way it falls, how it wears<br>over time. We help make that decision well.</p>
+  </section>
+
+  <!-- ===== WHO WE SERVE SECTION ===== -->
+  <section class="wws-section">
+    <div class="wws-left">
+      <div class="wws-top">
+        <h2 class="wws-title">WHO WE SERVE</h2>
+        <p class="wws-intro">From manufacturers and exporters to buying houses and fashion<br>brands, each partner needs something different. Our work begins by<br>understanding exactly what that is.</p>
+      </div>
+      <div class="wws-list">
+        <div class="wws-item">
+          <span class="wws-num">01</span>
+          <span class="wws-label">GARMENT MANUFACTURERS</span>
+          <span class="wws-desc">Consistent bulk supply and repeat lots.</span>
+        </div>
+        <div class="wws-item">
+          <span class="wws-num">02</span>
+          <span class="wws-label">EXPORTERS</span>
+          <span class="wws-desc">International standards and timelines.</span>
+        </div>
+        <div class="wws-item">
+          <span class="wws-num">03</span>
+          <span class="wws-label">BUYING HOUSES</span>
+          <span class="wws-desc">Spec matching and sampling across clients.</span>
+        </div>
+        <div class="wws-item">
+          <span class="wws-num">04</span>
+          <span class="wws-label">FASHION BRANDS</span>
+          <span class="wws-desc">Custom development for specific collections.</span>
+        </div>
+      </div>
+    </div>
+    <div class="wws-right">
+      <img src="who-we-serve.jpg" alt="Denim fabric close-up">
+    </div>
+  </section>
+  <!-- ===== GET IN TOUCH SECTION ===== -->
+  <section class="get-in-touch-section">
+    <h2 class="git-heading">GET IN TOUCH</h2>
+    <div class="git-subheading">
+      We find the fabric.<br>Or we get it made.
+    </div>
+    <p class="git-paragraph">
+      Tell us what you're making, and we'll come<br>back with the right cloth, a fair price, and a<br>timeline you can plan around.
+    </p>
+    <a href="#" class="git-cta">START A BRIEF &rarr;</a>
+  </section>
+
+  <!-- ===== FOOTER SECTION ===== -->
+  <footer class="footer-section">
+    <div class="footer-divider"></div>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="indigo-multifab-logo.png" alt="Indigo Multifab">
+      </div>
+      <div class="footer-right-nav">
+        <nav class="footer-nav">
+          <a href="#">About us</a>
+          <a href="#">Work</a>
+          <a href="#">Services</a>
+          <a href="#">FAQs</a>
+        </nav>
+      </div>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
+
+
+
+
