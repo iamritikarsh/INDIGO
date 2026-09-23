@@ -34,29 +34,29 @@ body {
   align-items: center;
   height: 47px;
   padding: 0 40px;
-  background-color: var(--bg-dark);
-  position: sticky;
+  background-color: #191A17;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
 }
 
 .logo {
   grid-column: 1;
   position: absolute;
-  width: 91px;
-  height: 94px;
   top: -6px;
   left: 5px;
-  opacity: 1;
   font-family: 'Geist', sans-serif;
   font-weight: 100;
-  font-style: normal;
   font-size: 35px;
   line-height: 60px;
   letter-spacing: -0.09em;
-  text-align: right;
-  vertical-align: middle;
   color: #F5F4EE;
+  text-decoration: none;
+  display: inline-block;
+  width: 91px;
+  height: 94px;
 }
 
 .main-nav {
@@ -68,26 +68,22 @@ body {
   height: 100%;
 }
 
-.logo {
-  grid-column: 1;
-}
-
-
 .main-nav a {
   color: #F5F4EE;
   text-decoration: none;
   font-family: 'Geist', sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  text-align: center;
-  vertical-align: middle;
 }
 
 .main-nav a:hover {
   color: #e8e8e4;
+}
+
+.main-nav a.active {
+  color: #F5F4EE;
 }
 
 /* ===== PAGE 1 — HERO ===== */
@@ -95,6 +91,7 @@ body {
   display: flex;
   height: calc(100vh - 47px);
   min-height: 600px;
+  margin-top: 47px;
 }
 
 /* LEFT — beige panel */
@@ -812,12 +809,12 @@ body {
   grid-template-columns: 35px 280px 1fr;
   align-items: center;
   padding: 24px 50px;
-  border-top: 1px solid #444444;
+  border-top: 1px solid #D3D1C8;
   gap: 16px;
 }
 
 .wws-item:last-child {
-  border-bottom: 1px solid #444444;
+  border-bottom: 1px solid #D3D1C8;
   margin-bottom: 0;
 }
 

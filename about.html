@@ -438,149 +438,251 @@
       }
     }
 
-    /* ===== HOW WE WORK SECTION ===== */
-    .hww-section {
-      background-color: #E2E0D7;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      /* Padding above to separate from THE FAMILY section */
-      padding-top: 0;
-    }
+    /* ===== HOW WE WORK GRID ===== */
+.how-we-work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
+  margin-bottom: 0;
+  width: 100%;
+  border-bottom: 1px solid #191A17;
+  color: #191A17;
+  background-color: #E2E0D7;
+}
 
-    .hww-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: clamp(300px, 30.3vw, 437px); /* Scales proportionally up to 437px max */
-      width: 100%;
-      border-top: 1px solid #B8B6AE;
-      border-bottom: 1px solid #B8B6AE;
-    }
+.how-we-work-grid > div {
+  background-color: #E2E0D7;
+  overflow: hidden;
+}
 
-    .hww-cell {
-      border-right: 1px solid #B8B6AE;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-    
-    .hww-cell:nth-child(4n) {
-      border-right: none;
-    }
+.hww-title-cell { border-bottom: 1px solid #191A17;
+  grid-row: 1 / 4;
+  grid-column: 1 / 3;
+  padding-left: 54px;
+  padding-top: 200px;
+}
+.hww-title-cell h2 {
+  width: 348px;
+  height: 152px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: -0.05em;
+  color: #191A17;
+  margin: 0;
+}
 
-    .hww-row-border {
-      border-bottom: 1px solid #B8B6AE;
-    }
+.hww-drape-img { border-right: 1px solid #191A17; border-bottom: 1px solid #191A17;
+  grid-row: 1 / 4;
+  grid-column: 3 / 4;
+  height: 437px;
+}
+.hww-drape-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
-    .hww-img-cell img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+.hww-spacer-tr { border-bottom: 1px solid #191A17;
+  grid-row: 1 / 2;
+  grid-column: 4 / 5;
+}
 
-    /* Subgrids */
-    .hww-subgrid-upper {
-      display: grid;
-      grid-template-rows: 1fr 18% 45%;
-      height: 100%;
-    }
-    
-    .hww-subgrid-lower {
-      display: grid;
-      grid-template-rows: 18% 45% 1fr;
-      height: 100%;
-    }
+.hww-understand-label { border-bottom: 1px solid #191A17;
+  grid-row: 2 / 3;
+  grid-column: 4 / 5;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: -0.05em;
+  color: #191A17;
+}
 
-    .hww-subgrid-upper > div, .hww-subgrid-lower > div {
-      border-bottom: 1px solid #B8B6AE;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-sizing: border-box;
-    }
+.hww-understand-text { border-bottom: 1px solid #191A17;
+  grid-row: 3 / 4;
+  grid-column: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .hww-subgrid-upper > div:last-child, .hww-subgrid-lower > div:last-child {
-      border-bottom: none;
-    }
+.hww-source-label { border-bottom: 1px solid #191A17;
+  grid-row: 4 / 5;
+  grid-column: 1 / 2;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: -0.05em;
+  color: #191A17;
+}
 
-    .hww-col-1-upper {
-      display: flex;
-      align-items: center;
-      padding-left: 15%;
-    }
+.hww-rolls-img {
+  grid-row: 4 / 7;
+  grid-column: 2 / 3;
+  height: 435px;
+}
+.hww-rolls-img img {
+  width: 379px;
+  height: 435px;
+  object-fit: cover;
+  display: block;
+  
+}
 
-    .hww-heading {
-      font-family: 'Geist', sans-serif;
-      font-weight: 200;
-      font-size: clamp(30px, 3.2vw, 52px);
-      letter-spacing: 0.02em;
-      line-height: 1.1;
-      color: #1A1A1A;
-      margin: 0;
-    }
+.hww-deliver-label { border-bottom: 1px solid #191A17;
+  grid-row: 4 / 5;
+  grid-column: 3 / 4;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: -0.05em;
+  color: #191A17;
+}
 
-    .hww-label {
-      font-family: 'Geist', sans-serif;
-      font-weight: 300;
-      font-size: clamp(9px, 0.8vw, 12px);
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: #1A1A1A;
-    }
+.hww-folded-img { border-left: 1px solid #191A17;
+  grid-row: 4 / 7;
+  grid-column: 4 / 5;
+  height: 436px;
+}
+.hww-folded-img img {
+  width: 379px;
+  height: 435px;
+  object-fit: cover;
+  object-position: right;
+  display: block;
+  
+}
 
-    .hww-text {
-      font-family: 'Geist', sans-serif;
-      font-weight: 300;
-      font-size: clamp(10px, 0.9vw, 13px);
-      line-height: 1.35;
-      color: #333;
-      padding: 0 15%;
-      text-align: left;
-    }
+.hww-source-text {
+  grid-row: 5 / 6;
+  grid-column: 1 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .hww-footer {
-      padding: 8vw 20px;
-      text-align: center;
-    }
+.hww-deliver-text {
+  grid-row: 5 / 6;
+  grid-column: 3 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .hww-footer-text {
-      font-family: 'Geist', sans-serif;
-      font-weight: 300;
-      font-size: clamp(14px, 1.6vw, 24px);
-      letter-spacing: 0.03em;
-      color: #1A1A1A;
-      line-height: 1.4;
-      margin: 0;
-    }
+.hww-understand-text p,
+.hww-source-text p,
+.hww-deliver-text p {
+  width: 317px;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: -0.05em;
+  text-align: justify;
+  color: #191A17;
+}
 
-    /* Responsive adjustments */
-    @media (max-width: 900px) {
-      .hww-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 400px;
-      }
-      .hww-cell:nth-child(4n) { border-right: 1px solid #B8B6AE; }
-      .hww-cell:nth-child(2n) { border-right: none; }
-      .hww-cell:nth-child(1), .hww-cell:nth-child(2),
-      .hww-cell:nth-child(3), .hww-cell:nth-child(4),
-      .hww-cell:nth-child(5), .hww-cell:nth-child(6) {
-        border-bottom: 1px solid #B8B6AE;
-      }
-    }
-    
-    @media (max-width: 500px) {
-      .hww-grid {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 350px;
-      }
-      .hww-cell {
-        border-right: none !important;
-        border-bottom: 1px solid #B8B6AE;
-      }
-    }
+.hww-spacer-bl {
+  grid-row: 6 / 7;
+  grid-column: 1 / 2;
+}
+
+.hww-spacer-bm {
+  grid-row: 6 / 7;
+  grid-column: 3 / 4;
+}
+
+@media (max-width: 900px) {
+  .how-we-work-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .hww-title-cell, .hww-drape-img, .hww-spacer-tr, .hww-understand-label, .hww-understand-text,
+  .hww-source-label, .hww-rolls-img, .hww-deliver-label, .hww-folded-img, .hww-source-text, .hww-deliver-text,
+  .hww-spacer-bl, .hww-spacer-bm { display: none;
+    grid-column: 1 / 2;
+    grid-row: auto;
+  }
+  .hww-spacer-tr, .hww-spacer-bl, .hww-spacer-bm { display: none;
+    display: none;
+  }
+}
+
+/* ===== SPEC VIDEO ===== */
+.spec-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+
+
+
+
+/* ===== QUOTE SECTION ===== */
+.quote-section {
+  background-color: #D9D9D9;
+  height: 508px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.quote-text {
+  font-family: 'Raleway', sans-serif;
+  font-size: 35px;
+  font-weight: 300;
+  font-style: normal;
+  color: #191A17;
+  line-height: 45px;
+  letter-spacing: -0.02em;
+  margin: 0 auto;
+  text-align: center;
+  width: 998px;
+  max-width: 100%;
+}
+
+.hww-footer {
+  padding: 8vw 20px;
+  text-align: center;
+}
+.hww-footer-text {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  color: #191A17;
+  line-height: 1.4;
+  margin: 0;
+}
 
     /* ===== EDITORIAL MASONRY GRID ===== */
     .about-editorial-section {
@@ -737,12 +839,12 @@
       grid-template-columns: 35px 280px 1fr;
       align-items: center;
       padding: 24px 50px;
-      border-top: 1px solid #444444;
+      border-top: 1px solid #D3D1C8;
       gap: 16px;
     }
     
     .wws-item:last-child {
-      border-bottom: 1px solid #444444;
+      border-bottom: 1px solid #D3D1C8;
       margin-bottom: 0;
     }
     
@@ -1037,77 +1139,34 @@
   </section>
 
   <!-- ===== HOW WE WORK SECTION ===== -->
-  <section class="hww-section">
-    <div class="hww-grid">
+  <section class="hww-section-new" style="background-color: #E2E0D7; width: 100%;">
+    <div class="how-we-work-grid">
+      <!-- Col 1-2, rows 1-3: title --><div class="hww-title-cell">
+        <h2>HOW WE<br>WORK</h2>
+      </div>
+      <!-- Col 3, rows 1-3: draped fabric image --><div class="hww-drape-img">
+        <img src="index-hww-1.png" alt="Draped fabric">
+      </div>
+      <!-- Col 4, row 1: empty spacer --><div class="hww-spacer-tr"></div>
+      <!-- Col 4, row 2: 01 / UNDERSTAND label --><div class="hww-understand-label">01 / UNDERSTAND</div><!-- Col 4, row 3: UNDERSTAND body text --><div class="hww-understand-text">
+        <p>Every requirement is reviewed by our technical team, who recommend the right construction, weight, composition and finish for the garment.</p></div>
+
+      <!-- Col 1, row 4: 02 / SOURCE label --><div class="hww-source-label">02 / SOURCE</div>
+        <!-- Col 1, row 5: SOURCE body text --><div class="hww-source-text"><p>We find the best available option across our mill network in India and China &mdash; or develop it with our mill partners when nothing existing fits.</p></div>
       
-      <!-- ROW 1 (Upper section) -->
-      
-      <!-- Col 1 -->
-      <div class="hww-cell hww-row-border hww-col-1-upper">
-        <h2 class="hww-heading">HOW WE<br>WORK</h2>
+      <!-- Col 2, rows 4-6: fabric rolls image --><div class="hww-rolls-img">
+        <img src="index-hww-2.jpg" alt="Fabric rolls">
       </div>
       
-      <!-- Col 2 -->
-      <div class="hww-cell hww-row-border hww-img-cell">
-        <img src="hww-1.png" alt="01 Understand - dark folded fabric">
+      <!-- Col 3, row 4: 03 / DELIVER label --><div class="hww-deliver-label">03 / DELIVER</div>
+        <!-- Col 3, row 5: DELIVER body text --><div class="hww-deliver-text"><p>From sampling to bulk production, we manage supply through to delivery, with ready stock available for common fabrics.</p></div>
+      
+      <!-- Col 4, rows 4-6: stacked fabric image --><div class="hww-folded-img">
+        <img src="index-hww-3.jpg" alt="Stacked folded fabric">
       </div>
-      
-      <!-- Col 3 -->
-      <div class="hww-cell hww-row-border hww-subgrid-upper">
-        <div class="sub-cell empty-sub"></div>
-        <div class="sub-cell label-sub">
-          <span class="hww-label">01 / UNDERSTAND</span>
-        </div>
-        <div class="sub-cell text-sub">
-          <p class="hww-text">
-            Every requirement is reviewed by our technical team, who recommend the right construction, weight, composition and finish for the garment.
-          </p>
-        </div>
-      </div>
-      
-      <!-- Col 4 -->
-      <div class="hww-cell hww-row-border">
-        <!-- empty block -->
-      </div>
-      
-      <!-- ROW 2 (Lower section) -->
-      
-      <!-- Col 1 -->
-      <div class="hww-cell hww-subgrid-lower">
-        <div class="sub-cell label-sub">
-          <span class="hww-label">02 / SOURCE</span>
-        </div>
-        <div class="sub-cell text-sub">
-          <p class="hww-text">
-            We find the best available option across our mill network in India and China — or develop it with our mill partners when nothing existing fits.
-          </p>
-        </div>
-        <div class="sub-cell empty-sub"></div>
-      </div>
-      
-      <!-- Col 2 -->
-      <div class="hww-cell hww-img-cell">
-        <img src="hww-2.jpg" alt="02 Source - cream fabric rolls">
-      </div>
-      
-      <!-- Col 3 -->
-      <div class="hww-cell hww-subgrid-lower">
-        <div class="sub-cell label-sub">
-          <span class="hww-label">03 / DELIVER</span>
-        </div>
-        <div class="sub-cell text-sub">
-          <p class="hww-text">
-            From sampling to bulk production, we manage supply through to delivery, with ready stock available for common fabrics.
-          </p>
-        </div>
-        <div class="sub-cell empty-sub"></div>
-      </div>
-      
-      <!-- Col 4 -->
-      <div class="hww-cell hww-img-cell">
-        <img src="hww-3.jpg" alt="03 Deliver - stacked neutral fabric rolls">
-      </div>
-      
+
+      <!-- Col 1, row 6: bottom spacer --><div class="hww-spacer-bl"></div>
+      <!-- Col 3, row 6: bottom spacer --><div class="hww-spacer-bm"></div>
     </div>
 
     <!-- BOTTOM STATEMENT -->
