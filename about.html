@@ -33,7 +33,7 @@
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
-      height: 47px;
+      height: 80px;
       padding: 0 40px;
       background-color: #191A17;
       position: fixed;
@@ -45,25 +45,21 @@
 
     .about-logo {
       grid-column: 1;
-      position: absolute;
-      top: -6px;
-      left: 5px;
       font-family: 'Geist', sans-serif;
       font-weight: 100;
       font-size: 35px;
-      line-height: 60px;
+      line-height: 1;
       letter-spacing: -0.09em;
       color: #F5F4EE;
       text-decoration: none;
-      display: inline-block;
-      width: 91px;
-      height: 94px;
+      display: inline-flex;
+      align-items: center;
     }
 
     .about-nav {
       grid-column: 2;
       display: flex;
-      gap: 32px;
+      gap: 50px;
       justify-content: center;
       align-items: center;
       height: 100%;
@@ -90,8 +86,8 @@
     /* ===== HERO ===== */
     .about-hero {
       position: relative;
-      margin-top: 47px;
-      height: calc(100vh - 47px);
+      margin-top: 80px;
+      height: calc(100vh - 80px);
       width: 100%;
       overflow: hidden;
     }
@@ -222,19 +218,24 @@
     }
 
     .info-at {
-      font-size: clamp(16px, 1.4vw, 24px);
+      font-family: 'Geist', sans-serif;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 60px;
+      letter-spacing: 0;
+      vertical-align: middle;
+      color: #191A17;
       margin-right: 1.5vw;
-      font-weight: 300;
-      color: #1A1A1A;
     }
 
     .info-title {
-      font-size: clamp(28px, 3.8vw, 60px);
-      font-weight: 300;
-      letter-spacing: 0.02em;
-      color: #1A1A1A;
+      font-family: 'Geist', sans-serif;
+      font-weight: 400;
+      font-size: 70px;
+      line-height: 60px;
+      letter-spacing: 0;
+      color: #191A17;
       margin: 0;
-      line-height: 1.1;
     }
 
     .info-title .comma {
@@ -242,11 +243,14 @@
     }
 
     .info-desc {
-      font-size: clamp(11px, 1.05vw, 15px);
-      line-height: 1.5;
-      font-weight: 300;
-      color: #2b2b2b;
-      letter-spacing: -0.01em;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: -0.05em;
+      text-align: justify;
+      vertical-align: middle;
+      color: #191A17;
     }
 
     .metric-box {
@@ -258,39 +262,49 @@
     }
 
     .metric-text {
-      font-size: clamp(9px, 0.75vw, 13px);
-      line-height: 1.35;
-      color: #333;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
+      letter-spacing: -0.05em;
+      text-align: justify;
+      vertical-align: middle;
+      color: #191A17;
       margin-bottom: 0.5vw;
-      font-weight: 300;
+      width: 181px;
+      flex-shrink: 0;
     }
 
     .metric-num {
-      font-size: clamp(32px, 4.5vw, 80px);
-      font-weight: 300;
-      line-height: 0.9;
-      color: #1A1A1A;
+      font-family: 'Geist', sans-serif;
+      font-weight: 400;
+      font-size: 80px;
+      line-height: 60px;
+      letter-spacing: 0;
+      text-align: right;
+      vertical-align: middle;
+      color: #191A17;
     }
 
     .metric-25 {
       grid-column: 2 / 3;
       grid-row: 2 / 3;
-      border: 1px solid #B8B6AE;
-      border-bottom: none;
+      border-top: 0.5px solid #191A17;
+      border-right: 0.5px solid #191A17;
+      border-bottom: 0.5px solid #191A17;
     }
 
     .metric-2 {
       grid-column: 3 / 4;
       grid-row: 2 / 3;
-      border-top: 1px solid #B8B6AE;
-      border-bottom: none;
+      border-top: 0.5px solid #191A17;
+      border-bottom: 0.5px solid #191A17;
     }
 
     .metric-5 {
       grid-column: 2 / 3;
       grid-row: 3 / 4;
-      border-left: 1px solid #B8B6AE;
-      border-right: 1px solid #B8B6AE;
+      border-right: 0.5px solid #191A17;
     }
 
     .metric-blue {
@@ -306,9 +320,13 @@
     }
 
     .blue-text {
-      font-size: clamp(9px, 0.75vw, 13px);
-      line-height: 1.45;
-      font-weight: 300;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
+      letter-spacing: -0.05em;
+      text-align: justify;
+      vertical-align: middle;
       margin: 0;
       margin-top: 4vw; /* Offset to match the reference positioning */
     }
@@ -327,19 +345,25 @@
       .metric-25 {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
-        border: 1px solid #B8B6AE;
+        border: 0.5px solid #191A17;
+        border-left: none;
+        border-right: none;
       }
       .metric-2 {
         grid-column: 1 / 2;
         grid-row: 3 / 4;
-        border: 1px solid #B8B6AE;
+        border: 0.5px solid #191A17;
         border-top: none;
+        border-left: none;
+        border-right: none;
       }
       .metric-5 {
         grid-column: 1 / 2;
         grid-row: 4 / 5;
-        border: 1px solid #B8B6AE;
+        border: 0.5px solid #191A17;
         border-top: none;
+        border-left: none;
+        border-right: none;
       }
       .metric-blue {
         grid-column: 1 / 2;
@@ -384,22 +408,25 @@
     }
 
     .family-content h2 {
-      font-family: 'Geist', sans-serif;
-      font-weight: 200;
-      font-size: clamp(32px, 3.5vw, 54px);
-      letter-spacing: 0.05em;
-      color: #E2E0D7;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      font-size: 60px;
+      line-height: 60px;
+      letter-spacing: -0.05em;
+      color: #D3D1C8;
       margin: 0 0 30px 0;
       text-transform: uppercase;
     }
 
     .family-content p {
-      font-family: 'Geist', sans-serif;
+      font-family: 'Raleway', sans-serif;
       font-weight: 300;
-      font-size: clamp(12px, 1.1vw, 15px);
-      line-height: 1.6;
-      color: #A0A0A0; /* Muted light grey */
-      max-width: 440px;
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: -0.02em;
+      vertical-align: middle;
+      color: #D3D1C8;
+      max-width: 480px;
       margin: 0 0 45px 0;
     }
 
@@ -408,12 +435,14 @@
       display: inline-block;
       padding: 12px 24px;
       border: 1px solid #444; /* Subtle thin border */
-      color: #D0D0D0;
+      color: #D3D1C8;
       text-decoration: none;
-      font-family: 'Geist', sans-serif;
+      font-family: 'Raleway', sans-serif;
       font-weight: 300;
-      font-size: 11px;
-      letter-spacing: 0.08em;
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: -0.02em;
+      vertical-align: middle;
       text-transform: uppercase;
       transition: border-color 0.3s ease, color 0.3s ease;
     }
@@ -732,28 +761,31 @@
     }
 
     .info-block h4 {
-      font-family: 'Geist', sans-serif;
+      font-family: 'Raleway', sans-serif;
       font-weight: 300;
-      font-size: clamp(10px, 0.9vw, 13px);
-      letter-spacing: 0.05em;
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: -0.05em;
       text-transform: uppercase;
       margin: 0 0 20px 0;
+      color: inherit;
     }
 
     .info-block p {
-      font-family: 'Geist', sans-serif;
+      font-family: 'Raleway', sans-serif;
       font-weight: 300;
-      font-size: clamp(11px, 1.1vw, 14px);
-      line-height: 1.5;
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: -0.05em;
       margin: 0;
+      color: inherit;
     }
 
     .block-two-markets {
       background-color: #353535;
-      color: #D4D4D4;
+      color: #D3D1C8;
       aspect-ratio: 387 / 393;
     }
-    .block-two-markets h4 { color: #D4D4D4; }
 
     .block-grey {
       background-color: #BEBDB8; /* Light warm grey */
@@ -763,17 +795,15 @@
 
     .block-developed {
       background-color: #5D5650; /* Muted brown/charcoal */
-      color: #DCD8D3;
+      color: #D3D1C8;
       aspect-ratio: 387 / 445;
     }
-    .block-developed h4 { color: #DCD8D3; }
 
     .block-mills {
       background-color: #3B4B5B; /* Slate / denim blue */
-      color: #D2D6DA;
+      color: #D3D1C8;
       aspect-ratio: 387 / 392;
     }
-    .block-mills h4 { color: #D2D6DA; }
 
     /* Responsive for masonry */
     @media (max-width: 900px) {
@@ -899,58 +929,61 @@
     .contact-left {
       display: flex;
       flex-direction: column;
-      gap: 40px;
+      gap: 75px;
     }
 
     .contact-heading {
-      font-family: 'Geist', sans-serif;
-      font-weight: 200;
-      font-size: clamp(28px, 3.2vw, 42px);
-      letter-spacing: 0.02em;
-      color: #E2E0D7;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 40px;
+      letter-spacing: 0;
+      vertical-align: middle;
+      color: #D3D1C8;
       margin: 0;
     }
 
     .contact-cta {
-      font-family: 'Geist', sans-serif;
-      font-weight: 300;
-      font-size: 11px;
-      letter-spacing: 0.05em;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: -0.02em;
+      text-align: center;
+      vertical-align: middle;
       text-transform: uppercase;
-      color: #B0B8C0;
+      color: #D3D1C8;
       text-decoration: none;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 5px;
+      transition: color 0.3s ease;
     }
     
-    .contact-cta:hover { color: #E2E0D7; }
+    .contact-cta:hover {
+      color: #FFF;
+    }
 
     .contact-right {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       text-align: right;
-      max-width: 480px;
+      max-width: 643px;
       gap: 30px;
       padding-top: 10px; /* Align visually with heading */
     }
 
-    .contact-right-top {
-      font-family: 'Geist', sans-serif;
+    .contact-right-top, .contact-right-bottom {
+      font-family: 'Raleway', sans-serif;
       font-weight: 300;
-      font-size: clamp(14px, 1.4vw, 18px);
-      color: #E2E0D7;
+      font-size: 25px;
+      line-height: 40px;
+      letter-spacing: -0.02em;
+      color: #D3D1C8;
       margin: 0;
-    }
-
-    .contact-right-bottom {
-      font-family: 'Geist', sans-serif;
-      font-weight: 300;
-      font-size: clamp(12px, 1.2vw, 15px);
-      line-height: 1.6;
-      color: #B0B8C0;
-      margin: 0;
+      text-align: right;
+      vertical-align: middle;
     }
 
     /* ===== FOOTER ===== */
@@ -989,11 +1022,15 @@
       gap: 15px;
     }
     .footer-nav a, .footer-legal a {
-      font-family: 'Geist', sans-serif;
-      font-weight: 300;
-      font-size: 12px;
-      color: #333;
-      text-decoration: none;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 40px;
+      letter-spacing: -0.05em;
+      text-align: right;
+      vertical-align: middle;
+      text-decoration: underline;
+      color: #191A17;
       transition: opacity 0.3s;
     }
     .footer-nav a:hover, .footer-legal a:hover { color: #000; opacity: 0.7; }
@@ -1037,7 +1074,8 @@
     <nav class="about-nav">
       <a href="index.html">HOME</a>
       <a href="about.html" class="active">ABOUT US</a>
-      <a href="#">WORK</a>
+      <a href="#">DENIM COLLECTION</a>
+      <a href="#">NON DENIM COLLECTION</a>
       <a href="#">CONTACT US</a>
     </nav>
   </header>
@@ -1082,8 +1120,8 @@
     <!-- METRICS GRID -->
     <div class="metric-box metric-25">
       <div class="metric-text">
-        years spent sourcing fabric<br>
-        for garment manufacturers,<br>
+        years spent sourcing fabric
+        for garment manufacturers,
         exporters and brands.
       </div>
       <div class="metric-num">25</div>
@@ -1091,8 +1129,8 @@
 
     <div class="metric-box metric-2">
       <div class="metric-text">
-        countries we source from —<br>
-        India's mills and Guangzhou<br>
+        countries we source from —
+        India's mills and Guangzhou
         for specialised requirements.
       </div>
       <div class="metric-num">2</div>
@@ -1100,8 +1138,8 @@
 
     <div class="metric-box metric-5">
       <div class="metric-text">
-        mill partnerships built<br>
-        directly with Arvind, KGN,<br>
+        mill partnerships built
+        directly with Arvind, KGN,
         Ginni, Bhaskar and LNJ.
       </div>
       <div class="metric-num">5+</div>
@@ -1109,9 +1147,9 @@
 
     <div class="metric-blue">
       <p class="blue-text">
-        Where a fabric does not exist, we have it<br>
-        made. Our mill partners develop to<br>
-        specification from yarn selection onwards, so<br>
+        Where a fabric does not exist, we have it
+        made. Our mill partners develop to
+        specification from yarn selection onwards, so
         a requirement is rarely turned away.
       </p>
     </div>
@@ -1127,11 +1165,11 @@
     <div class="family-content">
       <h2>THE FAMILY</h2>
       <p>
-        From fabric to finished garment. Indigo Multifab is the<br>
-        sister company of Vintage Blue Jeanswear, a<br>
-        contemporary Indian menswear brand established in<br>
-        2006. Together, the two businesses span the full<br>
-        journey of a garment — from sourcing the cloth to<br>
+        From fabric to finished garment. Indigo Multifab is the
+        sister company of Vintage Blue Jeanswear, a
+        contemporary Indian menswear brand established in
+        2006. Together, the two businesses span the full
+        journey of a garment — from sourcing the cloth to
         designing, manufacturing and bringing it to market.
       </p>
       <a href="#">VISIT VINTAGE BLUE</a>
@@ -1265,7 +1303,7 @@
     </div>
     <div class="contact-right">
       <p class="contact-right-top">We find the fabric. Or we get it made.</p>
-      <p class="contact-right-bottom">Tell us what you're making, and we'll come back with the<br>right cloth, a fair price, and a timeline you can plan around.</p>
+      <p class="contact-right-bottom">Tell us what you're making, and we'll come back with the right cloth, a fair price, and a timeline you can plan around.</p>
     </div>
   </section>
 

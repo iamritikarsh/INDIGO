@@ -32,7 +32,7 @@ body {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  height: 47px;
+  height: 80px;
   padding: 0 40px;
   background-color: #191A17;
   position: fixed;
@@ -44,25 +44,21 @@ body {
 
 .logo {
   grid-column: 1;
-  position: absolute;
-  top: -6px;
-  left: 5px;
   font-family: 'Geist', sans-serif;
   font-weight: 100;
   font-size: 35px;
-  line-height: 60px;
+  line-height: 1;
   letter-spacing: -0.09em;
   color: #F5F4EE;
   text-decoration: none;
-  display: inline-block;
-  width: 91px;
-  height: 94px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .main-nav {
   grid-column: 2;
   display: flex;
-  gap: 32px;
+  gap: 50px;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -89,9 +85,9 @@ body {
 /* ===== PAGE 1 — HERO ===== */
 .hero {
   display: flex;
-  height: calc(100vh - 47px);
+  height: calc(100vh - 80px);
   min-height: 600px;
-  margin-top: 47px;
+  margin-top: 80px;
 }
 
 /* LEFT — beige panel */
