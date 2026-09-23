@@ -42,36 +42,48 @@ body {
 
 .logo {
   grid-column: 1;
-  font-size: 22px;
-  font-weight: 200;
-  letter-spacing: 1.5px;
-  color: #ccc;
+  position: absolute;
+  width: 91px;
+  height: 94px;
+  top: -6px;
+  left: 5px;
+  opacity: 1;
+  font-family: 'Geist', sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 35px;
+  line-height: 60px;
+  letter-spacing: -0.09em;
+  text-align: right;
+  vertical-align: middle;
+  color: #F5F4EE;
 }
 
 .main-nav {
   grid-column: 2;
   display: flex;
   gap: 32px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .logo {
   grid-column: 1;
 }
 
-.main-nav {
-  grid-column: 2;
-  display: flex;
-  gap: 32px;
-}
 
 .main-nav a {
-  color: #b8b8b4;
+  color: #F5F4EE;
   text-decoration: none;
-  font-family: 'Jost', sans-serif;
-  font-size: 10px;
-  font-weight: 300;
-  letter-spacing: 1.5px;
+  font-family: 'Geist', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .main-nav a:hover {
@@ -113,12 +125,14 @@ body {
 
 /* ===== SWATCH CARD ===== */
 .swatch-card {
-  width: 220px;
+  width: 260px;
   height: auto;
   display: block;
-  align-self: flex-start;
-  margin-left: 70px;
-  margin-top: 30px;
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 0;
+  transform: translate(-40px, 40px);
   flex-shrink: 0;
 }
 
@@ -165,10 +179,14 @@ body {
 }
 
 .hero-text p {
-  font-size: 15px;
-  font-weight: 300;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: -0.05em;
+  text-align: justify;
   color: #3a424a;
-  line-height: 1.4;
 }
 
 /* ===== PAGE 2 — INTRO SECTION ===== */
@@ -258,24 +276,25 @@ body {
 }
 
 .collections-inner {
-  max-width: 880px;
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 24px;
 }
 
 /* ===== COLLECTION CARD ===== */
 .collection-card {
   display: flex;
   border: 1px solid var(--border-color);
-  height: 170px;
-  /* collapse shared border */
-  margin-bottom: -1px;
+  height: 253px;
 }
 
 .collection-card > div {
+  flex: 1 1 50%;
   width: 50%;
+  margin: 0;
+  padding: 0;
 }
 
 /* TEXT panel */
@@ -300,53 +319,79 @@ body {
 
 .coll-num {
   display: block;
-  font-size: 10px;
-  font-weight: 300;
-  color: #4a4a46;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.05em;
+  text-align: justify;
+  color: #6F6E6B;
   margin-bottom: 14px;
-  letter-spacing: 0.5px;
 }
 
 .coll-title {
-  font-size: 11px;
-  font-weight: 300;
-  letter-spacing: 1.2px;
-  color: #b8b8b4;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.02em;
+  text-align: justify;
+  color: #D3D1C8;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
 
 .coll-desc {
-  font-size: 11px;
-  font-weight: 300;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.05em;
+  text-align: justify;
   color: #666;
-  line-height: 1.6;
   margin-bottom: 16px;
 }
 
 .coll-link {
-  font-size: 9px;
-  font-weight: 300;
-  letter-spacing: 1.2px;
-  color: #888;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 25px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #D3D1C8;
   text-decoration: none;
   text-transform: uppercase;
+  display: inline-block;
 }
 
 .coll-link:hover {
   color: #d0d0cc;
 }
 
-/* IMAGE panel */
 .coll-img {
+  position: relative;
   overflow: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .coll-img img {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
   object-fit: cover;
   display: block;
+}
+
+/* Crop the baked-in black border at the top of the cream image */
+.collection-card--reversed .coll-img img {
+  transform: scale(1.12);
+  transform-origin: bottom center;
 }
 
 /* ===== FULL IMAGE ===== */
