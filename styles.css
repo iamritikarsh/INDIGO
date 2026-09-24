@@ -857,59 +857,77 @@ body {
 
 
 /* ===== GET IN TOUCH SECTION ===== */
-.get-in-touch-section {
-  background-color: #1a1a1a;
-  color: #fff;
-  padding: 40px 20px;
-  text-align: center;
-}
-.git-heading {
-  font-family: 'Raleway', sans-serif;
-  font-size: 50px;
-  font-weight: 400;
-  line-height: 40px;
-  color: #D3D1C8;
-  margin: 0 auto 20px auto;
-  text-align: center;
-  width: 456px;
-  height: 49px;
+.contact-section {
+  background-color: #49545B; /* Muted slate-blue */
+  padding: 40px 8vw;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-.git-combined-text {
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+}
+
+.contact-heading {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 40px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: #D3D1C8;
+  margin: 0;
+}
+
+.contact-cta {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #D3D1C8;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.contact-cta:hover {
+  color: #FFF;
+}
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  max-width: 643px;
+  gap: 30px;
+  padding-top: 10px; /* Align visually with heading */
+}
+
+.contact-right-top, .contact-right-bottom {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
   font-size: 25px;
   line-height: 40px;
   letter-spacing: -0.02em;
   color: #D3D1C8;
-  text-align: center;
-  width: 509px;
-  height: auto;
-  margin: 0 auto 30px auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0;
+  text-align: right;
+  vertical-align: middle;
 }
-.git-cta {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 25px;
-  letter-spacing: -0.02em;
-  color: #D3D1C8;
-  width: 232px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  text-decoration: none;
-  transition: opacity 0.3s;
-}
-.git-cta:hover {
-  opacity: 0.8;
+
+@media (max-width: 900px) {
+  .contact-section { flex-direction: column; align-items: flex-start; gap: 50px; }
+  .contact-right { align-items: flex-start; text-align: left; }
 }
 
 /* ===== FOOTER SECTION ===== */
