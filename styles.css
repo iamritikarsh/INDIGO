@@ -916,7 +916,7 @@ body {
 .footer-section {
   background-color: #1a1a1a;
   border-top: 1px solid #333;
-  padding: 20px 18px;
+  padding: 5px 18px 0px 18px;
 }
 .footer-divider {
   display: none;
@@ -925,7 +925,7 @@ body {
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: auto auto;
-  gap: 40px;
+  gap: 10px;
 }
 .footer-logo {
   grid-column: 1 / 2;
@@ -937,9 +937,13 @@ body {
   width: 1057px;
   max-width: 100%;
   height: auto;
-  max-height: 353px;
+  aspect-ratio: 1057 / 249;
   object-fit: contain;
+  object-position: left bottom;
   display: block;
+  position: relative;
+  left: -5px;
+  top: 10px;
 }
 .footer-right-nav {
   grid-column: 2 / 3;
@@ -949,7 +953,7 @@ body {
 .footer-nav {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 5px;
 }
 .footer-nav a, .footer-legal a {
   color: #D3D1C8;
@@ -959,6 +963,7 @@ body {
   font-size: 14px;
   font-weight: 300;
   transition: opacity 0.3s;
+  line-height: 20px;
 }
 .footer-nav a:hover, .footer-legal a:hover {
   opacity: 0.7;
@@ -970,6 +975,6 @@ body {
   gap: 20px;
   align-items: flex-end;
   justify-content: flex-end;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
 }
 
