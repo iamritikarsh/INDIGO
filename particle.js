@@ -21,7 +21,7 @@
 
   window.initParticleText = function(container) {
     const text = 'INDIGO MULTIFAB';
-    const particleSize = 1.6;
+    const particleSize = 2.8;
     const density = 2;
     const color = '#ffffff';
     const scatter = 350;
@@ -205,7 +205,7 @@
         }
       }
 
-      const maxP = 15000;
+      const maxP = 22000;
       const stride = Math.max(1, Math.ceil(targets.length / maxP));
       const selected = targets.filter((_, i) => i % stride === 0);
 
