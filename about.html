@@ -47,7 +47,7 @@
       grid-column: 1;
       font-family: 'Geist', sans-serif;
       font-weight: 100;
-      font-size: 35px;
+      font-size: clamp(24px, 3vw, 35px);
       line-height: 1;
       letter-spacing: -0.09em;
       color: #F5F4EE;
@@ -59,10 +59,11 @@
     .about-nav {
       grid-column: 2;
       display: flex;
-      gap: 50px;
+      gap: clamp(15px, 3vw, 50px);
       justify-content: center;
       align-items: center;
       height: 100%;
+      flex-wrap: wrap;
     }
 
     .about-nav a {
@@ -118,7 +119,7 @@
     /* ===== HERO TEXT ===== */
     .about-hero-text {
       position: absolute;
-      top: 350px; /* Base top */
+      top: clamp(100px, 30vh, 350px); /* Base top */
       left: 0;    /* Base left */
       z-index: 10;
     }
@@ -127,12 +128,12 @@
       display: block;
       font-family: 'Geist', sans-serif;
       font-weight: 400;
-      font-size: 60px;
+      font-size: clamp(32px, 5vw, 60px);
       letter-spacing: 0;
       text-transform: uppercase;
       color: #FFFFFF;
       opacity: 0.6;
-      line-height: 60px;
+      line-height: 1.1;
       text-align: left;
     }
 
@@ -197,6 +198,7 @@
     /* ===== INFO SECTION ===== */
     .about-info-section {
       display: grid;
+      min-width: 0;
       grid-template-columns: 53.5% 23.25% 23.25%;
       grid-template-rows: 9vw minmax(15vw, auto) minmax(15vw, auto);
       background-color: #E2E0D7; /* Warm light grey/stone */
@@ -220,8 +222,8 @@
     .info-at {
       font-family: 'Geist', sans-serif;
       font-weight: 400;
-      font-size: 30px;
-      line-height: 60px;
+      font-size: clamp(20px, 3vw, 30px);
+      line-height: 1.1;
       letter-spacing: 0;
       vertical-align: middle;
       color: #191A17;
@@ -230,9 +232,9 @@
 
     .info-title {
       font-family: 'Geist', sans-serif;
-      font-weight: 400;
-      font-size: 70px;
-      line-height: 60px;
+      font-weight: 300;
+      font-size: clamp(32px, 5vw, 70px);
+      line-height: 1.1;
       letter-spacing: 0;
       color: #191A17;
       margin: 0;
@@ -244,8 +246,8 @@
 
     .info-desc {
       font-family: 'Raleway', sans-serif;
-      font-weight: 400;
-      font-size: 20px;
+      font-weight: 300;
+      font-size: 18px;
       line-height: 25px;
       letter-spacing: -0.05em;
       text-align: justify;
@@ -263,7 +265,7 @@
 
     .metric-text {
       font-family: 'Raleway', sans-serif;
-      font-weight: 400;
+      font-weight: 300;
       font-size: 15px;
       line-height: 20px;
       letter-spacing: -0.05em;
@@ -271,15 +273,15 @@
       vertical-align: middle;
       color: #191A17;
       margin-bottom: 0.5vw;
-      width: 181px;
+      max-width: 181px; width: 100%;
       flex-shrink: 0;
     }
 
     .metric-num {
       font-family: 'Geist', sans-serif;
-      font-weight: 400;
-      font-size: 80px;
-      line-height: 60px;
+      font-weight: 300;
+      font-size: clamp(40px, 6vw, 80px);
+      line-height: 1.1;
       letter-spacing: 0;
       text-align: right;
       vertical-align: middle;
@@ -328,7 +330,52 @@
       text-align: justify;
       vertical-align: middle;
       margin: 0;
-      margin-top: 4vw; /* Offset to match the reference positioning */
+      margin-top: 2vw; /* Offset to match the reference positioning */
+    }
+
+    
+    .info-image-wrapper {
+      width: 100%;
+      max-width: 630px;
+      aspect-ratio: 630 / 340;
+      height: auto;
+      margin-top: 2vw;
+      position: relative;
+      overflow: hidden;
+    }
+    .info-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 1;
+      display: block;
+    }
+
+    
+    .blue-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 15px;
+      max-width: 225px;
+      width: 100%;
+      min-height: 51px;
+      height: auto;
+      border: 0.5px solid #D3D1C8;
+      color: #D3D1C8;
+      text-decoration: none;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 25px;
+      letter-spacing: -0.02em;
+      margin-top: auto;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+    }
+    .blue-btn span {
+      margin-left: auto;
+      padding-right: 15px;
     }
 
     /* RESPONSIVE FOR NEW SECTION */
@@ -410,8 +457,8 @@
     .family-content h2 {
       font-family: 'Raleway', sans-serif;
       font-weight: 400;
-      font-size: 60px;
-      line-height: 60px;
+      font-size: clamp(32px, 5vw, 60px);
+      line-height: 1.1;
       letter-spacing: -0.05em;
       color: #D3D1C8;
       margin: 0 0 30px 0;
@@ -421,7 +468,7 @@
     .family-content p {
       font-family: 'Raleway', sans-serif;
       font-weight: 300;
-      font-size: 20px;
+      font-size: clamp(14px, 1.5vw, 20px);
       line-height: 25px;
       letter-spacing: -0.02em;
       vertical-align: middle;
@@ -439,7 +486,7 @@
       text-decoration: none;
       font-family: 'Raleway', sans-serif;
       font-weight: 300;
-      font-size: 20px;
+      font-size: clamp(14px, 1.5vw, 20px);
       line-height: 25px;
       letter-spacing: -0.02em;
       vertical-align: middle;
@@ -474,7 +521,7 @@
   grid-template-rows: auto auto auto auto auto auto;
   margin-bottom: 0;
   width: 100%;
-  border-bottom: 1px solid #191A17;
+    border-bottom: 1px solid #191A17;
   color: #191A17;
   background-color: #E2E0D7;
 }
@@ -488,15 +535,15 @@
   grid-row: 1 / 4;
   grid-column: 1 / 3;
   padding-left: 54px;
-  padding-top: 200px;
+  padding-top: clamp(40px, 10vw, 200px);
 }
 .hww-title-cell h2 {
-  width: 348px;
-  height: 152px;
+  width: 100%; max-width: 348px;
+  height: auto; min-height: 152px;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 60px;
+  font-size: clamp(36px, 5vw, 60px);
   line-height: 60px;
   letter-spacing: -0.05em;
   color: #191A17;
@@ -506,7 +553,7 @@
 .hww-drape-img { border-right: 1px solid #191A17; border-bottom: 1px solid #191A17;
   grid-row: 1 / 4;
   grid-column: 3 / 4;
-  height: 437px;
+  height: auto; min-height: 437px;
 }
 .hww-drape-img img {
   width: 100%;
@@ -529,7 +576,7 @@
   justify-content: center;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
   line-height: 40px;
   letter-spacing: -0.05em;
   color: #191A17;
@@ -552,7 +599,7 @@
   justify-content: center;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
   line-height: 40px;
   letter-spacing: -0.05em;
   color: #191A17;
@@ -562,14 +609,14 @@
   grid-row: 4 / 7;
   grid-column: 2 / 3;
   height: 435px;
+    border: 1px solid #191A17;
 }
 .hww-rolls-img img {
   width: 379px;
-  height: 435px;
-  object-fit: cover;
-  display: block;
-  
-}
+    height: 435px;
+    object-fit: cover;
+    display: block;
+  }
 
 .hww-deliver-label { border-bottom: 1px solid #191A17;
   grid-row: 4 / 5;
@@ -580,25 +627,23 @@
   justify-content: center;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
   line-height: 40px;
   letter-spacing: -0.05em;
   color: #191A17;
 }
 
-.hww-folded-img { border-left: 1px solid #191A17;
+.hww-folded-img { border: 1px solid #191A17;
   grid-row: 4 / 7;
   grid-column: 4 / 5;
-  height: 436px;
+  height: 435px;
 }
 .hww-folded-img img {
   width: 379px;
-  height: 435px;
-  object-fit: cover;
-  object-position: right;
-  display: block;
-  
-}
+    height: 435px;
+    object-fit: cover;
+    display: block;
+  }
 
 .hww-source-text {
   grid-row: 5 / 6;
@@ -619,12 +664,12 @@
 .hww-understand-text p,
 .hww-source-text p,
 .hww-deliver-text p {
-  width: 317px;
+  width: 100%; max-width: 317px;
   margin: 0;
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
   line-height: 20px;
   letter-spacing: -0.05em;
   text-align: justify;
@@ -643,20 +688,22 @@
 
 @media (max-width: 900px) {
   .how-we-work-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
   }
-  .hww-title-cell, .hww-drape-img, .hww-spacer-tr, .hww-understand-label, .hww-understand-text,
-  .hww-source-label, .hww-rolls-img, .hww-deliver-label, .hww-folded-img, .hww-source-text, .hww-deliver-text,
-  .hww-spacer-bl, .hww-spacer-bm { display: none;
-    grid-column: 1 / 2;
-    grid-row: auto;
+  .how-we-work-grid > div {
+    border: none !important;
+    padding: 20px !important;
+    width: 100% !important;
+    min-height: 0 !important;
   }
-  .hww-spacer-tr, .hww-spacer-bl, .hww-spacer-bm { display: none;
+  .hww-drape-img, .hww-rolls-img, .hww-folded-img {
+    height: 435px;
+  }
+  .hww-spacer-tr, .hww-spacer-bl, .hww-spacer-bm {
     display: none;
   }
 }
-
 /* ===== SPEC VIDEO ===== */
 .spec-video {
   position: absolute;
@@ -677,7 +724,7 @@
 /* ===== QUOTE SECTION ===== */
 .quote-section {
   background-color: #D9D9D9;
-  height: 508px;
+  min-height: 508px; height: auto; padding: 40px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -687,7 +734,7 @@
 
 .quote-text {
   font-family: 'Raleway', sans-serif;
-  font-size: 35px;
+  font-size: clamp(24px, 3vw, 35px);
   font-weight: 300;
   font-style: normal;
   color: #191A17;
@@ -695,8 +742,8 @@
   letter-spacing: -0.02em;
   margin: 0 auto;
   text-align: center;
-  width: 998px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 998px;
 }
 
 .hww-footer {
@@ -706,7 +753,7 @@
 .hww-footer-text {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
-  font-size: 30px;
+  font-size: clamp(20px, 3vw, 30px);
   letter-spacing: -0.02em;
   color: #191A17;
   line-height: 1.4;
@@ -763,7 +810,7 @@
     .info-block h4 {
       font-family: 'Raleway', sans-serif;
       font-weight: 300;
-      font-size: 20px;
+      font-size: clamp(14px, 1.5vw, 20px);
       line-height: 25px;
       letter-spacing: -0.05em;
       text-transform: uppercase;
@@ -774,7 +821,7 @@
     .info-block p {
       font-family: 'Raleway', sans-serif;
       font-weight: 300;
-      font-size: 20px;
+      font-size: clamp(14px, 1.5vw, 20px);
       line-height: 25px;
       letter-spacing: -0.05em;
       margin: 0;
@@ -822,7 +869,7 @@
     .wws-section {
       display: flex;
       background-color: #141414;
-      height: 627px;
+      min-height: 627px; height: auto;
     }
     
     .wws-left {
@@ -840,7 +887,7 @@
     
     .wws-title {
       font-family: 'Raleway', sans-serif;
-      font-size: 50px;
+      font-size: clamp(28px, 4vw, 50px);
       font-weight: 400;
       font-style: normal;
       color: #D3D1C8;
@@ -851,7 +898,7 @@
     
     .wws-intro {
       font-family: 'Raleway', sans-serif;
-      font-size: 25px;
+      font-size: clamp(16px, 2vw, 25px);
       font-weight: 300;
       font-style: normal;
       color: #D3D1C8;
@@ -866,7 +913,7 @@
     
     .wws-item {
       display: grid;
-      grid-template-columns: 35px 280px 1fr;
+      grid-template-columns: 35px minmax(100px, 280px) 1fr;
       align-items: center;
       padding: 24px 50px;
       border-top: 1px solid #D3D1C8;
@@ -904,8 +951,8 @@
     }
     
     .wws-right {
-      flex: 0 0 487px;
-      width: 487px;
+      flex: 1 1 487px; min-width: 0;
+      max-width: 487px; width: 100%;
       overflow: hidden;
       position: relative;
     }
@@ -935,7 +982,7 @@
     .contact-heading {
       font-family: 'Raleway', sans-serif;
       font-weight: 400;
-      font-size: 50px;
+      font-size: clamp(28px, 4vw, 50px);
       line-height: 40px;
       letter-spacing: 0;
       vertical-align: middle;
@@ -946,7 +993,7 @@
     .contact-cta {
       font-family: 'Raleway', sans-serif;
       font-weight: 400;
-      font-size: 20px;
+      font-size: clamp(14px, 1.5vw, 20px);
       line-height: 25px;
       letter-spacing: -0.02em;
       text-align: center;
@@ -977,7 +1024,7 @@
     .contact-right-top, .contact-right-bottom {
       font-family: 'Raleway', sans-serif;
       font-weight: 300;
-      font-size: 25px;
+      font-size: clamp(16px, 2vw, 25px);
       line-height: 40px;
       letter-spacing: -0.02em;
       color: #D3D1C8;
@@ -1110,7 +1157,7 @@
     <div class="info-left">
       <div class="info-title-wrap">
         <span class="info-at">At</span>
-        <h2 class="info-title">INDIGO MULTIFAB</h2>
+        <h2 class="info-title">INDIGO MULTIFAB ,</h2>
       </div>
       <p class="info-desc">
         We have spent over 25 years sourcing fabric for garment manufacturers,<br>
@@ -1119,6 +1166,9 @@
         every requirement — working mill-direct with India’s leading textile mills, and<br>
         sourcing internationally through our office in Guangzhou.
       </p>
+      <div class="info-image-wrapper">
+        <img src="scissors-denim.jpg" alt="Denim and scissors" class="info-image">
+      </div>
     </div>
 
     <!-- METRICS GRID -->
@@ -1155,7 +1205,9 @@
         made. Our mill partners develop to
         specification from yarn selection onwards, so
         a requirement is rarely turned away.
+      
       </p>
+      <a href="contact.html" class="blue-btn">DISCUSS A REQUIREMENT <span>&#x2197;</span></a>
     </div>
 
   </section>
@@ -1334,6 +1386,10 @@
 
 </body>
 </html>
+
+
+
+
 
 
 
