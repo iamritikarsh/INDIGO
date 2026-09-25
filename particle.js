@@ -1,4 +1,4 @@
-﻿// Particle Text Vanilla JS
+// Particle Text Vanilla JS
 (function() {
   const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
   const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
@@ -21,12 +21,12 @@
 
   window.initParticleText = function(container) {
     const text = 'INDIGO MULTIFAB';
-    const particleSize = 5.2;
-    const density = 4;
+    const particleSize = 1.6;
+    const density = 2;
     const color = '#ffffff';
     const scatter = 350;
-    const gatherDuration = 1600;
-    const stagger = 420;
+    const gatherDuration = 2200;
+    const stagger = 800;
     const pointerRepel = 42;
     const repelRadius = 120;
     const fontSize = 'clamp(2.5rem, 4vw, 4rem)';
@@ -138,7 +138,7 @@
         ctx.globalAlpha = alpha;
         
         if (alpha > 0.02) {
-          ctx.fillRect(Math.round(p.x - p.size/2), Math.round(p.y - p.size/2), p.size, p.size);
+          ctx.fillRect(p.x - p.size/2, p.y - p.size/2, p.size, p.size);
         }
       });
 
@@ -205,7 +205,7 @@
         }
       }
 
-      const maxP = 3000;
+      const maxP = 15000;
       const stride = Math.max(1, Math.ceil(targets.length / maxP));
       const selected = targets.filter((_, i) => i % stride === 0);
 
