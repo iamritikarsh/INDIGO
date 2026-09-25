@@ -69,9 +69,9 @@
       color: #F5F4EE;
       text-decoration: none;
       font-family: 'Geist', sans-serif;
-      font-weight: 400;
+      font-weight: 300;
       font-size: 13px;
-      letter-spacing: 0.08em;
+      letter-spacing: -0.05em;
       text-transform: uppercase;
     }
 
@@ -190,7 +190,7 @@
       }
       .about-nav a {
         font-size: 10px;
-        letter-spacing: 0.04em;
+        letter-spacing: -0.05em;
       }
     }
 
@@ -920,7 +920,7 @@
     /* ===== GET IN TOUCH SECTION ===== */
     .contact-section {
       background-color: #49545B; /* Muted slate-blue */
-      padding: 40px 8vw;
+      padding: 40px 40px;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -971,7 +971,7 @@
       text-align: right;
       max-width: 643px;
       gap: 30px;
-      padding-top: 10px; /* Align visually with heading */
+      padding-margin-bottom: -20px; /* Align visually with heading */
     }
 
     .contact-right-top, .contact-right-bottom {
@@ -989,7 +989,7 @@
     /* ===== FOOTER ===== */
     .site-footer {
       background-color: #E2E0D7;
-      padding: 10px 18px 5px 18px;
+      padding: 40px 40px 0px 40px; overflow: hidden;
     }
     .footer-content {
       display: grid;
@@ -1012,8 +1012,8 @@
       object-position: left bottom;
       display: block;
       position: relative;
-      left: -5px;
-      top: 10px;
+      left: 0;
+      margin-bottom: -20px;
     }
     .footer-right-nav {
       grid-column: 2 / 3;
@@ -1046,7 +1046,7 @@
       gap: 20px;
       align-items: flex-end;
       justify-content: flex-end;
-      padding-bottom: 0px;
+      padding-bottom: 10px;
     }
 
     /* Responsive */
@@ -1334,3 +1334,6 @@
 
 </body>
 </html>
+
+
+

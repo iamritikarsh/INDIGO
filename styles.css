@@ -68,9 +68,9 @@ body {
   color: #F5F4EE;
   text-decoration: none;
   font-family: 'Geist', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 13px;
-  letter-spacing: 0.08em;
+  letter-spacing: -0.05em;
   text-transform: uppercase;
 }
 
@@ -218,9 +218,9 @@ body {
 
 .marquee-container.border-y .marquee-text {
   font-family: 'Raleway', sans-serif;
-  font-size: 35px;
+  font-size: 28px;
   font-weight: 300;
-  line-height: 45px;
+  line-height: 36px;
   letter-spacing: -0.02em;
   color: #D3D1C8;
   padding-right: 20px;
@@ -232,9 +232,9 @@ body {
 
 .marquee-container.border-t .marquee-text {
   font-family: 'Raleway', sans-serif;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 300;
-  line-height: 35px;
+  line-height: 30px;
   letter-spacing: -0.02em;
   color: #c4c3b9;
   padding-right: 30px;
@@ -405,9 +405,9 @@ body {
 
 .mill-title {
   font-family: 'Raleway', sans-serif;
-  font-size: 35px;
+  font-size: 28px;
   font-weight: 400;
-  line-height: 40px;
+  line-height: 34px;
   letter-spacing: 0px;
   color: #D3D1C8;
   margin-bottom: 30px;
@@ -417,11 +417,13 @@ body {
 
 .mill-desc {
   font-family: 'Raleway', sans-serif;
-  font-size: 30px;
+  font-size: 18px;
   font-weight: 300;
-  line-height: 40px;
-  letter-spacing: -0.02em;
+  line-height: 1.6;
+  letter-spacing: 0px;
   color: #D3D1C8;
+  text-align: center;
+  vertical-align: middle;
 }
 
 
@@ -859,7 +861,7 @@ body {
 /* ===== GET IN TOUCH SECTION ===== */
 .contact-section {
   background-color: #49545B; /* Muted slate-blue */
-  padding: 40px 8vw;
+  padding: 40px 40px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -934,7 +936,7 @@ body {
 .footer-section {
   background-color: #1a1a1a;
   border-top: 1px solid #333;
-  padding: 5px 18px 0px 18px;
+  padding: 40px 40px 0px 40px; overflow: hidden;
 }
 .footer-divider {
   display: none;
@@ -960,8 +962,8 @@ body {
   object-position: left bottom;
   display: block;
   position: relative;
-  left: -5px;
-  top: 10px;
+  left: 0;
+  margin-bottom: -20px;
 }
 .footer-right-nav {
   grid-column: 2 / 3;
@@ -993,6 +995,8 @@ body {
   gap: 20px;
   align-items: flex-end;
   justify-content: flex-end;
-  padding-bottom: 0px;
+  padding-bottom: 10px;
 }
+
+
 

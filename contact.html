@@ -70,9 +70,9 @@
       color: #F5F4EE;
       text-decoration: none;
       font-family: 'Geist', sans-serif;
-      font-weight: 400;
+      font-weight: 300;
       font-size: 13px;
-      letter-spacing: 0.08em;
+      letter-spacing: -0.05em;
       text-transform: uppercase;
       transition: color 0.3s ease;
     }
@@ -207,7 +207,7 @@
     .input-field {
       width: 100%;
       background: transparent;
-      border: none;
+      border: 1px solid rgba(25, 26, 23, 0.4); padding: 15px 40px;
       border-bottom: 1px solid rgba(25, 26, 23, 0.2);
       padding: 10px 0;
       font-family: 'Raleway', sans-serif;
@@ -240,7 +240,7 @@
     }
 
     .type-card {
-      border: 1px solid rgba(25, 26, 23, 0.15);
+      
       padding: 40px;
       cursor: pointer;
       transition: background-color 0.3s ease, color 0.3s ease;
@@ -317,8 +317,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 40px;
-      margin-top: 150px;
-      padding-top: 80px;
+      margin-top: 80px; padding-top: 60px;
       border-top: 1px solid rgba(25, 26, 23, 0.15);
     }
 
@@ -349,7 +348,7 @@
     .footer-section {
       background-color: #1a1a1a;
       border-top: 1px solid #333;
-      padding: 5px 18px 15px 18px;
+      padding: 40px 40px 0px 40px; overflow: hidden;
     }
     .footer-divider {
       display: none;
@@ -376,7 +375,7 @@
       display: block;
       position: relative;
       left: -5px;
-      top: 10px;
+      margin-bottom: -20px;
     }
     .footer-right-nav {
       grid-column: 2 / 3;
@@ -395,7 +394,7 @@
       font-family: 'Raleway', sans-serif;
       font-size: 14px;
       font-weight: 300;
-      transition: opacity 0.3s;
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
       line-height: 20px;
     }
     .footer-nav a:hover, .footer-legal a:hover {
@@ -408,7 +407,7 @@
       gap: 20px;
       align-items: flex-end;
       justify-content: flex-end;
-      padding-bottom: 0px;
+      padding-bottom: 10px;
     }
 
     /* ===== RESPONSIVE ===== */
@@ -462,6 +461,177 @@
         grid-template-columns: 1fr;
       }
     }
+  
+    /* ===== FORM REDESIGN CSS ===== */
+    .grouped-box { border: 1px solid rgba(25, 26, 23, 0.15); padding: 40px;
+      border-radius: 2px;
+    }
+    
+    .grouped-box .input-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px 80px;
+    }
+    
+    .input-col {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .inline-options {
+      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      color: #191A17;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      align-items: center;
+      margin-margin-bottom: -20px;
+      line-height: 1.8;
+    }
+    
+    .inline-options label {
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity 0.2s, font-weight 0.2s;
+    }
+    
+    .inline-options label:hover,
+    .inline-options label.selected {
+      opacity: 1;
+      font-weight: 500;
+    }
+    
+    .inline-options input[type="radio"] {
+      display: none;
+    }
+    
+    .inline-options .dot {
+      opacity: 0.3;
+    }
+    
+    .spec-label {
+      font-family: 'Geist', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #191A17;
+      margin-bottom: 40px;
+    }
+    
+    .not-sure-opt {
+      margin-top: 25px;
+    }
+    
+    .opt-label {
+      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    .opt-label:hover { opacity: 1; }
+    
+    .radio-circle {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 1px solid rgba(25, 26, 23, 0.4);
+      display: inline-block;
+      position: relative;
+    }
+    
+    input[type="radio"]:checked + .radio-circle::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 8px;
+      height: 8px;
+      background: #191A17;
+      border-radius: 50%;
+    }
+    
+    .opt-label input[type="radio"] {
+      display: none;
+    }
+    
+    .file-upload-btn {
+      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      cursor: pointer;
+      opacity: 0.7;
+      margin-margin-bottom: -20px;
+    }
+    .file-upload-btn:hover {
+      opacity: 1;
+    }
+    
+    .submit-area {
+      text-align: center;
+      
+      padding: 0px; margin-top: -40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2px;
+    }
+    
+    .submit-btn-new {
+      background-color: transparent;
+      color: #191A17;
+      border: 1px solid rgba(25, 26, 23, 0.4); padding: 15px 40px;
+      font-family: 'Geist', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-bottom: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    }
+    .submit-btn-new:hover { background-color: #191A17; color: #E2E0D7; border-color: #191A17; }
+    
+    .submit-note {
+      font-family: 'Raleway', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      opacity: 0.7;
+    }
+    
+    /* JS logic classes for active cards */
+    .type-card.active {
+      background-color: #191A17;
+      color: #E2E0D7;
+    }
+    .type-card.active .type-card-desc {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 900px) {
+      .grouped-box .input-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .grouped-box {
+        padding: 30px 20px;
+      }
+      .submit-area {
+        padding: 0px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -487,27 +657,29 @@
       <p class="intro-desc">Tell us what you're making, and we'll come back with the right cloth, a fair price, and a timeline you can plan around. We read every enquiry personally.</p>
     </div>
 
-    <form class="contact-form-section" onsubmit="event.preventDefault(); alert('Thank you for your enquiry! We will get back to you shortly.'); this.reset();">
+    
+    <form class="contact-form-section" id="indigo-form" onsubmit="event.preventDefault(); alert('Thank you for your enquiry! We will get back to you shortly.'); this.reset(); initForm();">
       
-      <!-- 01 REQUIREMENT TYPE -->
+      <!-- 01 REQUEST TYPE -->
       <div class="form-group">
         <div class="group-header">
           <span class="group-num">01</span>
-          <span class="group-title">REQUIREMENT TYPE</span>
+          <span class="group-title">REQUEST TYPE</span>
           <div class="group-line"></div>
         </div>
-        
         <div class="type-grid">
-          <div class="type-card active" onclick="document.querySelectorAll('.type-card').forEach(c => c.classList.remove('active')); this.classList.add('active');">
+          <label class="type-card active" id="card-req-fabric">
+            <input type="radio" name="req_type" value="fabric" checked onchange="updateFormDisplay()" style="display:none;">
             <div class="type-card-radio"></div>
-            <h3 class="type-card-title">Denim Collection</h3>
-            <p class="type-card-desc">Enquire about our shirting and heavy weight denim collections, across various blends and finishes.</p>
-          </div>
-          <div class="type-card" onclick="document.querySelectorAll('.type-card').forEach(c => c.classList.remove('active')); this.classList.add('active');">
+            <h3 class="type-card-title">Fabric Enquiry</h3>
+            <p class="type-card-desc">Share a requirement and we'll come back with options, pricing and a timeline.</p>
+          </label>
+          <label class="type-card" id="card-req-sample">
+            <input type="radio" name="req_type" value="sample" onchange="updateFormDisplay()" style="display:none;">
             <div class="type-card-radio"></div>
-            <h3 class="type-card-title">Non Denim Collection</h3>
-            <p class="type-card-desc">Enquire about our linen, corduroy, jacquard, dobby and cotton fabrics for shirting, bottoms and outerwear.</p>
-          </div>
+            <h3 class="type-card-title">Sample Request</h3>
+            <p class="type-card-desc">Receive swatches or sample meters from our current range.</p>
+          </label>
         </div>
       </div>
 
@@ -518,50 +690,325 @@
           <span class="group-title">YOUR DETAILS</span>
           <div class="group-line"></div>
         </div>
-        
-        <div class="input-grid">
-          <div class="input-wrapper">
-            <label class="input-label">FULL NAME *</label>
-            <input type="text" class="input-field" required>
-          </div>
-          <div class="input-wrapper">
-            <label class="input-label">EMAIL ADDRESS *</label>
-            <input type="email" class="input-field" required>
-          </div>
-          <div class="input-wrapper">
-            <label class="input-label">PHONE NUMBER</label>
-            <input type="tel" class="input-field">
-          </div>
-          <div class="input-wrapper">
-            <label class="input-label">LOCATION / CITY</label>
-            <input type="text" class="input-field">
+        <div class="grouped-box">
+          <div class="input-grid">
+            <div class="input-col">
+              <div class="input-wrapper">
+                <label class="input-label">FULL NAME *</label>
+                <input type="text" class="input-field" required>
+              </div>
+              <div class="input-wrapper" style="margin-top: 50px;">
+                <label class="input-label">PHONE / WHATSAPP *</label>
+                <input type="tel" class="input-field" required>
+              </div>
+              <div class="input-wrapper" style="margin-top: 50px;">
+                <label class="input-label">CITY / COUNTRY</label>
+                <input type="text" class="input-field">
+              </div>
+            </div>
+            <div class="input-col">
+              <div class="input-wrapper">
+                <label class="input-label">EMAIL ADDRESS *</label>
+                <input type="email" class="input-field" required>
+              </div>
+              <div class="input-wrapper" style="margin-top: 50px;">
+                <label class="input-label">COMPANY *</label>
+                <input type="text" class="input-field" required>
+              </div>
+              <div class="input-wrapper" style="margin-top: 50px;">
+                <label class="input-label">BUSINESS TYPE</label>
+                <div class="inline-options" id="opt-biz_type">
+                  <label><input type="radio" name="biz_type" value="Manufacturer" onchange="updateInlineSelection(this)"> Manufacturer</label> <span class="dot">·</span>
+                  <label><input type="radio" name="biz_type" value="Exporter" onchange="updateInlineSelection(this)"> Exporter</label> <span class="dot">·</span>
+                  <label><input type="radio" name="biz_type" value="Buying House" onchange="updateInlineSelection(this)"> Buying House</label> <span class="dot">·</span>
+                  <label><input type="radio" name="biz_type" value="Brand" onchange="updateInlineSelection(this)"> Brand</label> <span class="dot">·</span>
+                  <label><input type="radio" name="biz_type" value="Other" onchange="updateInlineSelection(this)"> Other</label>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- 03 PROJECT DETAILS -->
+      <!-- 03 FABRIC CATEGORY -->
       <div class="form-group">
         <div class="group-header">
           <span class="group-num">03</span>
-          <span class="group-title">REQUIREMENT DETAILS</span>
+          <span class="group-title">FABRIC CATEGORY</span>
+          <div class="group-line"></div>
+        </div>
+        <div class="type-grid">
+          <label class="type-card active" id="card-cat-denim">
+            <input type="radio" name="category" value="denim" checked onchange="updateFormDisplay()" style="display:none;">
+            <div class="type-card-radio"></div>
+            <h3 class="type-card-title">Denim</h3>
+            <p class="type-card-desc">Shirting weights 4–7 oz and heavy weights 8–14 oz, in Lycra and non-Lycra.</p>
+          </label>
+          <label class="type-card" id="card-cat-nondenim">
+            <input type="radio" name="category" value="non-denim" onchange="updateFormDisplay()" style="display:none;">
+            <div class="type-card-radio"></div>
+            <h3 class="type-card-title">Non-Denim</h3>
+            <p class="type-card-desc">Linen, corduroy, jacquard, dobby and cotton in every blend.</p>
+          </label>
+        </div>
+        <div class="not-sure-opt">
+          <label class="opt-label" id="card-cat-notsure">
+            <input type="radio" name="category" value="notsure" onchange="updateFormDisplay()"> <span class="radio-circle"></span> Not sure yet — help me choose
+          </label>
+        </div>
+      </div>
+
+      <!-- 04 SPECIFICATION -->
+      <div class="form-group" id="sec-specification">
+        <div class="group-header">
+          <span class="group-num">04</span>
+          <span class="group-title">SPECIFICATION</span>
           <div class="group-line"></div>
         </div>
         
-        <div class="input-grid">
-          <div class="input-wrapper full-width">
-            <label class="input-label">FABRIC TYPE / END USE *</label>
-            <input type="text" class="input-field" placeholder="e.g., 100% Cotton Shirting, Denim for Jackets" required>
-          </div>
-          <div class="input-wrapper full-width">
-            <label class="input-label">DESCRIBE YOUR REQUIREMENTS *</label>
-            <textarea class="input-field" placeholder="Tell us about the fabric you need, quantities, and timelines." required></textarea>
+        <div id="spec-denim" class="grouped-box">
+          <div class="spec-label">Denim:</div>
+          <div class="input-grid">
+            <div class="input-col">
+              <div class="input-wrapper">
+                <label class="input-label">WEIGHT *</label>
+                <div class="inline-options">
+                  <label><input type="radio" name="d_weight" value="4-7" onchange="updateInlineSelection(this)"> 4–7 oz (shirting)</label> <span class="dot">·</span>
+                  <label><input type="radio" name="d_weight" value="8-10" onchange="updateInlineSelection(this)"> 8–10 oz</label> <span class="dot">·</span>
+                  <label><input type="radio" name="d_weight" value="10-12" onchange="updateInlineSelection(this)"> 10–12 oz</label> <span class="dot">·</span>
+                  <label><input type="radio" name="d_weight" value="12-14" onchange="updateInlineSelection(this)"> 12–14 oz</label> <span class="dot">·</span>
+                  <label><input type="radio" name="d_weight" value="Other" onchange="updateInlineSelection(this)"> Other</label>
+                </div>
+              </div>
+              <div class="input-wrapper" style="margin-top: 50px;">
+                <label class="input-label">COMPOSITION</label>
+                <div class="inline-options">
+                  <label><input type="radio" name="d_comp" value="Cotton" onchange="updateInlineSelection(this)"> Cotton</label> <span class="dot">·</span>
+                  <label><input type="radio" name="d_comp" value="Cotton Poly" onchange="updateInlineSelection(this)"> Cotton Poly</label> <span class="dot">·</span>
+                  <label><input type="radio" name="d_comp" value="Cotton Tencel" onchange="updateInlineSelection(this)"> Cotton Tencel</label> <span class="dot">·</span>
+                  <label><input type="radio" name="d_comp" value="Cotton Rayon" onchange="updateInlineSelection(this)"> Cotton Rayon</label> <span class="dot">·</span>
+                  <label><input type="radio" name="d_comp" value="Cotton Modal" onchange="updateInlineSelection(this)"> Cotton Modal</label> <span class="dot">·</span>
+                  <label><input type="radio" name="d_comp" value="Other" onchange="updateInlineSelection(this)"> Other</label>
+                </div>
+              </div>
+              <div class="input-wrapper" style="margin-top: 50px;">
+                <label class="input-label">SHADE / WASH</label>
+                <input type="text" class="input-field">
+              </div>
+            </div>
+            <div class="input-col">
+              <div class="input-wrapper">
+                <label class="input-label">STRETCH *</label>
+                <div class="inline-options">
+                  <label><input type="radio" name="d_stretch" value="Lycra" onchange="updateInlineSelection(this)"> Lycra</label> <span class="dot">·</span>
+                  <label><input type="radio" name="d_stretch" value="Non-Lycra" onchange="updateInlineSelection(this)"> Non-Lycra</label> <span class="dot">·</span>
+                  <label><input type="radio" name="d_stretch" value="Either" onchange="updateInlineSelection(this)"> Either</label>
+                </div>
+              </div>
+              <div class="input-wrapper" style="margin-top: 50px;">
+                <label class="input-label">CONSTRUCTION</label>
+                <div class="inline-options">
+                  <label><input type="radio" name="d_const" value="Twill" onchange="updateInlineSelection(this)"> Twill</label> <span class="dot">·</span>
+                  <label><input type="radio" name="d_const" value="Slub" onchange="updateInlineSelection(this)"> Slub</label> <span class="dot">·</span>
+                  <label><input type="radio" name="d_const" value="Crosshatch" onchange="updateInlineSelection(this)"> Crosshatch</label> <span class="dot">·</span>
+                  <label><input type="radio" name="d_const" value="Structured" onchange="updateInlineSelection(this)"> Structured</label> <span class="dot">·</span>
+                  <label><input type="radio" name="d_const" value="Not sure" onchange="updateInlineSelection(this)"> Not sure</label>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <button type="submit" class="submit-btn">SUBMIT REQUEST &rarr;</button>
+        <div id="spec-nondenim" class="grouped-box" style="display:none;">
+          <div class="spec-label">Non-Denim:</div>
+          <div class="input-grid">
+            <div class="input-col">
+              <div class="input-wrapper">
+                <label class="input-label">FABRIC TYPE *</label>
+                <div class="inline-options">
+                  <label><input type="radio" name="nd_type" value="Linen" onchange="updateInlineSelection(this)"> Linen</label> <span class="dot">·</span>
+                  <label><input type="radio" name="nd_type" value="Corduroy" onchange="updateInlineSelection(this)"> Corduroy</label> <span class="dot">·</span>
+                  <label><input type="radio" name="nd_type" value="Jacquard" onchange="updateInlineSelection(this)"> Jacquard</label> <span class="dot">·</span>
+                  <label><input type="radio" name="nd_type" value="Dobby" onchange="updateInlineSelection(this)"> Dobby</label> <span class="dot">·</span>
+                  <label><input type="radio" name="nd_type" value="Cotton Blends" onchange="updateInlineSelection(this)"> Cotton Blends</label> <span class="dot">·</span>
+                  <label><input type="radio" name="nd_type" value="Other" onchange="updateInlineSelection(this)"> Other</label>
+                </div>
+              </div>
+              <div class="input-wrapper" style="margin-top: 50px;">
+                <label class="input-label">WEIGHT / GSM</label>
+                <input type="text" class="input-field">
+              </div>
+            </div>
+            <div class="input-col">
+              <div class="input-wrapper">
+                <label class="input-label">COMPOSITION</label>
+                <input type="text" class="input-field">
+              </div>
+              <div class="input-wrapper" style="margin-top: 50px;">
+                <label class="input-label">FINISH</label>
+                <div class="inline-options">
+                  <label><input type="radio" name="nd_finish" value="Dyed" onchange="updateInlineSelection(this)"> Dyed</label> <span class="dot">·</span>
+                  <label><input type="radio" name="nd_finish" value="Printed" onchange="updateInlineSelection(this)"> Printed</label> <span class="dot">·</span>
+                  <label><input type="radio" name="nd_finish" value="Yarn dyed" onchange="updateInlineSelection(this)"> Yarn dyed</label> <span class="dot">·</span>
+                  <label><input type="radio" name="nd_finish" value="Greige" onchange="updateInlineSelection(this)"> Greige</label> <span class="dot">·</span>
+                  <label><input type="radio" name="nd_finish" value="Not sure" onchange="updateInlineSelection(this)"> Not sure</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
+      <!-- 05 ORDER DETAILS -->
+      <div class="form-group">
+        <div class="group-header">
+          <span class="group-num">05</span>
+          <span class="group-title">ORDER DETAILS</span>
+          <div class="group-line"></div>
+        </div>
+        
+        <div id="order-bulk" class="grouped-box">
+          <div class="input-grid">
+            <div class="input-col">
+              <div class="input-wrapper">
+                <label class="input-label">QUANTITY (METRES) *</label>
+                <input type="text" class="input-field">
+              </div>
+              <div class="input-wrapper" style="margin-top: 50px;">
+                <label class="input-label">END USE</label>
+                <div class="inline-options">
+                  <label><input type="radio" name="end_use" value="Shirts" onchange="updateInlineSelection(this)"> Shirts</label> <span class="dot">·</span>
+                  <label><input type="radio" name="end_use" value="Trousers" onchange="updateInlineSelection(this)"> Trousers</label> <span class="dot">·</span>
+                  <label><input type="radio" name="end_use" value="Jeans" onchange="updateInlineSelection(this)"> Jeans</label> <span class="dot">·</span>
+                  <label><input type="radio" name="end_use" value="Jackets" onchange="updateInlineSelection(this)"> Jackets</label> <span class="dot">·</span>
+                  <label><input type="radio" name="end_use" value="Other" onchange="updateInlineSelection(this)"> Other</label>
+                </div>
+              </div>
+            </div>
+            <div class="input-col">
+              <div class="input-wrapper">
+                <label class="input-label">PURPOSE</label>
+                <div class="inline-options">
+                  <label><input type="radio" name="purpose" value="Bulk" onchange="updateInlineSelection(this)"> Bulk production</label> <span class="dot">·</span>
+                  <label><input type="radio" name="purpose" value="Sampling" onchange="updateInlineSelection(this)"> Sampling</label> <span class="dot">·</span>
+                  <label><input type="radio" name="purpose" value="New" onchange="updateInlineSelection(this)"> New development</label>
+                </div>
+              </div>
+              <div class="input-wrapper" style="margin-top: 50px;">
+                <label class="input-label">REQUIRED BY</label>
+                <input type="text" class="input-field">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="order-sample" class="grouped-box" style="display:none;">
+          <div style="font-family:'Geist',sans-serif; font-size:12px; opacity:0.6; margin-bottom:30px; font-style:italic;">If Sample Request selected in 01, replace 05 with:</div>
+          <div class="input-grid">
+            <div class="input-col">
+              <div class="input-wrapper">
+                <label class="input-label">SAMPLE TYPE *</label>
+                <div class="inline-options">
+                  <label><input type="radio" name="sample_type" value="Swatches" onchange="updateInlineSelection(this)"> Swatches</label> <span class="dot">·</span>
+                  <label><input type="radio" name="sample_type" value="Hanger" onchange="updateInlineSelection(this)"> Sample hanger</label> <span class="dot">·</span>
+                  <label><input type="radio" name="sample_type" value="Meters" onchange="updateInlineSelection(this)"> Sample meters</label>
+                </div>
+              </div>
+            </div>
+            <div class="input-col">
+              <div class="input-wrapper">
+                <label class="input-label">DELIVERY ADDRESS *</label>
+                <textarea class="input-field"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 06 ANYTHING ELSE -->
+      <div class="form-group">
+        <div class="group-header">
+          <span class="group-num">06</span>
+          <span class="group-title">ANYTHING ELSE</span>
+          <div class="group-line"></div>
+        </div>
+        <div class="grouped-box">
+          <div class="input-wrapper full-width">
+            <label class="input-label">YOUR MESSAGE</label>
+            <textarea class="input-field"></textarea>
+          </div>
+          <div class="input-wrapper full-width" style="margin-top: 50px;">
+            <label class="input-label">ATTACH SPEC OR SWATCH (OPTIONAL)</label>
+            <div class="file-upload-btn">+ Upload file</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUBMIT AREA -->
+      <div class="submit-area">
+        <button type="submit" class="submit-btn-new">SEND REQUIREMENT &nearr;</button>
+        <div class="submit-note">We respond to every enquiry personally, usually within one working day.</div>
+      </div>
+      
+      <script>
+        function updateFormDisplay() {
+          // 01 REQUEST TYPE logic
+          const reqTypeNode = document.querySelector('input[name="req_type"]:checked');
+          const reqType = reqTypeNode ? reqTypeNode.value : 'fabric';
+          
+          document.getElementById('card-req-fabric').classList.toggle('active', reqType === 'fabric');
+          document.getElementById('card-req-sample').classList.toggle('active', reqType === 'sample');
+          
+          if (reqType === 'sample') {
+            document.getElementById('order-bulk').style.display = 'none';
+            document.getElementById('order-sample').style.display = 'block';
+          } else {
+            document.getElementById('order-bulk').style.display = 'block';
+            document.getElementById('order-sample').style.display = 'none';
+          }
+          
+          // 03 CATEGORY logic
+          const catSelect = document.querySelector('input[name="category"]:checked');
+          const cat = catSelect ? catSelect.value : 'denim';
+          
+          document.getElementById('card-cat-denim').classList.toggle('active', cat === 'denim');
+          document.getElementById('card-cat-nondenim').classList.toggle('active', cat === 'non-denim');
+          
+          const specSec = document.getElementById('sec-specification');
+          
+          if (cat === 'denim') {
+            specSec.style.display = 'flex';
+            document.getElementById('spec-denim').style.display = 'block';
+            document.getElementById('spec-nondenim').style.display = 'none';
+          } else if (cat === 'non-denim') {
+            specSec.style.display = 'flex';
+            document.getElementById('spec-denim').style.display = 'none';
+            document.getElementById('spec-nondenim').style.display = 'block';
+          } else {
+            specSec.style.display = 'none';
+          }
+        }
+        
+        function updateInlineSelection(radioInput) {
+          // Find all labels in this specific inline-options group
+          const group = radioInput.closest('.inline-options');
+          group.querySelectorAll('label').forEach(lbl => lbl.classList.remove('selected'));
+          // Add selected class to current
+          radioInput.closest('label').classList.add('selected');
+        }
+        
+        function initForm() {
+          updateFormDisplay();
+          // Reset all inline options styling
+          document.querySelectorAll('.inline-options label').forEach(lbl => lbl.classList.remove('selected'));
+        }
+        
+        // Initial setup
+        document.addEventListener('DOMContentLoaded', initForm);
+      </script>
+
     </form>
+
 
     <!-- Business Details -->
     <div class="contact-details">
@@ -622,3 +1069,12 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
