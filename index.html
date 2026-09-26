@@ -324,7 +324,7 @@
       let wAmp=0, wTgt=0, phase=0;      /* wave */
       let lastNX=0, lastNY=0;
       let isHovering=false, rafId=null, frame=0;
-      let cPlayRate = 1.0, tPlayRate = 1.0;
+      let cPlayRate = 1.0, tPlayRate = 1.0, rawVx = 0, smoothedVx = 0;
       let pLastX = -1, lastMoveT = 0;
 
       const L = (a,b,t) => a + (b-a)*t;
@@ -333,14 +333,26 @@
         frame++;
 
         const now = performance.now();
-        if (now - lastMoveT > 150) {
-          tPlayRate = L(tPlayRate, 1.0, 0.05);
+        // Zero out raw velocity if mouse hasn't moved in 50ms
+        if (now - lastMoveT > 50) {
+          rawVx = 0;
         }
+        
+        // Aggressively smooth the velocity to prevent sudden spikes
+        smoothedVx = L(smoothedVx, rawVx, 0.05);
+        
+        // Map to playback rate (gentle sensitivity)
+        tPlayRate = 1.0 + (smoothedVx * 0.4);
+        // Clamp to sensible speeds (0.15x to 2.5x) to prevent browser stutter
+        tPlayRate = Math.max(0.15, Math.min(2.5, tPlayRate));
+        
+        // Lerp current rate
         cPlayRate = L(cPlayRate, tPlayRate, 0.1);
+        
         try {
           heroVideo.playbackRate = cPlayRate;
         } catch(e) {
-          heroVideo.playbackRate = cPlayRate < 0.1 ? 0.1 : cPlayRate;
+          heroVideo.playbackRate = 1.0;
         }
 
         /* ── Tilt + scale lerp (full 60/90fps) ── */
@@ -400,9 +412,9 @@
         if (pLastX !== -1) {
           const dx = e.clientX - pLastX;
           const dt = Math.max(1, now - lastMoveT);
-          const vx = dx / dt;
-          tPlayRate = 1.0 + (vx * 2.0);
-          tPlayRate = Math.max(-2.5, Math.min(4.0, tPlayRate));
+          if (dt < 100) {
+             rawVx = dx / dt;
+          }
         }
         pLastX = e.clientX;
         lastMoveT = now;
