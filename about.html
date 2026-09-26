@@ -1021,16 +1021,24 @@
       padding-margin-bottom: -20px; /* Align visually with heading */
     }
 
-    .contact-right-top, .contact-right-bottom {
+        .contact-right-top, .contact-right-bottom {
       font-family: 'Raleway', sans-serif;
       font-weight: 300;
-      font-size: clamp(16px, 2vw, 25px);
       line-height: 40px;
-      letter-spacing: 0px;
+      letter-spacing: -0.02em;
       color: #D3D1C8;
       margin: 0;
       text-align: right;
       vertical-align: middle;
+    }
+
+    .contact-right-top {
+      font-size: 18px;
+    }
+
+    .contact-right-bottom {
+      font-size: 18px;
+      text-align: center;
     }
 
     /* ===== FOOTER ===== */
@@ -1355,11 +1363,11 @@
   <section class="contact-section">
     <div class="contact-left">
       <h2 class="contact-heading">GET IN TOUCH</h2>
-      <a href="#" class="contact-cta">START A BRIEF ↗</a>
+      <a href="#" class="contact-cta">START A BRIEF &#x2197; </a>
     </div>
     <div class="contact-right">
       <p class="contact-right-top">We find the fabric. Or we get it made.</p>
-      <p class="contact-right-bottom">Tell us what you're making, and we'll come back with the right cloth, a fair price, and a timeline you can plan around.</p>
+      <p class="contact-right-bottom">Tell us what you're making, and we'll come back with the<br>right cloth, a fair price, and a timeline you can plan around.</p>
     </div>
   </section>
 
@@ -1386,6 +1394,8 @@
 
 </body>
 </html>
+
+
 
 
 
