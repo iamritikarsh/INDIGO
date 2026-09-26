@@ -350,7 +350,9 @@
         cPlayRate = L(cPlayRate, tPlayRate, 0.1);
         
         try {
-          heroVideo.playbackRate = cPlayRate;
+          if (Math.abs(heroVideo.playbackRate - cPlayRate) > 0.02) {
+            heroVideo.playbackRate = cPlayRate;
+          }
         } catch(e) {
           heroVideo.playbackRate = 1.0;
         }
@@ -366,19 +368,7 @@
         wTgt *= isHovering ? 0.80 : 0.65;
         wAmp  = L(wAmp, wTgt, 0.16);
 
-        /* ── Phase for motion translate (compositor-thread, no cost) ── */
-        phase += 0.038 + wAmp * 0.012;
-        const mX = Math.sin(phase * 1.15) * wAmp * 0.20;
-        const mY = Math.cos(phase * 0.72) * wAmp * 0.12;
-
-        /* ── SVG: update scale every 3rd frame only (GPU cost cut by 3x) ── */
-        if (frame % 3 === 0) {
-          disp.setAttribute('scale', (wAmp * 0.65).toFixed(2));
-        }
-
-        /* ── Single composited transform — never causes layout ── */
-        wrap.style.transform =
-          'perspective(2400px) rotateX('+cRX.toFixed(4)+'deg) rotateY('+cRY.toFixed(4)+'deg) scale('+cSc.toFixed(5)+') translate3d('+mX.toFixed(3)+'px,'+mY.toFixed(3)+'px,0)';
+        wrap.style.transform = 'perspective(2400px) rotateX('+cRX.toFixed(4)+'deg) rotateY('+cRY.toFixed(4)+'deg) scale('+cSc.toFixed(5)+')';
 
         /* ── Light (update only while active) ── */
         if (isHovering || Math.abs(clx-50) > 0.2 || Math.abs(cly-50) > 0.2)
@@ -390,7 +380,6 @@
             Math.abs(cSc-1)<0.0002 && wAmp<0.04) {
           cRX=cRY=0; cSc=1; wAmp=0;
           wrap.style.transform = 'none';
-          disp.setAttribute('scale','0');
           light.style.background = '';
           rafId = null; return;
         }
