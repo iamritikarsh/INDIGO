@@ -940,6 +940,7 @@ body {
 
 .contact-right-bottom {
   font-size: 18px;
+  text-align: center;
 }
 
 @media (max-width: 900px) {

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Indigo Multifab</title>
-  <link rel="stylesheet" href="styles.css?v=70">
+  <link rel="stylesheet" href="styles.css?v=71">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Jost:wght@200;300;400;500&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
     </nav>
   </header>
 
-  <!-- ===== PAGE 1 â€” HERO ===== -->
+  <!-- ===== PAGE 1 — HERO ===== -->
   <section class="hero">
     <div class="hero-left">
 
@@ -39,7 +39,7 @@
 
     </div>
 
-    <!-- Right â€” Blue Fabric Image -->
+    <!-- Right — Blue Fabric Image -->
     <div class="hero-right">
       <video
         autoplay
@@ -54,7 +54,7 @@
     </div>
   </section>
 
-  <!-- ===== PAGE 2 â€” COLLECTIONS ===== -->
+  <!-- ===== PAGE 2 — COLLECTIONS ===== -->
 
   <!-- Intro Text -->
   <section class="intro-section">
@@ -75,7 +75,7 @@
   <section class="collections">
     <div class="collections-inner">
 
-      <!-- Card 1 â€” DENIM â€” text left, image right -->
+      <!-- Card 1 — DENIM — text left, image right -->
       <div class="collection-card">
         <div class="coll-text">
           <div class="coll-inner">
@@ -90,7 +90,7 @@
         </div>
       </div>
 
-      <!-- Card 2 â€” NON-DENIM â€” image left, text right -->
+      <!-- Card 2 — NON-DENIM — image left, text right -->
       <div class="collection-card collection-card--reversed">
         <div class="coll-img">
           <img src="cream-collection.jpg" alt="Soft cream fabric texture">
@@ -237,7 +237,7 @@
     </div>
     <div class="contact-right">
       <p class="contact-right-top">We find the fabric. Or we get it made.</p>
-      <p class="contact-right-bottom">Tell us what you're making, and we'll come back with the right cloth, a fair price, and a timeline you can plan around.</p>
+      <p class="contact-right-bottom">Tell us what you're making, and we'll come back with the<br>right cloth, a fair price, and a timeline you can plan around.</p>
     </div>
   </section>
 
@@ -276,7 +276,7 @@
 
       
 
-      /* â”€â”€â”€ SVG displacement filter â”€â”€â”€ (created once, scale driven by JS) */
+      /* ─── SVG displacement filter ─── (created once, scale driven by JS) */
       const ns = 'http://www.w3.org/2000/svg';
       const svg = document.createElementNS(ns, 'svg');
       svg.setAttribute('style', 'position:absolute;width:0;height:0;overflow:hidden');
@@ -303,12 +303,12 @@
       defs.appendChild(flt); svg.appendChild(defs);
       document.body.appendChild(svg);
 
-      /* â”€â”€â”€ DOM â”€â”€â”€ */
+      /* ─── DOM ─── */
       heroRight.style.position = 'relative';
       heroRight.style.overflow = 'hidden';
 
       const wrap = document.createElement('div');
-      /* filter applied once permanently â€” we only drive scale to 0/N, never toggle */
+      /* filter applied once permanently — we only drive scale to 0/N, never toggle */
       wrap.style.cssText = 'width:100%;height:100%;will-change:transform;backface-visibility:hidden;';
       heroRight.insertBefore(wrap, heroVideo);
       wrap.appendChild(heroVideo);
@@ -317,7 +317,7 @@
       light.style.cssText = 'position:absolute;inset:0;pointer-events:none;z-index:3;mix-blend-mode:screen;opacity:0;transition:opacity 600ms cubic-bezier(0.22,1,0.36,1)';
       heroRight.appendChild(light);
 
-      /* â”€â”€â”€ State â”€â”€â”€ */
+      /* ─── State ─── */
       let tRX=0, tRY=0, tSc=1;          /* target tilt / scale */
       let cRX=0, cRY=0, cSc=1;          /* current lerped */
       let lx=50, ly=50, clx=50, cly=50; /* light */
@@ -330,36 +330,36 @@
       function tick() {
         frame++;
 
-        /* â”€â”€ Tilt + scale lerp (full 60/90fps) â”€â”€ */
+        /* ── Tilt + scale lerp (full 60/90fps) ── */
         cRX  = L(cRX,  tRX, isHovering ? 0.045 : 0.025);
           cRY  = L(cRY,  tRY, isHovering ? 0.045 : 0.025);
           cSc  = L(cSc,  tSc, isHovering ? 0.045 : 0.025);
         clx  = L(clx,  lx,  isHovering ? 0.110 : 0.060);
         cly  = L(cly,  ly,  isHovering ? 0.110 : 0.060);
 
-        /* â”€â”€ Wave amplitude (velocity-driven, decays naturally) â”€â”€ */
+        /* ── Wave amplitude (velocity-driven, decays naturally) ── */
         wTgt *= isHovering ? 0.80 : 0.65;
         wAmp  = L(wAmp, wTgt, 0.16);
 
-        /* â”€â”€ Phase for motion translate (compositor-thread, no cost) â”€â”€ */
+        /* ── Phase for motion translate (compositor-thread, no cost) ── */
         phase += 0.038 + wAmp * 0.012;
         const mX = Math.sin(phase * 1.15) * wAmp * 0.20;
         const mY = Math.cos(phase * 0.72) * wAmp * 0.12;
 
-        /* â”€â”€ SVG: update scale every 3rd frame only (GPU cost cut by 3x) â”€â”€ */
+        /* ── SVG: update scale every 3rd frame only (GPU cost cut by 3x) ── */
         if (frame % 3 === 0) {
           disp.setAttribute('scale', (wAmp * 0.65).toFixed(2));
         }
 
-        /* â”€â”€ Single composited transform â€” never causes layout â”€â”€ */
+        /* ── Single composited transform — never causes layout ── */
         wrap.style.transform =
           'perspective(2400px) rotateX('+cRX.toFixed(4)+'deg) rotateY('+cRY.toFixed(4)+'deg) scale('+cSc.toFixed(5)+') translate3d('+mX.toFixed(3)+'px,'+mY.toFixed(3)+'px,0)';
 
-        /* â”€â”€ Light (update only while active) â”€â”€ */
+        /* ── Light (update only while active) ── */
         if (isHovering || Math.abs(clx-50) > 0.2 || Math.abs(cly-50) > 0.2)
           light.style.background = 'radial-gradient(ellipse 72% 58% at '+clx.toFixed(1)+'% '+cly.toFixed(1)+'%, rgba(210,225,255,0.10) 0%, transparent 62%)';
 
-        /* â”€â”€ Rest detection â”€â”€ */
+        /* ── Rest detection ── */
         if (!isHovering &&
             Math.abs(cRX)<0.003 && Math.abs(cRY)<0.003 &&
             Math.abs(cSc-1)<0.0002 && wAmp<0.04) {
@@ -374,7 +374,7 @@
 
       function go() { if (!rafId) rafId = requestAnimationFrame(tick); }
 
-      /* â”€â”€â”€ Events â”€â”€â”€ */
+      /* ─── Events ─── */
       heroRight.addEventListener('mouseenter', function() {
         if (mql.matches || isTouch) return;
         isHovering=true; tSc=1.08;
@@ -392,7 +392,7 @@
           tRX = -ny * 4.0 * cornerBoost;
         lx  = (e.clientX-r.left)/r.width *100;
         ly  = (e.clientY-r.top) /r.height*100;
-        /* velocity â†’ wave target (capped) */
+        /* velocity → wave target (capped) */
         const vel = Math.hypot(nx-lastNX, ny-lastNY);
         wTgt = Math.min(16, wTgt + vel*110);
         lastNX=nx; lastNY=ny;
