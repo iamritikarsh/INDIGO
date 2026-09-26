@@ -97,3 +97,5 @@ Project Link: [https://github.com/iamritikarsh/INDIGO](https://github.com/iamrit
 - Optimized hero video hover interaction for performance and smooth playback rate scaling.
 - Added seamless rAF-based looping to native video elements.
 - Polished typography and layouts across the contact and about sections.
+
+- Verified git configuration and contribution tracking.
