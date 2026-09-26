@@ -353,9 +353,13 @@
           if (Math.abs(heroVideo.playbackRate - cPlayRate) > 0.02) {
             heroVideo.playbackRate = cPlayRate;
           }
-        } catch(e) {
-          heroVideo.playbackRate = 1.0;
-        }
+          } catch(e) {
+            heroVideo.playbackRate = 1.0;
+          }
+
+          if (heroVideo.duration && heroVideo.currentTime >= heroVideo.duration - 0.12) {
+            heroVideo.currentTime = 0.05;
+          }
 
         /* ── Tilt + scale lerp (full 60/90fps) ── */
         cRX  = L(cRX,  tRX, isHovering ? 0.045 : 0.025);
