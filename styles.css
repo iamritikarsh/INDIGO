@@ -741,7 +741,7 @@ body {
 /* ===== QUOTE SECTION ===== */
 .quote-section {
   background-color: #D9D9D9;
-  height: 508px;
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
