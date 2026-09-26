@@ -123,6 +123,13 @@ body {
   display: block;
 }
 
+  /* WebGL denim fabric canvas  scoped only to hero-fabric-canvas */
+  .hero-fabric-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
 
 
 /* ===== SWATCH CARD ===== */
@@ -174,7 +181,7 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 40px;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.0;
   letter-spacing: 0px;
   color: #1a1a1a;
   margin-bottom: 10px;
@@ -465,7 +472,7 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 50px;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.0;
   color: #1C1C1C;
   margin-bottom: 30px;
   letter-spacing: 0px;
@@ -584,12 +591,13 @@ body {
 .hww-spacer-tr { border-bottom: 1px solid #D3D1C8;
   grid-row: 1 / 2;
   grid-column: 4 / 5;
+  height: 190px;
 }
 
 .hww-understand-label { border-bottom: 1px solid #D3D1C8;
   grid-row: 2 / 3;
   grid-column: 4 / 5;
-  height: 40px;
+  height: 76px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -605,14 +613,15 @@ body {
   grid-row: 3 / 4;
   grid-column: 4 / 5;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding-top: 20px;
 }
 
 .hww-source-label { border-bottom: 1px solid #D3D1C8;
   grid-row: 4 / 5;
   grid-column: 1 / 2;
-  height: 40px;
+  height: 76px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -640,7 +649,7 @@ body {
 .hww-deliver-label { border-bottom: 1px solid #D3D1C8;
   grid-row: 4 / 5;
   grid-column: 3 / 4;
-  height: 40px;
+  height: 76px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -668,16 +677,24 @@ body {
   grid-row: 5 / 6;
   grid-column: 1 / 2;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  align-self: flex-start;
+  border-bottom: 1px solid #D3D1C8;
 }
 
 .hww-deliver-text {
   grid-row: 5 / 6;
   grid-column: 3 / 4;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  align-self: flex-start;
+  border-bottom: 1px solid #D3D1C8;
 }
 
 .hww-understand-text p,
@@ -1029,3 +1046,9 @@ video::-internal-media-controls-overlay-cast-button {
     opacity: 0 !important;
     -webkit-appearance: none !important;
 }
+
+
+
+
+
+
