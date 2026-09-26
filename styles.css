@@ -755,8 +755,8 @@ body {
   font-weight: 300;
   font-style: normal;
   color: #191A17;
-  line-height: 45px;
-  letter-spacing: -0.02em;
+  line-height: 1.6;
+  letter-spacing: 0px;
   margin: 0 auto;
   text-align: center;
   width: 998px;
