@@ -14,7 +14,7 @@
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
-  padding: 100px 0 0 0;
+  padding: 0;
 }
 
 /* ===== BASE ===== */
@@ -296,7 +296,7 @@ body {
   flex: 1 1 50%;
   width: 50%;
   margin: 0;
-  padding: 100px 0 0 0;
+  padding: 0;
 }
 
 /* TEXT panel */
@@ -444,7 +444,7 @@ body {
   display: flex;
   width: 100%;
   margin: 0;
-  padding: 100px 0 0 0;
+  padding: 0;
 }
 
 .spec-left {
@@ -520,7 +520,7 @@ body {
   width: 50%;
   position: relative;
   margin: 0;
-  padding: 100px 0 0 0;
+  padding: 0;
 }
 
 .spec-video {
@@ -765,6 +765,7 @@ body {
 
 /* ===== WHO WE SERVE SECTION ===== */
 .wws-section {
+  height: 627px;
   display: flex;
   background-color: #141414;
   
@@ -775,7 +776,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 100px 0 0 0;
+  padding: 0;
 }
 
 .wws-top {
