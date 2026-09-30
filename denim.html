@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Denim Collection — Indigo Multifab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET ===== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #191A17;
+      color: #D3D1C8;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ===== HEADER ===== */
+    .denim-header {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      height: 80px;
+      padding: 0 40px;
+      background-color: #191A17;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      border-bottom: 1px solid #2e2e2b;
+    }
+    .denim-logo {
+      grid-column: 1;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 100;
+      font-size: 35px;
+      line-height: 1;
+      letter-spacing: -0.09em;
+      color: #F5F4EE;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+    .denim-nav {
+      grid-column: 2;
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    .denim-nav a {
+      color: #F5F4EE;
+      text-decoration: none;
+      font-family: 'Geist', sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+    .denim-nav a:hover { color: #e8e8e4; }
+    .denim-nav a.active { color: #F5F4EE; }
+
+    /* ===== SECTION LABEL SYSTEM ===== */
+    .dc-label {
+      font-family: 'Geist', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(211, 209, 200, 0.5);
+      display: block;
+      margin-bottom: 28px;
+    }
+
+    /* ===== SECTION 01 — HERO ===== */
+    .dc-hero {
+      margin-top: 80px;
+      height: calc(100vh - 80px);
+      min-height: 600px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+    .dc-hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      filter: contrast(1.08) saturate(1.05) brightness(1.02);
+    }
+    .dc-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: 
+        linear-gradient(to top, rgba(15,16,20,0.85) 0%, rgba(15,16,20,0.0) 60%),
+        linear-gradient(to right, rgba(15,16,20,0.7) 0%, rgba(15,16,20,0.0) 50%);
+    }
+    .dc-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 60px 80px;
+      max-width: 900px;
+    }
+    .dc-hero-label {
+      font-family: 'Geist', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(211, 209, 200, 0.6);
+      display: block;
+      margin-bottom: 24px;
+    }
+    .dc-hero-heading {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      font-size: 60px;
+      line-height: 60px;
+      letter-spacing: 0px;
+      color: #F5F4EE;
+      margin-bottom: 32px;
+    }
+    .dc-hero-sub {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: clamp(15px, 1.8vw, 18px);
+      line-height: 1.65;
+      letter-spacing: -0.01em;
+      color: rgba(211, 209, 200, 0.8);
+      max-width: 520px;
+    }
+    .dc-hero-scroll {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .dc-hero-scroll-label {
+      font-family: 'Geist', sans-serif;
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(211,209,200,0.45);
+      writing-mode: vertical-rl;
+    }
+    .dc-hero-scroll-line {
+      width: 1px;
+      height: 48px;
+      background: rgba(211,209,200,0.25);
+    }
+
+    /* ===== MARQUEE — DENIM CONSTRUCTIONS ===== */
+    .dc-marquee-container {
+      overflow: hidden;
+      white-space: nowrap;
+      background-color: #191A17;
+      padding: 22px 0;
+      border-top: 1px solid #2e2e2b;
+      border-bottom: 1px solid #2e2e2b;
+    }
+    .dc-marquee-track {
+      display: inline-flex;
+      animation: dc-marquee 45s linear infinite;
+    }
+    .dc-marquee-text {
+      display: inline-block;
+      font-family: 'Raleway', sans-serif;
+      font-size: 24px;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      color: rgba(211,209,200,0.35);
+      padding-right: 40px;
+    }
+    @keyframes dc-marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ===== SECTION 02 — DENIM PHILOSOPHY ===== */
+    .dc-philosophy {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 600px;
+      border-bottom: 1px solid #2e2e2b;
+    }
+    .dc-philosophy-text {
+      padding: 100px 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-right: 1px solid #2e2e2b;
+    }
+    .dc-philosophy-num {
+      font-family: 'Geist', sans-serif;
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      color: rgba(211,209,200,0.35);
+      margin-bottom: 50px;
+    }
+    .dc-philosophy-heading {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: clamp(36px, 4.5vw, 58px);
+      line-height: 1.0;
+      letter-spacing: -0.04em;
+      color: #F5F4EE;
+      margin-bottom: 36px;
+    }
+    .dc-philosophy-body {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 1.7;
+      letter-spacing: -0.01em;
+      color: rgba(211,209,200,0.7);
+      max-width: 400px;
+    }
+    .dc-philosophy-attrs {
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 0;
+    }
+    .dc-philosophy-attr {
+      font-family: 'Geist', sans-serif;
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(211,209,200,0.45);
+      width: 50%;
+      padding: 12px 0;
+      border-top: 1px solid #2e2e2b;
+    }
+    .dc-philosophy-img {
+      position: relative;
+      overflow: hidden;
+    }
+    .dc-philosophy-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.8s ease;
+    }
+    .dc-philosophy-img:hover img {
+      transform: scale(1.04);
+    }
+
+    /* ===== SECTION 03 — THE WEAVE ===== */
+    .dc-weave {
+      padding: 120px 60px;
+      border-bottom: 1px solid #2e2e2b;
+    }
+    .dc-weave-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 70px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #2e2e2b;
+    }
+    .dc-weave-heading {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: clamp(36px, 5vw, 68px);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      color: #F5F4EE;
+    }
+    .dc-weave-desc {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.65;
+      letter-spacing: -0.01em;
+      color: rgba(211,209,200,0.6);
+      max-width: 340px;
+      text-align: right;
+    }
+    .dc-weave-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2px;
+      height: 520px;
+    }
+    .dc-weave-img {
+      overflow: hidden;
+      position: relative;
+    }
+    .dc-weave-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.9s ease;
+    }
+    .dc-weave-img:hover img { transform: scale(1.05); }
+
+/* ===== BEYOND THE BLUE ===== */
+    .dc-beyond {
+      padding: 90px 20px 80px;
+      text-align: center;
+    }
+    .dc-beyond-heading {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 50px;
+      line-height: 40px;
+      letter-spacing: 0;
+      vertical-align: middle;
+      color: #F5F4EE;
+      margin: 0;
+    }
+
+    /* ===== SECTION 04 — WEIGHT / CHARACTER / FINISH ===== */
+    .dc-weight {
+      border-bottom: 1px solid #D3D1C8;
+      border-top: 1px solid rgba(211,209,200,0.25);
+    }
+    .dc-weight-header {
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .dc-weight-heading {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: clamp(36px, 4.5vw, 54px);
+      letter-spacing: 0em;
+      color: #F5F4EE;
+      margin: 0;
+    }
+    .dc-weight-top {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: 1px solid #D3D1C8;
+    }
+    .dc-weight-block {
+      padding: 90px 60px;
+      border-right: 1px solid #D3D1C8;
+    }
+    .dc-weight-block:last-child { border-right: none; }
+    .dc-weight-num {
+      font-family: 'Geist', sans-serif;
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      color: rgba(211,209,200,0.35);
+      margin-bottom: 20px;
+      display: block;
+    }
+    .dc-weight-name {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: clamp(22px, 2.5vw, 30px);
+      letter-spacing: -0.03em;
+      color: #F5F4EE;
+      margin-bottom: 16px;
+    }
+    .dc-weight-desc {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.65;
+      color: rgba(211,209,200,0.55);
+    }
+    .dc-weight-imgs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      height: 380px;
+      gap: 2px;
+    }
+    .dc-weight-img {
+      overflow: hidden;
+      position: relative;
+    }
+    .dc-weight-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ===== SECTION 05 — COLLECTION GALLERY ===== */
+    .dc-gallery {
+      background-color: #D3D1C8;
+      padding: 110px 60px;
+      border-bottom: 1px solid #2e2e2b;
+    }
+    .dc-gallery-header {
+      margin-bottom: 70px;
+    }
+    .dc-gallery-heading {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: clamp(36px, 4.5vw, 54px);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      color: #191A17;
+      margin-bottom: 20px;
+    }
+    .dc-gallery-sub {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      letter-spacing: -0.01em;
+      color: rgba(211,209,200,0.5);
+    }
+    /* Asymmetric editorial grid */
+    
+
+    /* ===== EDITORIAL TEXT BREAK ===== */
+    .dc-text-break {
+      padding: 110px 20px 90px;
+      text-align: center;
+      border-bottom: 1px solid rgba(211, 209, 200, 0.2);
+    }
+    .dc-text-break-line {
+      font-family: 'Raleway', sans-serif;
+      font-size: 22px;
+      font-weight: 300;
+      color: #b8b8b4;
+      line-height: 1.6;
+      letter-spacing: 0px;
+      display: block;
+    }
+    .dc-text-break-line + .dc-text-break-line {
+      margin-top: 0px;
+    }
+
+
+    /* ===== INTERACTIVE COLLECTION ===== */
+    .dc-interactive-collection {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 0 40px 120px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    @media (min-width: 992px) {
+      .dc-interactive-collection {
+        grid-template-columns: 55% 45%;
+        gap: 80px;
+        align-items: center;
+      }
+    }
+    .dc-ic-visual {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .dc-ic-main-img-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 550px;
+      overflow: hidden;
+      cursor: zoom-in;
+      aspect-ratio: 4 / 5;
+    }
+    .dc-ic-main-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.4s ease-in-out;
+    }
+    .dc-ic-zoom-hint {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(25, 26, 23, 0.7);
+      color: #D3D1C8;
+      font-family: 'Geist', sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      padding: 8px 12px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+    .dc-ic-main-img-wrapper:hover .dc-ic-zoom-hint {
+      opacity: 1;
+    }
+    .dc-ic-content {
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+    }
+    .dc-ic-info {
+      transition: opacity 0.4s ease-in-out;
+    }
+    .dc-ic-num {
+      font-family: 'Geist', sans-serif;
+      font-size: 11px;
+      color: #4a4b49;
+      display: block;
+      margin-bottom: 6px;
+      letter-spacing: 0.05em;
+    }
+    .dc-ic-title {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 32px;
+      color: #191A17;
+      margin: 0 0 16px 0;
+      line-height: 1.2;
+    }
+    .dc-ic-desc {
+      font-family: 'Raleway', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #4a4b49;
+      margin: 0;
+      max-width: 420px;
+    }
+    .dc-ic-thumbnails {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .dc-ic-thumb {
+      width: 64px;
+      height: 64px;
+      padding: 0;
+      border: 1px solid transparent;
+      background: none;
+      cursor: pointer;
+      overflow: hidden;
+      opacity: 0.4;
+      transition: all 0.3s ease;
+    }
+    .dc-ic-thumb:hover {
+      opacity: 0.8;
+    }
+    .dc-ic-thumb.active {
+      opacity: 1;
+      border-color: #191A17;
+    }
+    .dc-ic-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    
+    /* Lightbox */
+    .dc-lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 16, 20, 0.98);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      padding: 40px;
+    }
+    .dc-lightbox.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .dc-lightbox-img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+    .dc-lightbox-close {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      background: none;
+      border: none;
+      color: #D3D1C8;
+      font-family: 'Geist', sans-serif;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 10000;
+    }
+
+
+    /* ===== EDITORIAL STATEMENT ===== */
+    .dc-editorial-statement {
+      padding: 120px 60px;
+      border-bottom: 1px solid #D3D1C8;
+    }
+    .dc-editorial-content {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .dc-editorial-heading {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      font-size: 32px;
+      color: #F5F4EE;
+      margin: 0 0 30px 0;
+      letter-spacing: 0;
+    }
+    .dc-editorial-body {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 1.6;
+      color: #b8b8b4;
+      margin: 0;
+    }
+
+    /* ===== SECTION 07 — THE PROCESS ===== */
+    .dc-process {
+      border-bottom: 1px solid #D3D1C8;
+    }
+    .dc-process-top {
+      padding: 130px 60px 90px;
+      border-bottom: 1px solid #D3D1C8;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    .dc-process-heading {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: clamp(38px, 5vw, 64px);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      color: #F5F4EE;
+      margin-top: 15px;
+    }
+    .dc-process-intro {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 1.6;
+      color: rgba(211,209,200,0.6);
+      max-width: 380px;
+      text-align: right;
+    }
+    .dc-process-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .dc-process-step {
+      padding: 90px 60px 110px;
+      border-right: 1px solid #D3D1C8;
+      display: flex;
+      flex-direction: column;
+    }
+    .dc-process-step:last-child { border-right: none; }
+    .dc-step-label {
+      font-family: 'Geist', sans-serif;
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(211,209,200,0.4);
+      margin-bottom: 50px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #D3D1C8;
+      display: block;
+    }
+    .dc-step-heading {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      letter-spacing: -0.02em;
+      color: #F5F4EE;
+      margin: 0 0 20px 0;
+    }
+    .dc-step-body {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.7;
+      color: rgba(211,209,200,0.5);
+      margin: 0;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="denim-header">
+    <a href="index.html" class="denim-logo">IMF</a>
+    <nav class="denim-nav">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="denim.html" class="active" target="_blank" rel="noopener noreferrer">DENIM COLLECTION</a>
+      <a href="#">NON DENIM COLLECTION</a>
+      <a href="contact.html">CONTACT US</a>
+    </nav>
+  </header>
+
+  <!-- ===== 01 — HERO ===== -->
+  <section class="dc-hero">
+    <img class="dc-hero-bg" src="denim-stack-4k.jpg" alt="Denim fabric texture">
+    <div class="dc-hero-overlay"></div>
+    <div class="dc-hero-content">
+      <h1 class="dc-hero-heading">DENIM,<br>WOVEN WITH<br>CHARACTER.</h1>
+    </div>
+  </section>
+
+  <!-- ===== EDITORIAL TEXT BREAK ===== -->
+  <section class="dc-text-break">
+    <span class="dc-text-break-line">Every shade begins with the weave.</span>
+    <span class="dc-text-break-line">Every weave creates its own character.</span>
+    <span class="dc-text-break-line">Every detail changes the final cloth.</span>
+  </section>
+
+  <!-- ===== 04 - WEIGHT / CHARACTER / FINISH ===== -->
+  <section class="dc-weight">
+    <div class="dc-weight-header">
+      <h2 class="dc-weight-heading">BEYOND THE BLUE</h2>
+    </div>
+    <div class="dc-weight-top">
+      <div class="dc-weight-block">
+        <span class="dc-weight-num">01</span>
+        <h3 class="dc-weight-name">LIGHTWEIGHT</h3>
+        <p class="dc-weight-desc">Soft and fluid, with a finer weave and gentle drape suited to lighter garment constructions.</p>
+      </div>
+      <div class="dc-weight-block">
+        <span class="dc-weight-num">02</span>
+        <h3 class="dc-weight-name">MIDWEIGHT</h3>
+        <p class="dc-weight-desc">A balanced denim construction with familiar structure, depth and everyday versatility.</p>
+      </div>
+      <div class="dc-weight-block">
+        <span class="dc-weight-num">03</span>
+        <h3 class="dc-weight-name">HEAVYWEIGHT</h3>
+        <p class="dc-weight-desc">Dense and substantial, with a firmer handle, pronounced texture and stronger character.</p>
+      </div>
+    </div>
+    <div class="dc-weight-imgs">
+      <div class="dc-weight-img"><img src="weight-light.jpg" alt="Light denim"></div>
+      <div class="dc-weight-img"><img src="weight-mid.jpg" alt="Mid denim"></div>
+      <div class="dc-weight-img"><img src="weight-heavy.jpg" alt="Heavy denim"></div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 05 - COLLECTION GALLERY ===== -->
+  <section class="dc-gallery">
+    <div class="dc-interactive-collection">
+      <div class="dc-ic-visual">
+        <div class="dc-gallery-header" style="margin-bottom: 60px;">
+          <h2 class="dc-gallery-heading" style="text-align: left; margin: 0;">DENIM, IN<br>EVERY EXPRESSION.</h2>
+        </div>
+        <div class="dc-ic-main-img-wrapper" onclick="openLightbox()">
+          <img src="fabric_cotton.jpg" alt="Fabric" class="dc-ic-main-img" id="ic-main-img">
+          <div class="dc-ic-zoom-hint">CLICK TO ENLARGE</div>
+        </div>
+      </div>
+
+      <div class="dc-ic-content">
+        <div class="dc-ic-info" id="ic-info-box">
+          <span class="dc-ic-num" id="ic-num">01</span>
+          <h3 class="dc-ic-title" id="ic-title">100% COTTON</h3>
+          <p class="dc-ic-desc" id="ic-desc">Pure cotton denim with a natural hand feel and distinctive woven character, suited to classic and structured denim constructions.</p>
+        </div>
+
+        <div class="dc-ic-thumbnails" style="margin-top: 40px;">
+          <div class="dc-ic-thumb active" onclick="selectFabric(0)"><img src="fabric_cotton.jpg" alt="01"></div>
+          <div class="dc-ic-thumb" onclick="selectFabric(1)"><img src="fabric_stretch.jpg" alt="02"></div>
+          <div class="dc-ic-thumb" onclick="selectFabric(2)"><img src="fabric_poly.jpg" alt="03"></div>
+          <div class="dc-ic-thumb" onclick="selectFabric(3)"><img src="fabric_tencel.jpg" alt="04"></div>
+          <div class="dc-ic-thumb" onclick="selectFabric(4)"><img src="fabric_viscose.jpg" alt="05"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; padding: 120px 20px 40px;">
+      <p style="font-family: 'Raleway', sans-serif; font-weight: 300; font-size: clamp(18px, 1.8vw, 22px); color: #191A17; line-height: 1.6; margin: 0 auto; max-width: 1000px;">
+        Beyond the shade, denim is defined by texture, weight and character.<br>We look closer to understand what each fabric can become.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section class="dc-process">
+    <div class="dc-process-top">
+      <h2 class="dc-process-heading">HOW WE<br>WORK IN DENIM.</h2>
+      <p class="dc-process-intro">We don't present a fixed catalogue. We begin with the requirement and work backward to the right construction.</p>
+    </div>
+    
+    <div class="dc-process-steps">
+      <div class="dc-process-step">
+        <span class="dc-step-label">01 / UNDERSTAND</span>
+        <h3 class="dc-step-heading">The Requirement</h3>
+        <p class="dc-step-body">Weight, construction, composition, wash, finish — we review every variable before sourcing begins. The right denim starts with a precise understanding of the application.</p>
+      </div>
+      <div class="dc-process-step">
+        <span class="dc-step-label">02 / SOURCE</span>
+        <h3 class="dc-step-heading">The Right Mill</h3>
+        <p class="dc-step-body">We work through our mill network across India and China to find the best available option. When nothing existing fits, we develop it directly with our mill partners.</p>
+      </div>
+      <div class="dc-process-step">
+        <span class="dc-step-label">03 / DELIVER</span>
+        <h3 class="dc-step-heading">Through to Production</h3>
+        <p class="dc-step-body">From sampling through to bulk production, we coordinate supply and manage delivery. Ready stock is available for common denim constructions and weights.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="dc-lightbox" id="ic-lightbox">
+    <button class="dc-lightbox-close" onclick="closeLightbox()">&#x2715;</button>
+    <img src="" alt="Zoomed fabric" class="dc-lightbox-img" id="ic-lightbox-img">
+  </div>
+
+    <script>
+    const fabrics = [
+      {
+        img: 'fabric_cotton.jpg',
+        num: '01',
+        title: '100% COTTON',
+        desc: 'Pure cotton denim with a natural hand feel and distinctive woven character, suited to classic and structured denim constructions.'
+      },
+      {
+        img: 'fabric_stretch.jpg',
+        num: '02',
+        title: 'COTTON ELASTANE / LYCRA / SPANDEX',
+        desc: 'Woven with advanced stretch yarns for superior recovery and flexibility, allowing for a close fit without compromising authentic denim character.'
+      },
+      {
+        img: 'fabric_poly.jpg',
+        num: '03',
+        title: 'COTTON POLYESTER',
+        desc: 'A resilient blend designed for increased durability and reduced shrinkage, maintaining a smooth, consistent finish over time.'
+      },
+      {
+        img: 'fabric_tencel.jpg',
+        num: '04',
+        title: 'COTTON TENCEL',
+        desc: 'Incorporating sustainable Tencel fibers for exceptional softness, fluid drape, and subtle luster, perfect for lightweight shirting and relaxed fits.'
+      },
+      {
+        img: 'fabric_viscose.jpg',
+        num: '05',
+        title: 'VISCOSE COTTON',
+        desc: 'A refined blend offering a silk-like hand and breathable comfort, bringing a luxurious touch and elevated drape to premium denim collections.'
+      }
+    ];
+
+    let currentIdx = 0;
+    const mainImg = document.getElementById('ic-main-img');
+    const infoBox = document.getElementById('ic-info-box');
+    const num = document.getElementById('ic-num');
+    const title = document.getElementById('ic-title');
+    const desc = document.getElementById('ic-desc');
+    const thumbs = document.querySelectorAll('.dc-ic-thumb');
+    let isTransitioning = false;
+
+    function selectFabric(idx) {
+      if(idx === currentIdx || isTransitioning) return;
+      isTransitioning = true;
+      currentIdx = idx;
+      
+      const data = fabrics[idx];
+      
+      thumbs.forEach((t, i) => {
+        if(i === idx) t.classList.add('active');
+        else t.classList.remove('active');
+      });
+      
+      mainImg.style.opacity = 0;
+      infoBox.style.opacity = 0;
+      
+      setTimeout(() => {
+        mainImg.src = data.img;
+        num.textContent = data.num;
+        title.innerHTML = data.title;
+        desc.textContent = data.desc;
+        
+        mainImg.style.opacity = 1;
+        infoBox.style.opacity = 1;
+        
+        setTimeout(() => {
+          isTransitioning = false;
+        }, 400);
+      }, 400); 
+    }
+
+    function openLightbox() {
+      const lb = document.getElementById('ic-lightbox');
+      const lbImg = document.getElementById('ic-lightbox-img');
+      lbImg.src = fabrics[currentIdx].img;
+      lb.classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('ic-lightbox').classList.remove('active');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>
