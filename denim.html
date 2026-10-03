@@ -865,6 +865,163 @@
     </div>
   </section>
 
+  <!-- ===== 05 - SHADES ===== -->
+  <section id="shades" class="shades" aria-label="Shades">
+
+    <div class="shades-grid">
+      <div class="shades-left">
+        <div class="shades-frame">
+          <img class="shades-img" src="images/shades/03-dark-indigo.jpg?v=2" width="1600" height="2000" alt="Dark indigo denim fabric">
+        </div>
+        <div class="shades-cap">
+          <b class="shades-name">Dark indigo</b>
+        </div>
+      </div>
+
+      <div class="shades-right">
+        <h3 class="shades-h">SHADES</h3>
+        <p class="shades-sub">Wide variety of shades including colours</p>
+        <div class="shades-list" role="group" aria-label="Shades">
+          <button type="button" class="shades-row" data-name="IBST" data-img="images/shades/01-ibst.jpg?v=2" aria-pressed="false"><span class="shades-mono">01</span><span class="shades-rname">IBST</span><span class="shades-chip"><i style="background:#26397b"></i></span></button>
+          <button type="button" class="shades-row" data-name="SBIT" data-img="images/shades/02-sbit.jpg?v=2" aria-pressed="false"><span class="shades-mono">02</span><span class="shades-rname">SBIT</span><span class="shades-chip"><i style="background:#1b2b66"></i></span></button>
+          <button type="button" class="shades-row is-on" data-name="Dark indigo" data-img="images/shades/03-dark-indigo.jpg?v=2" aria-pressed="true"><span class="shades-mono">03</span><span class="shades-rname">Dark indigo</span><span class="shades-chip"><i style="background:#10183f"></i></span></button>
+          <button type="button" class="shades-row" data-name="Luster jet black" data-img="images/shades/04-luster-jet-black.jpg?v=2" aria-pressed="false"><span class="shades-mono">04</span><span class="shades-rname">Luster jet black</span><span class="shades-chip"><i style="background:#0b0b0e"></i></span></button>
+          <button type="button" class="shades-row" data-name="Red bottom" data-img="images/shades/05-red-bottom.jpg?v=2" aria-pressed="false"><span class="shades-mono">05</span><span class="shades-rname">Red bottom</span><span class="shades-chip"><i style="background:#a8281f"></i></span></button>
+          <button type="button" class="shades-row" data-name="Red top" data-img="images/shades/06-red-top.jpg?v=2" aria-pressed="false"><span class="shades-mono">06</span><span class="shades-rname">Red top</span><span class="shades-chip"><i style="background:#c4372b"></i></span></button>
+          <button type="button" class="shades-row" data-name="Khaki bottom and top" data-img="images/shades/07-khaki-bottom-top.jpg?v=2" aria-pressed="false"><span class="shades-mono">07</span><span class="shades-rname">Khaki bottom and top</span><span class="shades-chip"><i style="background:#b49e72"></i></span></button>
+          <button type="button" class="shades-row" data-name="Indigo up to 5%" data-img="images/shades/08-indigo-upto-5.jpg?v=2" aria-pressed="false"><span class="shades-mono">08</span><span class="shades-rname">Indigo up to 5%</span><span class="shades-chip"><i style="background:#93a4cf"></i></span></button>
+          <button type="button" class="shades-row" data-name="Green bottom and top" data-img="images/shades/09-green-bottom-top.jpg?v=2" aria-pressed="false"><span class="shades-mono">09</span><span class="shades-rname">Green bottom and top</span><span class="shades-chip"><i style="background:#4d6b47"></i></span></button>
+          <button type="button" class="shades-row" data-name="Sandwich" data-img="images/shades/10-sandwich.jpg?v=2" aria-pressed="false"><span class="shades-mono">10</span><span class="shades-rname">Sandwich</span><span class="shades-chip"><i style="background:#1f2f6b"></i><i style="background:#e6e2d6"></i><i style="background:#1f2f6b"></i></span></button>
+          <button type="button" class="shades-row" data-name="Multi-coloured shades" data-img="images/shades/11-multi-coloured.jpg?v=2" aria-pressed="false"><span class="shades-mono">11</span><span class="shades-rname">Multi-coloured shades</span><span class="shades-chip"><i style="background:#a8281f"></i><i style="background:#b49e72"></i><i style="background:#4d6b47"></i><i style="background:#26397b"></i><i style="background:#93a4cf"></i></span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+  /* SHADES section (new) */
+  .shades{
+    --sh-bg:#000000; --sh-ink:#e9ecf7; --sh-mute:#8f97b8; --sh-line:rgba(233,236,247,.2);
+    --sh-pad-x:clamp(24px,8vw,150px);
+    background:var(--sh-bg); color:var(--sh-ink); font-family:inherit; font-weight:300;
+    padding:clamp(64px,10vh,140px) var(--sh-pad-x) clamp(72px,11vh,150px);
+    position:relative; z-index:10;
+  }
+  .shades-mono{ font-family:var(--font-mono, ui-monospace, "SF Mono", Menlo, Consolas, monospace);
+    font-size:11px; letter-spacing:.08em; color:var(--sh-mute); font-weight:400; }
+  .shades-top{ display:flex; justify-content:space-between; border-top:1px solid var(--sh-line);
+    padding-top:12px; margin-bottom:clamp(28px,5vh,56px); }
+  .shades-grid{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);
+    gap:clamp(24px,3.2vw,60px); align-items:start; }
+  .shades-frame{
+    --zw:1000px; position:relative; aspect-ratio:4/5; overflow:hidden;
+    width:min(100%, calc((100dvh - var(--nav-h,90px) - 150px) * .8));
+    border:1px solid var(--sh-line);
+  }
+  .shades-img{ display:block; width:100%; height:100%; object-fit:cover; transition:opacity .25s; }
+  .shades-loupe{
+    position:absolute; right:16px; bottom:16px; width:clamp(104px,9vw,168px); aspect-ratio:1;
+    border-radius:50%; overflow:hidden; background:rgba(13,16,32,.38);
+    box-shadow:0 0 0 2px rgba(13,16,32,.55);
+  }
+  .shades-zoom{ position:absolute; inset:0; border-radius:50%; opacity:.82; transition:opacity .25s;
+    background-repeat:no-repeat; background-position:50% 50%; background-size:var(--zw) auto; }
+  .shades-loupe::after{ content:""; position:absolute; inset:0; border-radius:50%;
+    background:rgba(255,255,255,.07); box-shadow:inset 0 0 0 1.5px rgba(233,236,247,.9); }
+  .shades-frame.is-swap .shades-img,
+  .shades-frame.is-swap .shades-zoom{ opacity:0; }
+  .shades-cap{ display:flex; justify-content:space-between; align-items:baseline;
+    width:min(100%, calc((100dvh - var(--nav-h,90px) - 150px) * .8));
+    margin-top:12px; padding-top:10px; border-top:1px solid var(--sh-line); }
+  .shades-name{ font-weight:300; font-size:clamp(26px,2.2vw,44px); letter-spacing:-.02em; text-transform:uppercase; }
+  .shades-h{ margin:8px 0 8px; font-family:'Raleway', sans-serif; font-weight:400; font-style:normal; font-size:60px; line-height:60px; letter-spacing:-0.05em; color:var(--sh-ink); }
+  .shades-sub{ margin:0 0 clamp(24px,4vh,40px); font-family:'Raleway', sans-serif; font-weight:300; font-size:clamp(16px,1.5vw,20px); line-height:1.2; letter-spacing:-0.02em; color:var(--sh-mute); }
+  .shades-row{
+    position:relative; display:grid; grid-template-columns:clamp(30px,3vw,48px) 1fr auto; align-items:center; gap:10px;
+    width:100%; padding:clamp(9px,1.2vh,14px) 0; background:none; border:0; border-top:1px solid var(--sh-line);
+    border-radius:0; color:var(--sh-ink); text-align:left; font:inherit; cursor:pointer;
+    opacity:.45; transition:opacity .2s, padding .25s;
+  }
+  .shades-row:hover,.shades-row:focus-visible,.shades-row.is-on{ opacity:1; }
+  .shades-row.is-on{ padding-left:14px; }
+  .shades-row::before{ content:""; position:absolute; left:0; top:50%; width:0; height:1px; background:var(--sh-ink); transition:width .25s; }
+  .shades-row.is-on::before{ width:8px; }
+  .shades-row:focus-visible{ outline:1px solid var(--sh-mute); outline-offset:2px; }
+  .shades-rname{ font-size:clamp(14px,1.05vw,19px); text-transform:uppercase; letter-spacing:-.01em; }
+  .shades-chip{ display:flex; width:22px; height:12px; border:1px solid var(--sh-line); }
+  .shades-chip i{ flex:1; }
+  @media (max-width:700px){
+    .shades-grid{ grid-template-columns:1fr; }
+    .shades-frame,.shades-cap{ width:100%; }
+    .shades-loupe{ width:96px; right:12px; bottom:12px; }
+  }
+  @media (prefers-reduced-motion:reduce){
+    .shades-img,.shades-zoom,.shades-row,.shades-row::before{ transition:none; }
+  }
+  </style>
+
+  <script>
+  (() => {
+    const root = document.getElementById('shades');
+    if (!root) return;
+    const frame = root.querySelector('.shades-frame');
+    const img   = root.querySelector('.shades-img');
+    
+    const nameEl = root.querySelector('.shades-name');
+    
+    const rows = [...root.querySelectorAll('.shades-row')];
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    const cache = new Map();
+    let cur = rows.findIndex((r) => r.classList.contains('is-on'));
+    let token = 0;
+
+    const load = (src) => {
+      if (!cache.has(src)) {
+        cache.set(src, new Promise((res) => {
+          const i = new Image();
+          i.onload = i.onerror = () => res(src);
+          i.src = src;
+        }));
+      }
+      return cache.get(src);
+    };
+
+    
+
+    async function show(i) {
+      if (i === cur) return;
+      cur = i;
+      const mine = ++token;
+      rows.forEach((r, k) => {
+        r.classList.toggle('is-on', k === i);
+        r.setAttribute('aria-pressed', String(k === i));
+      });
+      const r = rows[i], src = r.dataset.img;
+      if (!reduce) frame.classList.add('is-swap');
+      await Promise.all([load(src), reduce ? 0 : new Promise((ok) => setTimeout(ok, 170))]);
+      if (mine !== token) return;
+      img.src = src;
+      img.alt = r.dataset.name + ' denim fabric';
+      
+      nameEl.textContent = r.dataset.name;
+      
+      frame.classList.remove('is-swap');
+    }
+
+    rows.forEach((r, k) => {
+      r.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') show(k); });
+      r.addEventListener('click', () => show(k));
+      r.addEventListener('focus', () => show(k));
+    });
+
+    
+    
+    
+    (window.requestIdleCallback || ((f) => setTimeout(f, 800)))(() => rows.forEach((r) => load(r.dataset.img)));
+  })();
+  </script>
+
   <script>
   (() => {
     const sec = document.getElementById('comp');
@@ -944,6 +1101,10 @@
       track.style.height = (vh - navH) + (N - 1 + HOLD) * vh * VH_PER_STEP + 'px';
       trackTop = track.getBoundingClientRect().top + scrollY;
       span = track.offsetHeight - stage.offsetHeight;
+
+      const gap = Math.max(0, (vh - navH) - ((N - 1) * pile + H + 80));
+      const shadesSec = document.getElementById('shades');
+      if (shadesSec) shadesSec.style.marginTop = -gap + 'px';
     }
 
     function render(t) {
