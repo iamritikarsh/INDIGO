@@ -892,6 +892,36 @@
     </div>
   </section>
 
+  <!-- ===== 06 - WEAVES ===== -->
+  <section id="weaves" class="weaves" aria-label="Weaves">
+    <div class="weaves-threads" aria-hidden="true">
+      <i style="--c:#a8281f;--h:44px"></i><i style="--c:#b49e72;--h:39px"></i><i style="--c:#4d6b47;--h:34px"></i><i style="--c:#26397b;--h:29px"></i><i style="--c:#93a4cf;--h:24px"></i>
+    </div>
+    <div class="weaves-rule"></div>
+    <div class="weaves-head">
+      <h3 class="weaves-h">WEAVES</h3>
+      <hr class="weaves-line">
+      <span class="weaves-dot" aria-hidden="true"></span>
+    </div>
+    <p class="weaves-sub">The way a thread crosses decides how a cloth feels: its texture, its drape and its strength, all woven in.</p>
+
+    <div class="weaves-acc">
+      <div class="weaves-pn" role="button" tabindex="0" data-k="0" data-name="Plain" aria-pressed="false"><img class="weaves-ph" src="images/weaves/01-plain.jpg" width="2000" height="1600" alt="Macro photograph of plain weave denim cloth" loading="lazy" decoding="async"><span class="weaves-vt">Plain</span><div class="weaves-ft"><div><b>Plain</b><span>Simple 1x1 interlacement</span></div></div></div>
+      <div class="weaves-pn" role="button" tabindex="0" data-k="0" data-th="1" data-name="Rib stop" aria-pressed="false"><img class="weaves-ph" src="images/weaves/02-rib-stop.jpg" width="2000" height="1600" alt="Macro photograph of rib stop weave cloth" loading="lazy" decoding="async"><span class="weaves-vt">Rib stop</span><div class="weaves-ft"><div><b>Rib stop</b><span>Reinforced grid structure</span></div></div></div>
+      <div class="weaves-pn" role="button" tabindex="0" data-k="1" data-name="Oxford" aria-pressed="false"><img class="weaves-ph" src="images/weaves/03-oxford.jpg" width="2000" height="1600" alt="Macro photograph of oxford weave cloth" loading="lazy" decoding="async"><span class="weaves-vt">Oxford</span><div class="weaves-ft"><div><b>Oxford</b><span>Paired warp and weft yarns</span></div></div></div>
+      <div class="weaves-pn" role="button" tabindex="0" data-k="2" data-name="Matty" aria-pressed="false"><img class="weaves-ph" src="images/weaves/04-matty.jpg" width="2000" height="1600" alt="Macro photograph of matty basket weave cloth" loading="lazy" decoding="async"><span class="weaves-vt">Matty</span><div class="weaves-ft"><div><b>Matty</b><span>2x2 block basket weave</span></div></div></div>
+
+      <div class="weaves-pn is-gap is-on" role="button" tabindex="0" data-k="3" data-name="Twill" aria-pressed="true"><img class="weaves-ph" src="images/weaves/05-twill.jpg" width="2000" height="1600" alt="Macro photograph of twill weave denim cloth" loading="lazy" decoding="async"><span class="weaves-vt">Twill</span><div class="weaves-ft"><div><b>Twill</b><span>Classic diagonal ridges</span></div></div></div>
+      <div class="weaves-pn" role="button" tabindex="0" data-k="4" data-name="Satin" aria-pressed="false"><img class="weaves-ph" src="images/weaves/06-satin.jpg" width="2000" height="1600" alt="Macro photograph of satin weave cloth" loading="lazy" decoding="async"><span class="weaves-vt">Satin</span><div class="weaves-ft"><div><b>Satin</b><span>Smooth lustrous surface</span></div></div></div>
+      <div class="weaves-pn" role="button" tabindex="0" data-k="5" data-name="Dobby" aria-pressed="false"><img class="weaves-ph" src="images/weaves/07-dobby.jpg" width="2000" height="1600" alt="Macro photograph of dobby weave cloth" loading="lazy" decoding="async"><span class="weaves-vt">Dobby</span><div class="weaves-ft"><div><b>Dobby</b><span>Small repeating diamonds</span></div></div></div>
+
+      <div class="weaves-pn is-gap" role="button" tabindex="0" data-k="6" data-name="Herringbone" aria-pressed="false"><img class="weaves-ph" src="images/weaves/08-herringbone.jpg" width="2000" height="1600" alt="Macro photograph of herringbone weave cloth" loading="lazy" decoding="async"><span class="weaves-vt">Herringbone</span><div class="weaves-ft"><div><b>Herringbone</b><span>V-shaped zigzag twill</span></div></div></div>
+      <div class="weaves-pn" role="button" tabindex="0" data-k="7" data-name="Honey comb" aria-pressed="false"><img class="weaves-ph" src="images/weaves/09-honey-comb.jpg" width="2000" height="1600" alt="Macro photograph of honeycomb weave cloth" loading="lazy" decoding="async"><span class="weaves-vt">Honey comb</span><div class="weaves-ft"><div><b>Honey comb</b><span>3D waffle texture</span></div></div></div>
+      <div class="weaves-pn" role="button" tabindex="0" data-k="8" data-name="Broken twill" aria-pressed="false"><img class="weaves-ph" src="images/weaves/10-broken-twill.jpg" width="2000" height="1600" alt="Macro photograph of broken twill weave cloth" loading="lazy" decoding="async"><span class="weaves-vt">Broken twill</span><div class="weaves-ft"><div><b>Broken twill</b><span>Staggered diagonal zigzag</span></div></div></div>
+    </div>
+  </section>
+
+
   <style>
   /* SHADES section (new) */
   .shades{
@@ -953,6 +983,67 @@
   @media (prefers-reduced-motion:reduce){
     .shades-img,.shades-zoom,.shades-row,.shades-row::before{ transition:none; }
   }
+  
+
+  /* WEAVES section (new) */
+  .weaves{
+    --wv-bg:#000; --wv-ink:#f2f0ea; --wv-mute:#b4b6c2; --wv-line:rgba(242,240,234,.18); --wv-accent:#4560c0;
+    --wv-pad-x:clamp(24px,8vw,150px);
+    background:var(--wv-bg); color:var(--wv-ink); font-family:'Raleway', sans-serif; font-weight:300;
+    padding:0 var(--wv-pad-x) clamp(72px,11vh,150px);
+  }
+  .weaves-threads{ display:flex; gap:14px; height:44px; align-items:flex-start; padding-left:2px; }
+  .weaves-threads i{ display:block; width:2px; height:var(--h); background:var(--c); }
+  .weaves-rule{ border-top:1px solid var(--wv-line); }
+  .weaves-head{ display:flex; align-items:flex-end; gap:clamp(14px,1.6vw,28px); margin-top:clamp(24px,4vh,44px); }
+  .weaves-h{ margin:0; font-family:'Raleway', sans-serif; font-weight:200; font-style:normal; font-size:clamp(36px,4vw,80px); text-transform:uppercase; line-height:.9; letter-spacing:-.05em; color:var(--wv-ink); }
+  .weaves-line{ flex:1; border:0; border-top:1px solid var(--wv-line); margin:0 0 .45em; }
+  .weaves-dot{ width:7px; height:7px; border-radius:50%; background:var(--wv-accent); margin-bottom:.3em; }
+  .weaves-sub{ max-width:34ch; margin:20px 0 clamp(32px,5vh,52px); font-family:'Raleway', sans-serif; font-weight:300; font-size:clamp(16px,1.5vw,20px); line-height:1.2; letter-spacing:0.02em; color:var(--wv-mute); }
+
+  .weaves-acc{ display:flex; gap:5px; height:clamp(320px,55vh,520px); }
+  .weaves-pn{
+    position:relative; flex:1 1 0; min-width:0; overflow:hidden; background:#050507; outline:none; cursor:pointer;
+    border:1px solid rgba(242,240,234,.11);
+    transition:flex .75s cubic-bezier(.22,1,.36,1), border-color .4s;
+  }
+  .weaves-pn.is-gap{ margin-left:clamp(12px,1.4vw,22px); }
+  .weaves-pn.is-on{ flex:8; border-color:rgba(242,240,234,.3); }
+  .weaves-pn:focus-visible{ border-color:var(--wv-accent); }
+  .weaves-ph{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+    filter:grayscale(.85) brightness(.55); transition:filter .5s ease-out;
+  }
+  .weaves-pn:hover .weaves-ph{ filter:grayscale(.3) brightness(.85); }
+  .weaves-pn.is-on .weaves-ph{ filter:none; }
+
+
+
+  .weaves-vt{
+    position:absolute; left:50%; bottom:16px; writing-mode:vertical-rl; transform:translateX(-50%) rotate(180deg);
+    padding:10px 4px; background:rgba(0,0,0,.7); white-space:nowrap;
+    font-family:'Raleway', sans-serif; font-size:11px; font-weight:500; letter-spacing:.22em; text-transform:uppercase; transition:opacity .3s;
+  }
+  .weaves-pn.is-on .weaves-vt{ opacity:0; }
+  .weaves-ft{
+    position:absolute; left:0; right:0; bottom:0; height:72px; display:flex; align-items:center; padding:0 18px;
+    background:#000; border-top:1px solid var(--wv-accent); opacity:0; transition:opacity .5s;
+  }
+  .weaves-pn.is-on .weaves-ft{ opacity:1; transition-delay:.3s; }
+  .weaves-ft > div { display:flex; flex-direction:column; justify-content:center; }
+  .weaves-ft b{ font-family:'Raleway', sans-serif; font-weight:200; font-size:clamp(24px,2.3vw,44px); letter-spacing:-.025em; text-transform:uppercase; white-space:nowrap; line-height:1; }
+  .weaves-ft span { font-family:'Raleway', sans-serif; font-weight:300; font-size:12px; letter-spacing:0.04em; color:var(--wv-mute); white-space:nowrap; margin-top:2px; }
+
+  @media (max-width:700px){
+    .weaves-acc{ flex-direction:column; height:500px; }
+    .weaves-pn.is-gap{ margin-left:0; margin-top:14px; }
+    .weaves-vt{ writing-mode:horizontal-tb; transform:none; left:14px; bottom:auto; top:12px; }
+  }
+  @media (prefers-reduced-motion:reduce){
+    .weaves-pn,.weaves-ph,.weaves-ft{ transition:none; }
+
+  }
+
   </style>
 
   <script>
@@ -1016,6 +1107,38 @@
     (window.requestIdleCallback || ((f) => setTimeout(f, 800)))(() => rows.forEach((r) => load(r.dataset.img)));
   })();
   </script>
+
+  <script>
+  (() => {
+    const root = document.getElementById('weaves');
+    if (!root) return;
+    const panels = [...root.querySelectorAll('.weaves-pn')];
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    let cur = panels.findIndex((p) => p.classList.contains('is-on'));
+
+    function show(i) {
+      if (i === cur) return;
+      cur = i;
+      panels.forEach((p, k) => {
+        p.classList.toggle('is-on', k === i);
+        p.setAttribute('aria-pressed', String(k === i));
+      });
+    }
+
+    panels.forEach((p, k) => {
+      p.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') show(k); });
+      p.addEventListener('click', () => show(k));
+      p.addEventListener('focus', () => show(k));
+      p.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(k); }
+      });
+    });
+
+
+  })();
+  </script>
+
 
   <script>
   (() => {
