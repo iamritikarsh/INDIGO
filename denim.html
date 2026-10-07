@@ -626,7 +626,7 @@
     .comp-stage{
       position:sticky; top:var(--nav-h,80px);
       height:calc(100dvh - var(--nav-h,80px));
-      overflow:hidden; padding:0 var(--pad-x);
+      overflow:hidden; padding:0 var(--pad-x) 0 40px;
     }
     .comp-list{ position:relative; height:100%; }
 
@@ -657,7 +657,7 @@
     .crow-num { grid-column:1; grid-row:1; }
     .crow-name{ grid-column:2; grid-row:1; text-transform:uppercase; }
     .crow-desc{
-      grid-column:3; grid-row:1 / span 2; align-self:start;
+      grid-column:3; grid-row:1 / span 3; align-self:start;
       margin:0; padding-top:0.4em; 
       font-family:'Raleway',sans-serif; font-weight:300; font-size:20px; line-height:1.1; letter-spacing:-0.02em; color:#161713; opacity:1; max-width:480px;
     }
@@ -670,6 +670,29 @@
       font:300 14px/1.3 'Raleway',sans-serif;
       letter-spacing:0;
       margin-bottom: 16px;
+    }
+    .blend-photo {
+      grid-column: 2;
+      grid-row: 3;
+      width: 100%;
+      height: auto;
+      max-height: clamp(200px, 38vh, 450px);
+      aspect-ratio: 2.1 / 1;
+      overflow: hidden;
+      position: relative;
+      display: block;
+      margin-top: 12px;
+      align-self: start;
+      will-change: transform;
+    }
+    .blend-photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      object-fit: cover;
+      object-position: center;
     }
     .cta{
       display:inline-block; margin-top:20px; margin-bottom:5px; color:#1a1a1a; text-decoration:none;
@@ -1160,6 +1183,17 @@
     D.forEach((r, i) => {
       const el = document.createElement("article");
       el.className = "crow";
+      let imgSrc = '';
+      if (i < 5) {
+        const names = ['cotton', 'cotton-poly', 'cotton-tencel', 'cotton-rayon', 'cotton-modal'];
+        let v = '-premium';
+        if (i === 2 || i === 3) v = '-premium-v2';
+        imgSrc = `
+          <div class="blend-photo">
+            <img src="images/blends/denim-${names[i]}${v}.jpg" alt="${r[0]} denim" loading="lazy">
+          </div>
+        `;
+      }
       el.innerHTML = `
         <i class="crow-line"></i>
         <div class="crow-in">
@@ -1171,6 +1205,7 @@
             ${r[3].map(t => `<p>${t}</p>`).join("")}
             ${r[4] ? '<a class="cta mono" href="contact.html">TELL US WHAT YOU NEED \u2197</a>' : ''}
           </div>
+          ${imgSrc}
         </div>
       `;
       listEl.appendChild(el);
