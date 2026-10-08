@@ -99,7 +99,7 @@
       background-color: #0f1014;
     }
     .dc-hero-jacket {
-      width: 31%;
+      width: 29%;
       height: 100%;
       position: relative;
       flex-shrink: 0;
@@ -201,7 +201,7 @@
     }
     .dc-hero-card-links {
       display: flex;
-      gap: 50px;
+      gap: 20px;
     }
     .dc-hero-card-links a {
       font-family: 'Raleway', sans-serif;
@@ -211,10 +211,8 @@
       text-decoration: none;
       letter-spacing: 0.02em;
       text-transform: uppercase;
-      transition: opacity 0.3s ease;
-    }
-    .dc-hero-card-links a:hover {
-      opacity: 0.6;
+      border: 1px solid #1a1a1a;
+      padding: 12px 24px;
     }
     @media (max-width: 900px) {
       .dc-hero {
@@ -1186,8 +1184,8 @@
       let imgSrc = '';
       if (i < 5) {
         const names = ['cotton', 'cotton-poly', 'cotton-tencel', 'cotton-rayon', 'cotton-modal'];
-        let v = '-premium';
-        if (i === 2 || i === 3) v = '-premium-v2';
+        let v = '-custom';
+        if (i === 2) v = '-custom2';
         imgSrc = `
           <div class="blend-photo">
             <img src="images/blends/denim-${names[i]}${v}.jpg" alt="${r[0]} denim" loading="lazy">
