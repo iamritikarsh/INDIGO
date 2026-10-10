@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Non Denim Collection — Indigo Multifab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET ===== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 100%;
+      overflow-x: clip;
+    }
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #191A17;
+      color: #D3D1C8;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ===== HEADER ===== */
+    .nd-header {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      height: 80px;
+      padding: 0 40px;
+      background-color: #191A17;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      border-bottom: 1px solid #2e2e2b;
+    }
+    .nd-logo {
+      grid-column: 1;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 100;
+      font-size: 35px;
+      line-height: 1;
+      letter-spacing: -0.09em;
+      color: #F5F4EE;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+    .nd-nav {
+      grid-column: 2;
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    .nd-nav a {
+      color: #F5F4EE;
+      text-decoration: none;
+      font-family: 'Geist', sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+    .nd-nav a:hover { color: #e8e8e4; }
+    .nd-nav a.active { color: #F5F4EE; }
+
+    /* ===== SECTION LABEL SYSTEM ===== */
+    .nd-label {
+      font-family: 'Geist', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(211, 209, 200, 0.5);
+      display: block;
+      margin-bottom: 28px;
+    }
+
+    /* ===== SECTION 01 — HERO (REDESIGN) ===== */
+    .nd-hero {
+      margin-top: 80px;
+      height: calc(100vh - 80px);
+      min-height: 600px;
+      width: 100%;
+      position: relative;
+      display: flex;
+      overflow: hidden;
+      background-color: #0f1014;
+    }
+    .nd-hero-jacket {
+      width: 29%;
+      height: 100%;
+      position: relative;
+      flex-shrink: 0;
+    }
+    .nd-hero-jacket img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+    .nd-hero-strip {
+      width: 69px;
+      height: 100%;
+      background-color: #D3D1C8;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 3;
+      overflow: hidden;
+    }
+    .nd-hero-strip-track {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      animation: nd-marquee-up 24s linear infinite;
+    }
+    .nd-hero-strip-half {
+      display: flex;
+      flex-direction: column;
+    }
+    .nd-hero-strip-text {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 25px;
+      line-height: 35px;
+      letter-spacing: -0.02em;
+      color: #191A17;
+      white-space: nowrap;
+      text-transform: uppercase;
+      padding-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    @keyframes nd-marquee-up {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-50%); }
+    }
+    .nd-hero-bg-container {
+      flex-grow: 1;
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+    }
+    .nd-hero-bg-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transform: scale(1.30);
+    }
+    .nd-hero-card {
+      position: absolute;
+      top: 57%;
+      right: 4%;
+      transform: translateY(-50%);
+      width: 860px;
+      height: 507px;
+      background-color: #DDD9CF;
+      padding: 70px 80px;
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    .nd-hero-card-intro {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 22px;
+      line-height: 32px;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+      margin-bottom: 60px;
+    }
+    .nd-hero-card-desc {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 22px;
+      line-height: 32px;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+      margin-bottom: 80px;
+      max-width: 100%;
+    }
+    .nd-hero-card-links {
+      display: flex;
+      gap: 20px;
+    }
+    .nd-hero-card-links a {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      color: #1a1a1a;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      border: 1px solid #1a1a1a;
+      padding: 12px 24px;
+    }
+    @media (max-width: 900px) {
+      .nd-hero {
+        flex-direction: column;
+        height: auto;
+      }
+      .nd-hero-jacket {
+        width: 100%;
+        height: 40vh;
+      }
+      .nd-hero-strip {
+        width: 100%;
+        height: 30px;
+      }
+      .nd-hero-strip-text {
+        writing-mode: horizontal-tb;
+        transform: none;
+      }
+      .nd-hero-bg-container {
+        height: 60vh;
+      }
+      .nd-hero-card {
+        top: 10%;
+        left: 5%;
+        width: 90%;
+        padding: 30px 20px;
+      }
+    }
+    /* ===== MARQUEE — DENIM CONSTRUCTIONS ===== */
+    .nd-marquee-container {
+      overflow: hidden;
+      white-space: nowrap;
+      background-color: #191A17;
+      padding: 22px 0;
+      border-top: 1px solid #2e2e2b;
+      border-bottom: 1px solid #2e2e2b;
+    }
+    .nd-marquee-track {
+      display: inline-flex;
+      animation: nd-marquee 45s linear infinite;
+    }
+    .nd-marquee-text {
+      display: inline-block;
+      font-family: 'Raleway', sans-serif;
+      font-size: 24px;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      color: rgba(211,209,200,0.35);
+      padding-right: 40px;
+    }
+    @keyframes nd-marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ===== SECTION 02 — DENIM PHILOSOPHY ===== */
+    .nd-philosophy {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 600px;
+      border-bottom: 1px solid #2e2e2b;
+    }
+    .nd-philosophy-text {
+      padding: 100px 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-right: 1px solid #2e2e2b;
+    }
+    .nd-philosophy-num {
+      font-family: 'Geist', sans-serif;
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      color: rgba(211,209,200,0.35);
+      margin-bottom: 50px;
+    }
+    .nd-philosophy-heading {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: clamp(36px, 4.5vw, 58px);
+      line-height: 1.0;
+      letter-spacing: -0.04em;
+      color: #F5F4EE;
+      margin-bottom: 36px;
+    }
+    .nd-philosophy-body {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 1.7;
+      letter-spacing: -0.01em;
+      color: rgba(211,209,200,0.7);
+      max-width: 400px;
+    }
+    .nd-philosophy-attrs {
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 0;
+    }
+    .nd-philosophy-attr {
+      font-family: 'Geist', sans-serif;
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(211,209,200,0.45);
+      width: 50%;
+      padding: 12px 0;
+      border-top: 1px solid #2e2e2b;
+    }
+    .nd-philosophy-img {
+      position: relative;
+      overflow: hidden;
+    }
+    .nd-philosophy-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.8s ease;
+    }
+    .nd-philosophy-img:hover img {
+      transform: scale(1.04);
+    }
+
+    /* ===== SECTION 03 — THE WEAVE ===== */
+    .nd-weave {
+      padding: 120px 60px;
+      border-bottom: 1px solid #2e2e2b;
+    }
+    .nd-weave-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 70px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #2e2e2b;
+    }
+    .nd-weave-heading {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: clamp(36px, 5vw, 68px);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      color: #F5F4EE;
+    }
+    .nd-weave-desc {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.65;
+      letter-spacing: -0.01em;
+      color: rgba(211,209,200,0.6);
+      max-width: 340px;
+      text-align: right;
+    }
+    .nd-weave-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2px;
+      height: 520px;
+    }
+    .nd-weave-img {
+      overflow: hidden;
+      position: relative;
+    }
+    .nd-weave-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.9s ease;
+    }
+    .nd-weave-img:hover img { transform: scale(1.05); }
+
+/* ===== BEYOND THE BLUE ===== */
+    .nd-beyond {
+      padding: 90px 20px 80px;
+      text-align: center;
+    }
+    .nd-beyond-heading {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 50px;
+      line-height: 40px;
+      letter-spacing: 0;
+      vertical-align: middle;
+      color: #F5F4EE;
+      margin: 0;
+    }
+
+    
+
+    /* ===== SECTION 02 — WEIGHT RANGE ===== */
+    .nd-weight-range {
+      background-color: #DDD9CF;
+      width: 100%;
+      padding: 140px 0 160px;
+      display: flex;
+      justify-content: center;
+    }
+    .nd-weight-container {
+      width: 72%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .nd-weight-bar {
+      display: flex;
+      width: 100%;
+      height: 22px;
+      margin-bottom: 12px;
+    }
+    .nd-weight-bar-left {
+      width: 40%;
+      background-color: #8A9CA5;
+      height: 100%;
+    }
+    .nd-weight-bar-right {
+      width: 60%;
+      background-color: #49545B;
+      height: 100%;
+    }
+    .nd-weight-markers {
+      display: flex;
+      position: relative;
+      width: 100%;
+      height: 20px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: #666;
+    }
+    .marker-4 {
+      position: absolute;
+      left: 0;
+    }
+    .marker-8 {
+      position: absolute;
+      left: 40%;
+      transform: translateX(-50%);
+    }
+    .marker-14 {
+      position: absolute;
+      right: 0;
+    }
+    .nd-weight-columns {
+      display: flex;
+      width: 100%;
+      margin-top: 40px;
+    }
+    .nd-weight-col-left {
+      width: 40%;
+    }
+    .nd-weight-col-right {
+      width: 60%;
+    }
+    .nd-weight-col-content {
+      max-width: 290px;
+    }
+    .nd-weight-heading {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      letter-spacing: 0.03em;
+      color: #222;
+      margin-bottom: 15px;
+      margin-top: 0;
+    }
+    .nd-weight-desc {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 20px;
+      letter-spacing: -0.02em;
+      color: #000000;
+      margin: 0;
+    }
+    @media (max-width: 900px) {
+      .nd-weight-range { padding: 80px 0; }
+      .nd-weight-container { width: 85%; }
+      .nd-weight-columns { flex-direction: column; gap: 40px; }
+      .nd-weight-col-left, .nd-weight-col-right { width: 100%; }
+      .nd-weight-col-content { max-width: 100%; }
+    }
+
+    /* ===== SECTION 03 — STRETCH ===== */
+    .nd-stretch-section {
+      background-color: #DDD9CF;
+      width: 100%;
+      padding: 0 0 160px;
+      display: flex;
+      justify-content: center;
+    }
+    .nd-stretch-container {
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      position: relative;
+      display: block;
+      padding-top: 91px;
+    }
+    .nd-stretch-left {
+      padding-left: 73px;
+      margin-top: 0;
+      flex-shrink: 0;
+    }
+    .nd-stretch-heading {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 48px;
+      color: #1a1a1a;
+      margin: 0 0 15px;
+      letter-spacing: -0.01em;
+    }
+    .nd-stretch-subheading {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #161713;
+      margin: 0 0 60px;
+    }
+    .nd-stretch-body {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #161713;
+      max-width: 480px;
+      margin: 0 0 25px;
+    }
+    
+    .nd-stretch-right {
+      position: absolute;
+      left: 671px;
+      top: 57px;
+      display: flex;
+    }
+    .nd-stretch-panel {
+      background-color: #151614;
+      width: 841px;
+      height: 528px;
+      padding: 0 111px;
+      display: flex;
+      gap: 50px;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 0;
+      box-sizing: border-box;
+    }
+    .nd-stretch-card {
+      background-color: #DDD9CF;
+      width: 277px;
+      height: 368px;
+      padding: 45px 30px;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      flex-shrink: 0;
+    }
+    .nd-card-number {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+      color: #161713;
+      margin-bottom: 25px;
+    }
+    .nd-card-title {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: #161713;
+      margin: 0 0 35px;
+      letter-spacing: 0em;
+    }
+    .nd-card-desc {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.25;
+      color: #161713;
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+    
+    @media (max-width: 900px) {
+      .nd-stretch-section { padding: 0 0 80px; }
+      .nd-stretch-container { flex-direction: column; width: 85%; margin: 0 auto; padding-top: 0; justify-content: flex-start; }
+      .nd-stretch-left { width: 100%; margin-top: 0; margin-bottom: 40px; padding-left: 0; }
+      .nd-stretch-right { width: 100%; }
+      .nd-stretch-panel { flex-direction: column; height: auto; padding: 40px 30px; gap: 30px; }
+      .nd-stretch-card { width: 100%; height: auto; min-height: auto; }
+    }
+
+
+    
+
+    
+    /* ===== SECTION 04 - COMPOSITIONS ===== */
+    .comp{ --fs:clamp(28px,3.2vw,64px); --pad-x:clamp(24px,8vw,150px); position:relative; background-color: #DDD9CF; }
+
+
+    .comp-track{ position:relative; background-color: #DDD9CF; border-top:1px solid rgba(15,26,58,.15); }
+    .comp-stage{
+      position:sticky; top:var(--nav-h,80px);
+      height:calc(100dvh - var(--nav-h,80px));
+      overflow:hidden; padding:0 var(--pad-x) 0 40px;
+    }
+    .comp-list{ position:relative; height:100%; }
+
+    .crow{
+      position:absolute; left:0; right:0; top:0;
+      will-change:transform, clip-path; backface-visibility:hidden;
+    }
+    .crow::after{
+      content:""; position:absolute; left:0; right:0; top:0; height:1px;
+      background:currentColor; opacity:.16;
+    }
+    .crow-line{
+      position:absolute; left:0; right:0; top:0; height:1px; z-index:2;
+      background:#1a1a1a; transform-origin:0 50%; transform:scaleX(0);
+      will-change:transform; opacity:1;
+    }
+
+    .crow-in{
+      display:grid; grid-template-columns:17% minmax(0,1fr) minmax(0,30%);
+      column-gap:2vw;
+      padding:calc(var(--fs)*.55) 0 calc(var(--fs)*1.1);
+      will-change: transform;
+    }
+    .crow-num,.crow-name{
+      margin:0; font-family:'Raleway',sans-serif; font-size:var(--fs); font-weight:300; line-height:1;
+      letter-spacing:-.02em; white-space:nowrap; color:#1a1a1a;
+    }
+    .crow-num { grid-column:1; grid-row:1; }
+    .crow-name{ grid-column:2; grid-row:1; text-transform:uppercase; }
+    .crow-desc{
+      grid-column:3; grid-row:1 / span 3; align-self:start;
+      margin:0; padding-top:0.4em; 
+      font-family:'Raleway',sans-serif; font-weight:300; font-size:20px; line-height:1.1; letter-spacing:-0.02em; color:#161713; opacity:1; max-width:480px;
+    }
+    .crow-det{
+      grid-column:2; grid-row:2; margin-top:calc(var(--fs)*.9);
+      will-change:clip-path;
+    }
+    .crow-det > *{ margin:0; font-family:'Raleway',sans-serif; font-size:14px; font-weight:300; color:#1a1a1a; opacity:0.75; line-height:1.3; will-change:opacity, transform; }
+    .crow-det p.lbl.mono {
+      font:300 14px/1.3 'Raleway',sans-serif;
+      letter-spacing:0;
+      margin-bottom: 16px;
+    }
+    .blend-photo {
+      grid-column: 2;
+      grid-row: 3;
+      width: 100%;
+      height: auto;
+      max-height: clamp(200px, 38vh, 450px);
+      aspect-ratio: 2.1 / 1;
+      overflow: hidden;
+      position: relative;
+      display: block;
+      margin-top: 12px;
+      align-self: start;
+      will-change: transform;
+    }
+    .blend-photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      object-fit: cover;
+      object-position: center;
+    }
+    .cta{
+      display:inline-block; margin-top:20px; margin-bottom:5px; color:#1a1a1a; text-decoration:none;
+      border: 1px solid #1a1a1a; padding: 14px 28px; background: transparent;
+      transition: opacity .3s ease;
+    }
+    .cta.mono {
+      font:400 11px/1.4 ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+      letter-spacing:.05em;
+    }
+    .cta:hover,.cta:focus-visible{ opacity: 0.7; }
+
+
+    @media (max-width:700px){
+      .crow-in{ grid-template-columns:auto minmax(0,1fr); column-gap:5vw; }
+      .crow-desc{ grid-column:2; grid-row:2; margin-top:12px; }
+      .crow-det { grid-row:3; margin-top:16px; }
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      .comp-track{ height:auto !important; }
+      .comp-stage{ position:static; height:auto; overflow:visible; }
+      .comp-list{ height:auto; }
+      .crow{ position:relative; height:auto !important; clip-path:none !important; transform:none !important; }
+      .crow-line{ transform:scaleX(1) !important; }
+      .crow-det{ clip-path:none !important; visibility:visible !important; }
+      .crow-det > *{ opacity:1 !important; transform:none !important; }
+    }
+
+
+
+  /* --- COPIED FOOTER CSS --- */
+.contact-section {
+  background-color: #49545B; /* Muted slate-blue */
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact-heading {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 1.6;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: #D3D1C8;
+  margin: 0;
+}
+
+.contact-cta {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #D3D1C8;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.contact-cta:hover {
+  color: #FFF;
+}
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  max-width: 643px;
+  gap: 30px;
+  padding-top: 10px; /* Align visually with heading */
+}
+
+.contact-right-top, .contact-right-bottom {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+  color: #D3D1C8;
+  margin: 0;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.contact-right-top {
+  font-size: 18px;
+}
+
+.contact-right-bottom {
+  font-size: 18px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .contact-section { flex-direction: column; align-items: flex-start; gap: 50px; }
+  .contact-right { align-items: flex-start; text-align: left; }
+}
+
+/* ===== FOOTER SECTION ===== */
+.footer-section {
+  background-color: #1a1a1a;
+  border-top: 1px solid #333;
+  padding: 40px 40px 0px 40px; overflow: hidden;
+}
+.footer-divider {
+  display: none;
+}
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+.footer-logo {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  display: flex;
+  align-items: flex-end;
+}
+.footer-logo img {
+  width: 1057px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1057 / 249;
+  object-fit: contain;
+  object-position: left bottom;
+  display: block;
+  position: relative;
+  left: 0;
+  margin-bottom: -20px;
+}
+.footer-right-nav {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  text-align: right;
+}
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.footer-nav a, .footer-legal a {
+  color: #D3D1C8;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  transition: opacity 0.3s;
+  line-height: 20px;
+}
+.footer-nav a:hover, .footer-legal a:hover {
+  opacity: 0.7;
+}
+.footer-legal {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-bottom: 40px;
+}
+</style>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="nd-header">
+    <a href="index.html" class="nd-logo">IMF</a>
+    <nav class="nd-nav">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="denim.html">DENIM COLLECTION</a>
+      <a href="non-denim.html" class="active" target="_blank" rel="noopener noreferrer">NON DENIM COLLECTION</a>
+      <a href="contact.html">CONTACT US</a>
+    </nav>
+  </header>
+  <!-- ===== 01 — HERO (REDESIGN) ===== -->
+  <section class="nd-hero">
+    <div class="nd-hero-jacket">
+      <img src="non_denim_left_shirt.jpg" alt="Non-Denim Shirt">
+    </div>
+    <div class="nd-hero-strip">
+      <div class="nd-hero-strip-track">
+        <div class="nd-hero-strip-half">
+          <div class="nd-hero-strip-text">LINEN &middot; CORDUROY &middot; JACQUARD &middot; DOBBY &middot; COTTON WITH ALL BLENDS &nbsp; LINEN &middot; CORDUROY &middot; JACQUARD &middot; DOBBY &middot; COTTON WITH ALL BLENDS &nbsp; LINEN &middot; CORDUROY &middot; JACQUARD &middot; DOBBY &middot; COTTON WITH ALL BLENDS &nbsp; </div>
+          <div class="nd-hero-strip-text">LINEN &middot; CORDUROY &middot; JACQUARD &middot; DOBBY &middot; COTTON WITH ALL BLENDS &nbsp; LINEN &middot; CORDUROY &middot; JACQUARD &middot; DOBBY &middot; COTTON WITH ALL BLENDS &nbsp; LINEN &middot; CORDUROY &middot; JACQUARD &middot; DOBBY &middot; COTTON WITH ALL BLENDS &nbsp; </div>
+        </div>
+        <div class="nd-hero-strip-half">
+          <div class="nd-hero-strip-text">LINEN &middot; CORDUROY &middot; JACQUARD &middot; DOBBY &middot; COTTON WITH ALL BLENDS &nbsp; LINEN &middot; CORDUROY &middot; JACQUARD &middot; DOBBY &middot; COTTON WITH ALL BLENDS &nbsp; LINEN &middot; CORDUROY &middot; JACQUARD &middot; DOBBY &middot; COTTON WITH ALL BLENDS &nbsp; </div>
+          <div class="nd-hero-strip-text">LINEN &middot; CORDUROY &middot; JACQUARD &middot; DOBBY &middot; COTTON WITH ALL BLENDS &nbsp; LINEN &middot; CORDUROY &middot; JACQUARD &middot; DOBBY &middot; COTTON WITH ALL BLENDS &nbsp; LINEN &middot; CORDUROY &middot; JACQUARD &middot; DOBBY &middot; COTTON WITH ALL BLENDS &nbsp; </div>
+        </div>
+      </div>
+    </div>
+    <div class="nd-hero-bg-container">
+      <img src="non_denim_right_new.jpg" alt="Non-Denim Fabric Texture">
+      <div class="nd-hero-card">
+        <div class="nd-hero-card-intro">
+          Non-Denim.<br>
+          Linen, cotton and woven fabrics.
+        </div>
+        <div class="nd-hero-card-desc">
+          From breathable linen and versatile cotton blends to distinctive corduroy, jacquard and dobby constructions, our non-denim range brings together texture, versatility and considered craftsmanship. Sourced from trusted manufacturing partners and developed to specification when a requirement calls for it.
+        </div>
+        <div class="nd-hero-card-links">
+          <a href="index.html">VIEW THE RANGE</a>
+          <a href="contact.html">REQUEST SAMPLES</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 02 — NON DENIM WEIGHT RANGE ===== -->
+  <section class="nd-weight-range">
+    <div class="nd-weight-container">
+      
+      <div class="nd-weight-bar">
+        <div class="nd-weight-bar-left"></div>
+        <div class="nd-weight-bar-right"></div>
+      </div>
+      
+      <div class="nd-weight-markers">
+        <span class="marker-4">4 oz</span>
+        <span class="marker-8">8 oz</span>
+        <span class="marker-14">14 oz</span>
+      </div>
+      
+      <div class="nd-weight-columns">
+        <div class="nd-weight-col-left">
+          <div class="nd-weight-col-content">
+            <h3 class="nd-weight-heading">LIGHTWEIGHT WOVENS</h3>
+            <p class="nd-weight-desc">
+              Breathable linen and lightweight cotton blends with a soft handle and fluid drape, ideal for shirts, dresses, and summerwear.
+            </p>
+          </div>
+        </div>
+        <div class="nd-weight-col-right">
+          <div class="nd-weight-col-content">
+            <h3 class="nd-weight-heading">STRUCTURED WOVENS</h3>
+            <p class="nd-weight-desc">
+              Textured corduroy, jacquard, and heavier cotton blends offering structure and durability for jackets, trousers, and workwear.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- ===== 03 — NON DENIM STRETCH ===== -->
+  <section class="nd-stretch-section">
+    <div class="nd-stretch-container">
+      
+      <div class="nd-stretch-left">
+        <h2 class="nd-stretch-heading">STRETCH</h2>
+        <p class="nd-stretch-subheading">Two constructions.</p>
+        
+        <p class="nd-stretch-body">
+          Stretch and non-stretch constructions offer different qualities across our non-denim range. Elastane blends provide added flexibility and recovery where needed, while non-stretch fabrics preserve their natural structure, drape and surface character. The choice influences how a garment moves, feels and performs.
+        </p>
+        <p class="nd-stretch-body">
+          Available across selected cotton, viscose and other woven qualities, with compositions and specifications tailored to the intended application.
+        </p>
+      </div>
+
+      <div class="nd-stretch-right">
+        <div class="nd-stretch-panel">
+          
+          <div class="nd-stretch-card">
+            <span class="nd-card-number">01</span>
+            <h4 class="nd-card-title">ELASTANE BLENDS</h4>
+            <p class="nd-card-desc">
+              Cotton, viscose and selected woven fabrics blended with elastane to introduce stretch, flexibility and recovery. Suitable for applications where ease of movement and comfort are important, depending on the fabric construction and intended use.
+            </p>
+          </div>
+          
+          <div class="nd-stretch-card">
+            <span class="nd-card-number">02</span>
+            <h4 class="nd-card-title">NON-STRETCH</h4>
+            <p class="nd-card-desc">
+              Woven fabrics without added elastane, retaining their intended structure, drape and surface character. Ideal for applications that prioritise fabric stability and the natural qualities of linen, cotton, corduroy, jacquard, dobby and other woven constructions.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+
+  <!-- ===== 04 - COMPOSITIONS ===== -->
+  <section id="comp" class="comp" aria-label="Compositions">
+    <div class="comp-track">
+      <div class="comp-stage">
+        <div class="comp-list" id="comp-list"></div>
+      </div>
+    </div>
+  </section>
+
+<script>
+  (() => {
+    const sec = document.getElementById('comp');
+    if (!sec) return;
+
+    var A = ["Lightweight – heavyweight", "100% Linen · Linen Blends", "Plain and textured weaves"],
+          B = ["Fine wale · Medium wale · Wide wale", "Cotton · Cotton Blends", "Selected weights and constructions"],
+          C = ["Patterned woven constructions", "Selected fibres and blends", "Custom requirements"],
+          E = ["Geometric · Textured · Small-repeat weaves", "Cotton · Cotton Blends", "Selected constructions"],
+          F = ["Cotton–Polyester", "Cotton–Viscose / Rayon", "Cotton–Modal · Cotton–Lyocell"],
+          G = ["Yarn selection", "Sample development", "Production planning"];
+      
+      var D=[
+        ["Linen","Linen is valued for its natural texture, breathable feel and relaxed drape. From lighter shirting qualities to more substantial woven fabrics, our range offers selected constructions and blends suited to different garment requirements.","[ AVAILABLE IN ]",A,0],
+        ["Corduroy","Defined by its raised wales and distinctive tactile surface, corduroy brings depth and character to woven fabrics. Available in different wale widths and constructions for shirts, overshirts, trousers, jackets and other apparel applications.","[ AVAILABLE IN ]",B,0],
+        ["Jacquard","Jacquard fabrics create patterns through the weave itself, adding texture, depth and intricate surface detail. From understated woven motifs to more expressive designs, constructions can be selected according to the intended garment and specification.","[ AVAILABLE IN ]",C,0],
+        ["Dobby","Dobby fabrics use small-scale woven structures to introduce subtle geometry and surface texture. From understated everyday cloth to more pronounced woven patterns, the available qualities can be matched to the intended garment, fabric weight and finish.","[ AVAILABLE IN ]",E,0],
+        ["Cotton Blends","Cotton blends combine cotton with other fibres to achieve different levels of softness, strength, drape, texture and performance. Our range includes selected polyester, viscose, rayon, modal, lyocell and other cotton-blend constructions, with specifications guided by the intended application.","[ AVAILABLE IN ]",F,0],
+        ["And More","The fabrics listed represent the qualities we source most frequently, not the limit of what we can explore. From linen, corduroy and structured woven fabrics to specialised cotton blends, we can investigate suitable compositions, weave structures and finishes based on the requirement.","[ DEVELOPED TO ORDER ]",G,1]
+      ];
+
+    const listEl = document.getElementById("comp-list");
+    D.forEach((r, i) => {
+      const el = document.createElement("article");
+      el.className = "crow";
+      let imgSrc = '';
+      if (i < 5) {
+        const names = ['nd-linen', 'nd-corduroy', 'nd-jacquard', 'nd-dobby', 'nd-cotton-blends'];
+        imgSrc = `
+          <div class="blend-photo">
+            <img src="images/non-denim/${names[i]}.jpg" alt="${r[0]} non-denim" loading="lazy">
+          </div>
+        `;
+      }
+      el.innerHTML = `
+        <i class="crow-line"></i>
+        <div class="crow-in">
+          <span class="crow-num">0${i + 1}</span>
+          <h3 class="crow-name">${r[0]}</h3>
+          <p class="crow-desc">${r[1]}</p>
+          <div class="crow-det">
+            <p class="lbl mono">${r[2]}</p>
+            ${r[3].map(t => `<p>${t}</p>`).join("")}
+            ${r[4] ? '<a class="cta mono" href="contact.html">TELL US WHAT YOU NEED \u2197</a>' : ''}
+          </div>
+          ${imgSrc}
+        </div>
+      `;
+      listEl.appendChild(el);
+    });
+
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const track  = sec.querySelector('.comp-track');
+    const stage  = sec.querySelector('.comp-stage');
+    const rows   = [...sec.querySelectorAll('.crow')];
+    const N = rows.length;
+
+    const cl  = (x) => Math.min(1, Math.max(0, x));
+    const sm  = (x) => x * x * (3 - 2 * x);
+    const mix = (a, b, k) => a + (b - a) * k;
+
+    const VH_PER_STEP = 0.85;
+    const HOLD = 0.5;
+    const PILE_EM = 0.78;
+    const SHIFT_EM = 0.42;
+
+    let shift = 0;
+
+    const R = rows.map((el) => ({
+      el,
+      line: el.querySelector('.crow-line'),
+      inner: el.querySelector('.crow-in'),
+      det:  el.querySelector('.crow-det'),
+      kids: [...el.querySelectorAll('.crow-det > *')],
+    }));
+
+    let H = 0, pile = 0, navH = 0, trackTop = 0, span = 1;
+
+    function measure() {
+      navH = 80;
+      document.documentElement.style.setProperty('--nav-h', navH + 'px');
+
+      const vh = innerHeight;
+      rows.forEach((r) => (r.style.height = 'auto'));
+      const fs = parseFloat(getComputedStyle(rows[0].querySelector('.crow-name')).fontSize);
+      H = Math.ceil(Math.max(...rows.map((r) => r.querySelector('.crow-in').offsetHeight)));
+      pile = Math.round(fs * PILE_EM);
+      shift = Math.round(fs * SHIFT_EM);
+      rows.forEach((r) => (r.style.height = H + 'px'));
+
+      track.style.height = (vh - navH) + (N - 1 + HOLD) * vh * VH_PER_STEP + 'px';
+      trackTop = track.getBoundingClientRect().top + scrollY;
+      span = track.offsetHeight - stage.offsetHeight;
+
+      const gap = Math.max(0, (vh - navH) - ((N - 1) * pile + H + 80));
+      const shadesSec = document.getElementById('shades');
+      if (shadesSec) shadesSec.style.marginTop = -gap + 'px';
+    }
+
+    function render(t) {
+      let y = 0;
+      for (let i = 0; i < N; i++) {
+        const r = R[i];
+        const open  = i === 0 ? 1 : sm(cl((t - (i - 0.8)) / 0.6));
+        const c     = i < N - 1 ? sm(cl(t - i)) : 0;
+        const o     = open * (1 - sm(cl((t - i) / 0.4)));
+        const d     = i === 0 ? 1 : sm(cl((t - (i - 1.1)) / 0.7));
+        const h     = mix(H, pile, c);
+
+        r.el.style.transform = `translate3d(0,${y}px,0)`;
+        r.el.style.clipPath  = `inset(0 0 ${H - h}px 0)`;
+        r.inner.style.transform = `translate3d(0,${-shift * c}px,0)`;
+        r.line.style.transform = `scaleX(${d})`;
+
+        r.det.style.clipPath   = `inset(0 0 ${(1 - o) * 100}% 0)`;
+        r.det.style.visibility = o > 0.01 ? 'visible' : 'hidden';
+        for (let k = 0; k < r.kids.length; k++) {
+          const x = cl((o - 0.2 - k * 0.12) / 0.5);
+          r.kids[k].style.opacity   = x;
+          r.kids[k].style.transform = `translate3d(0,${(1 - x) * 14}px,0)`;
+        }
+        y += h;
+      }
+    }
+
+    let target = 0, cur = 0, raf = 0, prev = 0;
+    function frame(now) {
+      raf = 0;
+      const dt = Math.min(Math.max(now - prev, 0), 64);
+      prev = now;
+      cur += (target - cur) * (1 - Math.pow(1 - 0.16, dt / 16.667));
+      if (Math.abs(target - cur) < 0.00015) cur = target;
+      render(cur * (N - 1));
+      if (cur !== target) raf = requestAnimationFrame(frame);
+    }
+    function kick() {
+      if (!raf) { prev = performance.now() - 16.667; raf = requestAnimationFrame(frame); }
+    }
+    function onScroll() {
+      target = cl((scrollY + navH - trackTop) / span);
+      kick();
+    }
+    function init() {
+      measure();
+      target = cl((scrollY + navH - trackTop) / span);
+      cur = target;
+      render(cur * (N - 1));
+    }
+
+    addEventListener('scroll', onScroll, { passive: true });
+    let rz; addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(init, 120); });
+    (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(init);
+    init();
+  })();
+  </script>
+
+
+  <!-- ===== GET IN TOUCH SECTION ===== -->
+  <section class="contact-section">
+    <div class="contact-left">
+      <h2 class="contact-heading">GET IN TOUCH</h2>
+      <a href="#" class="contact-cta">START A BRIEF &#x2197; </a>
+    </div>
+    <div class="contact-right">
+      <p class="contact-right-top">We find the fabric. Or we get it made.</p>
+      <p class="contact-right-bottom">Tell us what you're making, and we'll come back with the<br>right cloth, a fair price, and a timeline you can plan around.</p>
+    </div>
+  </section>
+
+  
+
+  <!-- ===== FOOTER SECTION ===== -->
+  <footer class="footer-section">
+    <div class="footer-divider"></div>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="indigo-multifab-logo.png" alt="Indigo Multifab">
+      </div>
+      <div class="footer-right-nav">
+        <nav class="footer-nav">
+          <a href="#">About us</a>
+          <a href="#">Work</a>
+          <a href="#">Services</a>
+          <a href="#">FAQs</a>
+        </nav>
+      </div>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
