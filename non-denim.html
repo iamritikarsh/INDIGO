@@ -410,98 +410,6 @@
 
     
 
-    /* ===== SECTION 02 — WEIGHT RANGE ===== */
-    .nd-weight-range {
-      background-color: #DDD9CF;
-      width: 100%;
-      padding: 140px 0 160px;
-      display: flex;
-      justify-content: center;
-    }
-    .nd-weight-container {
-      width: 72%;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .nd-weight-bar {
-      display: flex;
-      width: 100%;
-      height: 22px;
-      margin-bottom: 12px;
-    }
-    .nd-weight-bar-left {
-      width: 40%;
-      background-color: #8A9CA5;
-      height: 100%;
-    }
-    .nd-weight-bar-right {
-      width: 60%;
-      background-color: #49545B;
-      height: 100%;
-    }
-    .nd-weight-markers {
-      display: flex;
-      position: relative;
-      width: 100%;
-      height: 20px;
-      font-family: 'Raleway', sans-serif;
-      font-size: 12px;
-      font-weight: 400;
-      color: #666;
-    }
-    .marker-4 {
-      position: absolute;
-      left: 0;
-    }
-    .marker-8 {
-      position: absolute;
-      left: 40%;
-      transform: translateX(-50%);
-    }
-    .marker-14 {
-      position: absolute;
-      right: 0;
-    }
-    .nd-weight-columns {
-      display: flex;
-      width: 100%;
-      margin-top: 40px;
-    }
-    .nd-weight-col-left {
-      width: 40%;
-    }
-    .nd-weight-col-right {
-      width: 60%;
-    }
-    .nd-weight-col-content {
-      max-width: 290px;
-    }
-    .nd-weight-heading {
-      font-family: 'Raleway', sans-serif;
-      font-weight: 300;
-      font-size: 16px;
-      letter-spacing: 0.03em;
-      color: #222;
-      margin-bottom: 15px;
-      margin-top: 0;
-    }
-    .nd-weight-desc {
-      font-family: 'Raleway', sans-serif;
-      font-weight: 300;
-      font-size: 15px;
-      line-height: 20px;
-      letter-spacing: -0.02em;
-      color: #000000;
-      margin: 0;
-    }
-    @media (max-width: 900px) {
-      .nd-weight-range { padding: 80px 0; }
-      .nd-weight-container { width: 85%; }
-      .nd-weight-columns { flex-direction: column; gap: 40px; }
-      .nd-weight-col-left, .nd-weight-col-right { width: 100%; }
-      .nd-weight-col-content { max-width: 100%; }
-    }
-
     /* ===== SECTION 03 — STRETCH ===== */
     .nd-stretch-section {
       background-color: #DDD9CF;
@@ -696,11 +604,20 @@
     .cta{
       display:inline-block; margin-top:20px; margin-bottom:5px; color:#1a1a1a; text-decoration:none;
       border: 1px solid #1a1a1a; padding: 14px 28px; background: transparent;
+      font-family: 'Raleway', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
       transition: opacity .3s ease;
     }
     .cta.mono {
-      font:400 11px/1.4 ui-monospace,"SF Mono",Menlo,Consolas,monospace;
-      letter-spacing:.05em;
+      font-family: 'Raleway', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.4;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
     .cta:hover,.cta:focus-visible{ opacity: 0.7; }
 
@@ -919,56 +836,20 @@
     </div>
   </section>
 
-  <!-- ===== 02 — NON DENIM WEIGHT RANGE ===== -->
-  <section class="nd-weight-range">
-    <div class="nd-weight-container">
-      
-      <div class="nd-weight-bar">
-        <div class="nd-weight-bar-left"></div>
-        <div class="nd-weight-bar-right"></div>
-      </div>
-      
-      <div class="nd-weight-markers">
-        <span class="marker-4">4 oz</span>
-        <span class="marker-8">8 oz</span>
-        <span class="marker-14">14 oz</span>
-      </div>
-      
-      <div class="nd-weight-columns">
-        <div class="nd-weight-col-left">
-          <div class="nd-weight-col-content">
-            <h3 class="nd-weight-heading">LIGHTWEIGHT WOVENS</h3>
-            <p class="nd-weight-desc">
-              Breathable linen and lightweight cotton blends with a soft handle and fluid drape, ideal for shirts, dresses, and summerwear.
-            </p>
-          </div>
-        </div>
-        <div class="nd-weight-col-right">
-          <div class="nd-weight-col-content">
-            <h3 class="nd-weight-heading">STRUCTURED WOVENS</h3>
-            <p class="nd-weight-desc">
-              Textured corduroy, jacquard, and heavier cotton blends offering structure and durability for jackets, trousers, and workwear.
-            </p>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </section>
 
   <!-- ===== 03 — NON DENIM STRETCH ===== -->
   <section class="nd-stretch-section">
     <div class="nd-stretch-container">
       
       <div class="nd-stretch-left">
-        <h2 class="nd-stretch-heading">STRETCH</h2>
+        <h2 class="nd-stretch-heading">STRETCH &amp; WEIGHT</h2>
         <p class="nd-stretch-subheading">Two constructions.</p>
         
         <p class="nd-stretch-body">
           Stretchable and non-stretchable constructions offer different qualities across our Fabric range. Elastane blends provide added flexibility and recovery where needed, while non-stretch fabrics preserve their natural structure, drape and surface character. The choice influences how a garment moves, feels and performs.
         </p>
         <p class="nd-stretch-body">
-          Available across selected cotton, viscose and other woven qualities, with compositions and specifications tailored to the intended application.
+          We work across the entire spectrum of fabric weights, from lightweight, fluid shirting to heavy structured wovens, tailored to the exact drape and hand-feel of your garment.
         </p>
       </div>
 
