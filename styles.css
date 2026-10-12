@@ -365,17 +365,21 @@ body {
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   font-size: 10px;
-  line-height: 25px;
+  line-height: 1.4;
   letter-spacing: -0.02em;
   text-align: center;
   color: #D3D1C8;
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
+  border: 1px solid #D3D1C8;
+  padding: 8px 18px;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .coll-link:hover {
-  color: #d0d0cc;
+  color: #FFF;
+  border-color: #FFF;
 }
 
 .coll-img {
@@ -924,11 +928,15 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  transition: color 0.3s ease;
+  border: 1px solid #D3D1C8;
+  padding: 12px 28px;
+  align-self: flex-start;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .contact-cta:hover {
   color: #FFF;
+  border-color: #FFF;
 }
 
 .contact-right {
