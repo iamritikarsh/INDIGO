@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Indigo Multifab</title>
-  <link rel="stylesheet" href="styles.css?v=96">
+  <link rel="stylesheet" href="styles.css?v=98">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Jost:wght@200;300;400;500&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
@@ -12,6 +12,160 @@
   <style>
     .footer-legal {
       padding-bottom: 68px !important;
+    }
+
+    /* HOW WE WORK SWAPPED GRID POSITIONS & UNBROKEN DIVIDERS */
+    .hww-title-cell {
+      border-bottom: 1px solid #D3D1C8 !important;
+      border-right: 1px solid #D3D1C8 !important;
+      grid-row: 1 / 4 !important;
+      grid-column: 1 / 3 !important;
+    }
+
+    .hww-drape-img {
+      border-left: 1px solid #D3D1C8 !important;
+      border-right: none !important;
+      border-bottom: 1px solid #D3D1C8 !important;
+      grid-row: 1 / 4 !important;
+      grid-column: 4 / 5 !important;
+      height: 437px !important;
+    }
+    .hww-drape-img img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+    }
+
+    .hww-spacer-tr {
+      border-bottom: 1px solid #D3D1C8 !important;
+      border-left: none !important;
+      grid-row: 1 / 2 !important;
+      grid-column: 3 / 4 !important;
+      height: 190px !important;
+    }
+
+    .hww-understand-label {
+      border-bottom: 1px solid #D3D1C8 !important;
+      border-left: none !important;
+      grid-row: 2 / 3 !important;
+      grid-column: 3 / 4 !important;
+      height: 76px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-family: 'Raleway', sans-serif !important;
+      font-weight: 400 !important;
+      font-size: 20px !important;
+      line-height: 1.6 !important;
+      letter-spacing: -0.05em !important;
+      color: #D3D1C8 !important;
+    }
+
+    .hww-understand-text {
+      border-bottom: 1px solid #D3D1C8 !important;
+      border-left: none !important;
+      grid-row: 3 / 4 !important;
+      grid-column: 3 / 4 !important;
+      display: flex !important;
+      align-items: flex-start !important;
+      justify-content: center !important;
+      padding-top: 20px !important;
+    }
+
+    .hww-source-label {
+      border-bottom: 1px solid #D3D1C8 !important;
+      grid-row: 4 / 5 !important;
+      grid-column: 2 / 3 !important;
+      height: 76px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-family: 'Raleway', sans-serif !important;
+      font-weight: 400 !important;
+      font-size: 20px !important;
+      line-height: 1.6 !important;
+      letter-spacing: -0.05em !important;
+      color: #D3D1C8 !important;
+    }
+
+    .hww-rolls-img {
+      grid-row: 4 / 7 !important;
+      grid-column: 1 / 2 !important;
+      height: 435px !important;
+      border: none !important;
+      border-right: 1px solid #D3D1C8 !important;
+    }
+    .hww-rolls-img img {
+      width: 100% !important;
+      height: 435px !important;
+      object-fit: cover !important;
+      display: block !important;
+    }
+
+    .hww-deliver-label {
+      border-bottom: 1px solid #D3D1C8 !important;
+      grid-row: 4 / 5 !important;
+      grid-column: 4 / 5 !important;
+      height: 76px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-family: 'Raleway', sans-serif !important;
+      font-weight: 400 !important;
+      font-size: 20px !important;
+      line-height: 1.6 !important;
+      letter-spacing: -0.05em !important;
+      color: #D3D1C8 !important;
+    }
+
+    .hww-folded-img {
+      grid-row: 4 / 7 !important;
+      grid-column: 3 / 4 !important;
+      height: 435px !important;
+      border: none !important;
+      border-left: 1px solid #D3D1C8 !important;
+      border-right: 1px solid #D3D1C8 !important;
+    }
+    .hww-folded-img img {
+      width: 100% !important;
+      height: 435px !important;
+      object-fit: cover !important;
+      display: block !important;
+    }
+
+    .hww-source-text {
+      grid-row: 5 / 6 !important;
+      grid-column: 2 / 3 !important;
+      display: flex !important;
+      align-items: flex-start !important;
+      justify-content: center !important;
+      padding-top: 30px !important;
+      padding-bottom: 40px !important;
+      align-self: flex-start !important;
+      border-bottom: 1px solid #D3D1C8 !important;
+    }
+
+    .hww-deliver-text {
+      grid-row: 5 / 6 !important;
+      grid-column: 4 / 5 !important;
+      display: flex !important;
+      align-items: flex-start !important;
+      justify-content: center !important;
+      padding-top: 30px !important;
+      padding-bottom: 40px !important;
+      align-self: flex-start !important;
+      border-bottom: 1px solid #D3D1C8 !important;
+    }
+
+    .hww-spacer-bl {
+      grid-row: 6 / 7 !important;
+      grid-column: 2 / 3 !important;
+    }
+
+    .hww-spacer-bm {
+      grid-row: 6 / 7 !important;
+      grid-column: 4 / 5 !important;
     }
   </style>
 </head>
@@ -39,7 +193,7 @@
       <!-- Hero Text -->
       <div class="hero-text">
         <h1>COMFORT, WOVEN<br>BEAUTIFULLY.</h1>
-        <p>We have spent over 25 years sourcing fabric</p>
+        <p>25 years of Legacy woven in excellence</p>
       </div>
 
     </div>
@@ -55,15 +209,15 @@
   <!-- Intro Text -->
   <section class="intro-section">
     <div class="intro-content">
-      <p class="intro-text">Good garments begin long before the cutting table. They begin<br>with the right yarn, the right weave, the right mill. Indigo Multifab<br>has spent twenty-five years getting that part right.</p>
+      <p class="intro-text">Great garments begin with great fabric. For 25 years, Indigo Multifab has helped make that possible through the right materials, the right weaves, and trusted mill partnerships.</p>
     </div>
   </section>
 
   <!-- Marquee Ticker -->
   <div class="marquee-container border-y">
       <div class="marquee-track">
-        <span class="marquee-text">TWILL &nbsp;&nbsp;&middot;&nbsp;&nbsp; SATEEN &nbsp;&nbsp;&middot;&nbsp;&nbsp; DOBBY &nbsp;&nbsp;&middot;&nbsp;&nbsp; SLUB &nbsp;&nbsp;&middot;&nbsp;&nbsp; CROSSHATCH &nbsp;&nbsp;&middot;&nbsp;&nbsp; CHAMBRAY &nbsp;&nbsp;&middot;&nbsp;&nbsp; OXFORD &nbsp;&nbsp;&middot;&nbsp;&nbsp; POPLIN &nbsp;&nbsp;&middot;&nbsp;&nbsp; SELVEDGE &nbsp;&nbsp;&middot;&nbsp;&nbsp; CANVAS &nbsp;&nbsp;&middot;&nbsp;&nbsp; JACQUARD &nbsp;&nbsp;&middot;&nbsp;&nbsp; LINEN &nbsp;&nbsp;&middot;&nbsp;&nbsp;  TWILL &nbsp;&nbsp;&middot;&nbsp;&nbsp; SATEEN &nbsp;&nbsp;&middot;&nbsp;&nbsp; DOBBY &nbsp;&nbsp;&middot;&nbsp;&nbsp; SLUB &nbsp;&nbsp;&middot;&nbsp;&nbsp; CROSSHATCH &nbsp;&nbsp;&middot;&nbsp;&nbsp; CHAMBRAY &nbsp;&nbsp;&middot;&nbsp;&nbsp; OXFORD &nbsp;&nbsp;&middot;&nbsp;&nbsp; POPLIN &nbsp;&nbsp;&middot;&nbsp;&nbsp; SELVEDGE &nbsp;&nbsp;&middot;&nbsp;&nbsp; CANVAS &nbsp;&nbsp;&middot;&nbsp;&nbsp; JACQUARD &nbsp;&nbsp;&middot;&nbsp;&nbsp; LINEN &nbsp;&nbsp;&middot;&nbsp;&nbsp;  TWILL &nbsp;&nbsp;&middot;&nbsp;&nbsp; SATEEN &nbsp;&nbsp;&middot;&nbsp;&nbsp; DOBBY &nbsp;&nbsp;&middot;&nbsp;&nbsp; SLUB &nbsp;&nbsp;&middot;&nbsp;&nbsp; CROSSHATCH &nbsp;&nbsp;&middot;&nbsp;&nbsp; CHAMBRAY &nbsp;&nbsp;&middot;&nbsp;&nbsp; OXFORD &nbsp;&nbsp;&middot;&nbsp;&nbsp; POPLIN &nbsp;&nbsp;&middot;&nbsp;&nbsp; SELVEDGE &nbsp;&nbsp;&middot;&nbsp;&nbsp; CANVAS &nbsp;&nbsp;&middot;&nbsp;&nbsp; JACQUARD &nbsp;&nbsp;&middot;&nbsp;&nbsp; LINEN &nbsp;&nbsp;&middot;&nbsp;&nbsp;  </span>
-        <span class="marquee-text" aria-hidden="true">TWILL &nbsp;&nbsp;&middot;&nbsp;&nbsp; SATEEN &nbsp;&nbsp;&middot;&nbsp;&nbsp; DOBBY &nbsp;&nbsp;&middot;&nbsp;&nbsp; SLUB &nbsp;&nbsp;&middot;&nbsp;&nbsp; CROSSHATCH &nbsp;&nbsp;&middot;&nbsp;&nbsp; CHAMBRAY &nbsp;&nbsp;&middot;&nbsp;&nbsp; OXFORD &nbsp;&nbsp;&middot;&nbsp;&nbsp; POPLIN &nbsp;&nbsp;&middot;&nbsp;&nbsp; SELVEDGE &nbsp;&nbsp;&middot;&nbsp;&nbsp; CANVAS &nbsp;&nbsp;&middot;&nbsp;&nbsp; JACQUARD &nbsp;&nbsp;&middot;&nbsp;&nbsp; LINEN &nbsp;&nbsp;&middot;&nbsp;&nbsp;  TWILL &nbsp;&nbsp;&middot;&nbsp;&nbsp; SATEEN &nbsp;&nbsp;&middot;&nbsp;&nbsp; DOBBY &nbsp;&nbsp;&middot;&nbsp;&nbsp; SLUB &nbsp;&nbsp;&middot;&nbsp;&nbsp; CROSSHATCH &nbsp;&nbsp;&middot;&nbsp;&nbsp; CHAMBRAY &nbsp;&nbsp;&middot;&nbsp;&nbsp; OXFORD &nbsp;&nbsp;&middot;&nbsp;&nbsp; POPLIN &nbsp;&nbsp;&middot;&nbsp;&nbsp; SELVEDGE &nbsp;&nbsp;&middot;&nbsp;&nbsp; CANVAS &nbsp;&nbsp;&middot;&nbsp;&nbsp; JACQUARD &nbsp;&nbsp;&middot;&nbsp;&nbsp; LINEN &nbsp;&nbsp;&middot;&nbsp;&nbsp;  TWILL &nbsp;&nbsp;&middot;&nbsp;&nbsp; SATEEN &nbsp;&nbsp;&middot;&nbsp;&nbsp; DOBBY &nbsp;&nbsp;&middot;&nbsp;&nbsp; SLUB &nbsp;&nbsp;&middot;&nbsp;&nbsp; CROSSHATCH &nbsp;&nbsp;&middot;&nbsp;&nbsp; CHAMBRAY &nbsp;&nbsp;&middot;&nbsp;&nbsp; OXFORD &nbsp;&nbsp;&middot;&nbsp;&nbsp; POPLIN &nbsp;&nbsp;&middot;&nbsp;&nbsp; SELVEDGE &nbsp;&nbsp;&middot;&nbsp;&nbsp; CANVAS &nbsp;&nbsp;&middot;&nbsp;&nbsp; JACQUARD &nbsp;&nbsp;&middot;&nbsp;&nbsp; LINEN &nbsp;&nbsp;&middot;&nbsp;&nbsp;  </span>
+        <span class="marquee-text">TWILL &nbsp;&nbsp;&middot;&nbsp;&nbsp; SATIN &nbsp;&nbsp;&middot;&nbsp;&nbsp; DOBBY &nbsp;&nbsp;&middot;&nbsp;&nbsp; SLUB &nbsp;&nbsp;&middot;&nbsp;&nbsp; CROSSHATCH &nbsp;&nbsp;&middot;&nbsp;&nbsp; CHAMBRAY &nbsp;&nbsp;&middot;&nbsp;&nbsp; OXFORD &nbsp;&nbsp;&middot;&nbsp;&nbsp; POPLIN &nbsp;&nbsp;&middot;&nbsp;&nbsp; SELVEDGE &nbsp;&nbsp;&middot;&nbsp;&nbsp; CANVAS &nbsp;&nbsp;&middot;&nbsp;&nbsp; JACQUARD &nbsp;&nbsp;&middot;&nbsp;&nbsp; LINEN &nbsp;&nbsp;&middot;&nbsp;&nbsp;  TWILL &nbsp;&nbsp;&middot;&nbsp;&nbsp; SATIN &nbsp;&nbsp;&middot;&nbsp;&nbsp; DOBBY &nbsp;&nbsp;&middot;&nbsp;&nbsp; SLUB &nbsp;&nbsp;&middot;&nbsp;&nbsp; CROSSHATCH &nbsp;&nbsp;&middot;&nbsp;&nbsp; CHAMBRAY &nbsp;&nbsp;&middot;&nbsp;&nbsp; OXFORD &nbsp;&nbsp;&middot;&nbsp;&nbsp; POPLIN &nbsp;&nbsp;&middot;&nbsp;&nbsp; SELVEDGE &nbsp;&nbsp;&middot;&nbsp;&nbsp; CANVAS &nbsp;&nbsp;&middot;&nbsp;&nbsp; JACQUARD &nbsp;&nbsp;&middot;&nbsp;&nbsp; LINEN &nbsp;&nbsp;&middot;&nbsp;&nbsp;  TWILL &nbsp;&nbsp;&middot;&nbsp;&nbsp; SATIN &nbsp;&nbsp;&middot;&nbsp;&nbsp; DOBBY &nbsp;&nbsp;&middot;&nbsp;&nbsp; SLUB &nbsp;&nbsp;&middot;&nbsp;&nbsp; CROSSHATCH &nbsp;&nbsp;&middot;&nbsp;&nbsp; CHAMBRAY &nbsp;&nbsp;&middot;&nbsp;&nbsp; OXFORD &nbsp;&nbsp;&middot;&nbsp;&nbsp; POPLIN &nbsp;&nbsp;&middot;&nbsp;&nbsp; SELVEDGE &nbsp;&nbsp;&middot;&nbsp;&nbsp; CANVAS &nbsp;&nbsp;&middot;&nbsp;&nbsp; JACQUARD &nbsp;&nbsp;&middot;&nbsp;&nbsp; LINEN &nbsp;&nbsp;&middot;&nbsp;&nbsp;  </span>
+        <span class="marquee-text" aria-hidden="true">TWILL &nbsp;&nbsp;&middot;&nbsp;&nbsp; SATIN &nbsp;&nbsp;&middot;&nbsp;&nbsp; DOBBY &nbsp;&nbsp;&middot;&nbsp;&nbsp; SLUB &nbsp;&nbsp;&middot;&nbsp;&nbsp; CROSSHATCH &nbsp;&nbsp;&middot;&nbsp;&nbsp; CHAMBRAY &nbsp;&nbsp;&middot;&nbsp;&nbsp; OXFORD &nbsp;&nbsp;&middot;&nbsp;&nbsp; POPLIN &nbsp;&nbsp;&middot;&nbsp;&nbsp; SELVEDGE &nbsp;&nbsp;&middot;&nbsp;&nbsp; CANVAS &nbsp;&nbsp;&middot;&nbsp;&nbsp; JACQUARD &nbsp;&nbsp;&middot;&nbsp;&nbsp; LINEN &nbsp;&nbsp;&middot;&nbsp;&nbsp;  TWILL &nbsp;&nbsp;&middot;&nbsp;&nbsp; SATIN &nbsp;&nbsp;&middot;&nbsp;&nbsp; DOBBY &nbsp;&nbsp;&middot;&nbsp;&nbsp; SLUB &nbsp;&nbsp;&middot;&nbsp;&nbsp; CROSSHATCH &nbsp;&nbsp;&middot;&nbsp;&nbsp; CHAMBRAY &nbsp;&nbsp;&middot;&nbsp;&nbsp; OXFORD &nbsp;&nbsp;&middot;&nbsp;&nbsp; POPLIN &nbsp;&nbsp;&middot;&nbsp;&nbsp; SELVEDGE &nbsp;&nbsp;&middot;&nbsp;&nbsp; CANVAS &nbsp;&nbsp;&middot;&nbsp;&nbsp; JACQUARD &nbsp;&nbsp;&middot;&nbsp;&nbsp; LINEN &nbsp;&nbsp;&middot;&nbsp;&nbsp;  TWILL &nbsp;&nbsp;&middot;&nbsp;&nbsp; SATIN &nbsp;&nbsp;&middot;&nbsp;&nbsp; DOBBY &nbsp;&nbsp;&middot;&nbsp;&nbsp; SLUB &nbsp;&nbsp;&middot;&nbsp;&nbsp; CROSSHATCH &nbsp;&nbsp;&middot;&nbsp;&nbsp; CHAMBRAY &nbsp;&nbsp;&middot;&nbsp;&nbsp; OXFORD &nbsp;&nbsp;&middot;&nbsp;&nbsp; POPLIN &nbsp;&nbsp;&middot;&nbsp;&nbsp; SELVEDGE &nbsp;&nbsp;&middot;&nbsp;&nbsp; CANVAS &nbsp;&nbsp;&middot;&nbsp;&nbsp; JACQUARD &nbsp;&nbsp;&middot;&nbsp;&nbsp; LINEN &nbsp;&nbsp;&middot;&nbsp;&nbsp;  </span>
       </div>
   </div>
 
@@ -77,7 +231,7 @@
           <div class="coll-inner">
             <span class="coll-num">01 / 02</span>
             <h3 class="coll-title">DENIM COLLECTION</h3>
-            <p class="coll-desc">Shirting weights from 4 to 7 oz and heavy weights<br>from 8 to 14 oz, in Lycra and non-Lycra, across cotton,<br>cotton poly and Tencel, rayon and modal blends.</p>
+            <p class="coll-desc">Shirting weights from 4 to 7 oz and heavy weights<br>from 8 to 14 oz, in Lycra and non-Lycra, across all blends.</p>
             <a href="denim.html" class="coll-link">EXPLORE DENIM &#x2197;</a>
           </div>
         </div>
@@ -112,12 +266,12 @@
   <!-- ===== MILL DIRECT ===== -->
   <section class="mill-direct">
     <h2 class="mill-title">MILL-DIRECT</h2>
-    <p class="mill-desc">Sourced from the mills that supply India's leading brands.<br><br>We work directly with Arvind, KGN, Ginni, Bhaskar, LNJ and<br>other leading manufacturers &mdash; no intermediaries between<br>your requirement and the production floor.</p>
+    <p class="mill-desc">Sourced from the mills that supply India's and china's leading brands.<br><br>We work directly with Arvind, KG, Ginni, Bhaskar, LNJ and<br>other leading manufacturers &mdash; no intermediaries between<br>your requirement and the production floor.</p>
   </section>
 
   <div class="marquee-container border-t">
     <div class="marquee-track">
-      <span class="marquee-text">ARVIND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KGN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GINNI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BHASKAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNJ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ARVIND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KGN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GINNI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BHASKAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNJ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ARVIND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KGN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GINNI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BHASKAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNJ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ARVIND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KGN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GINNI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BHASKAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNJ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ARVIND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KGN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GINNI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BHASKAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNJ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="marquee-text" aria-hidden="true">ARVIND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KGN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GINNI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BHASKAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNJ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ARVIND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KGN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GINNI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BHASKAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNJ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ARVIND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KGN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GINNI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BHASKAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNJ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ARVIND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KGN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GINNI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BHASKAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNJ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ARVIND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KGN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GINNI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BHASKAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNJ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+      <span class="marquee-text">ARVIND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KG &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GINNI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BHASKAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNJ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ARVIND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KG &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GINNI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BHASKAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNJ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ARVIND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KG &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GINNI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BHASKAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNJ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ARVIND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KG &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GINNI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BHASKAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNJ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ARVIND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KG &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GINNI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BHASKAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNJ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="marquee-text" aria-hidden="true">ARVIND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KG &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GINNI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BHASKAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNJ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ARVIND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KG &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GINNI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BHASKAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNJ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ARVIND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KG &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GINNI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BHASKAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNJ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ARVIND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KG &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GINNI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BHASKAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNJ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ARVIND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KG &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GINNI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BHASKAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNJ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
     </div>
   </div>
 
@@ -128,7 +282,7 @@
       <div class="spec-left">
         <div class="spec-left-text">
           <h2>DEVELOPED TO<br>SPECIFICATION</h2>
-          <p class="spec-subtitle">When the fabric doesn't exist yet.</p>
+          <p class="spec-subtitle">Beyond the ordinary, woven for needs till perfection</p>
           <p class="spec-body">If a requirement can't be met from existing<br>production, we develop it with our mill partners &mdash;<br>from yarn selection and sampling through to final<br>production.</p>
         </div>
         <div class="spec-list">
@@ -159,29 +313,28 @@
       <!-- Col 1-2, rows 1-3: title --><div class="hww-title-cell">
         <h2>HOW WE<br>WORK</h2>
       </div>
-      <!-- Col 3, rows 1-3: draped fabric image --><div class="hww-drape-img">
+      <!-- Col 3, row 1: empty spacer --><div class="hww-spacer-tr"></div>
+      <!-- Col 3, row 2: 01 / UNDERSTAND label --><div class="hww-understand-label">01 / UNDERSTAND</div><!-- Col 3, row 3: UNDERSTAND body text --><div class="hww-understand-text">
+        <p>Every requirement is reviewed by our technical team, who recommend the right construction, weight, composition and finish for the garment.</p></div>
+      <!-- Col 4, rows 1-3: draped fabric image --><div class="hww-drape-img">
         <img src="index-hww-1.png" alt="Draped fabric">
       </div>
-      <!-- Col 4, row 1: empty spacer --><div class="hww-spacer-tr"></div>
-      <!-- Col 4, row 2: 01 / UNDERSTAND label --><div class="hww-understand-label">01 / UNDERSTAND</div><!-- Col 4, row 3: UNDERSTAND body text --><div class="hww-understand-text">
-        <p>Every requirement is reviewed by our technical team, who recommend the right construction, weight, composition and finish for the garment.</p></div>
 
-      <!-- Col 1, row 4: 02 / SOURCE label --><div class="hww-source-label">02 / SOURCE</div>
-        <!-- Col 1, row 5: SOURCE body text --><div class="hww-source-text"><p>We find the best available option across our mill network in India and China &mdash; or develop it with our mill partners when nothing existing fits.</p></div>
-      
-      <!-- Col 2, rows 4-6: fabric rolls image --><div class="hww-rolls-img">
+      <!-- Col 1, rows 4-6: fabric rolls image --><div class="hww-rolls-img">
         <img src="index-hww-2.jpg" alt="Fabric rolls">
       </div>
-      
-      <!-- Col 3, row 4: 03 / DELIVER label --><div class="hww-deliver-label">03 / DELIVER</div>
-        <!-- Col 3, row 5: DELIVER body text --><div class="hww-deliver-text"><p>From sampling to bulk production, we manage supply through to delivery, with ready stock available for common fabrics.</p></div>
-      
-      <!-- Col 4, rows 4-6: stacked fabric image --><div class="hww-folded-img">
+
+      <!-- Col 2, row 4: 02 / SOURCE label --><div class="hww-source-label">02 / SOURCE</div>
+        <!-- Col 2, row 5: SOURCE body text --><div class="hww-source-text"><p>We find the best available option across our mill network in India and China &mdash; or develop it with our mill partners when nothing existing fits.</p></div>
+      <!-- Col 2, row 6: bottom spacer --><div class="hww-spacer-bl"></div>
+
+      <!-- Col 3, rows 4-6: stacked fabric image --><div class="hww-folded-img">
         <img src="index-hww-3.jpg" alt="Stacked folded fabric">
       </div>
 
-      <!-- Col 1, row 6: bottom spacer --><div class="hww-spacer-bl"></div>
-      <!-- Col 3, row 6: bottom spacer --><div class="hww-spacer-bm"></div>
+      <!-- Col 4, row 4: 03 / DELIVER label --><div class="hww-deliver-label">03 / DELIVER</div>
+        <!-- Col 4, row 5: DELIVER body text --><div class="hww-deliver-text"><p>From sampling to bulk production, we manage supply through to delivery, with ready stock available for common fabrics.</p></div>
+      <!-- Col 4, row 6: bottom spacer --><div class="hww-spacer-bm"></div>
     </div>
 
   </section>
@@ -193,36 +346,56 @@
 
   <!-- ===== WHO WE SERVE SECTION ===== -->
   <section class="wws-section">
-    <div class="wws-left">
-      <div class="wws-top">
-        <h2 class="wws-title">WHO WE SERVE</h2>
-        <p class="wws-intro">From manufacturers and exporters to buying houses and fashion<br>brands, each partner needs something different. Our work begins by<br>understanding exactly what that is.</p>
-      </div>
-      <div class="wws-list">
-        <div class="wws-item">
-          <span class="wws-num">01</span>
-          <span class="wws-label">GARMENT MANUFACTURERS</span>
-          <span class="wws-desc">Consistent bulk supply and repeat lots.</span>
-        </div>
-        <div class="wws-item">
-          <span class="wws-num">02</span>
-          <span class="wws-label">EXPORTERS</span>
-          <span class="wws-desc">International standards and timelines.</span>
-        </div>
-        <div class="wws-item">
-          <span class="wws-num">03</span>
-          <span class="wws-label">BUYING HOUSES</span>
-          <span class="wws-desc">Spec matching and sampling across clients.</span>
-        </div>
-        <div class="wws-item">
-          <span class="wws-num">04</span>
-          <span class="wws-label">FASHION BRANDS</span>
-          <span class="wws-desc">Custom development for specific collections.</span>
-        </div>
-      </div>
+    <div class="wws-header-row">
+      <h2 class="wws-title">WHO WE SERVE</h2>
+      <p class="wws-intro">From manufacturers and exporters to buying houses and fashion brands, each partner needs something different. Our work begins by understanding exactly what that is.</p>
     </div>
-    <div class="wws-right">
-      <img src="who-we-serve.jpg" alt="Denim fabric close-up">
+    <div class="wws-tape" aria-hidden="true"></div>
+    <div class="wws-items-row">
+      <div class="wws-item imf-item" style="--d: 0.15s;">
+        <div class="imf-pin" aria-hidden="true"></div>
+        <div class="wws-stitch imf-thread"></div>
+        <div class="wws-card">
+          <span class="wws-num">01</span>
+          <div class="wws-card-body">
+            <span class="wws-label">GARMENT MANUFACTURERS</span>
+            <span class="wws-desc">Consistent bulk supply and repeat lots.</span>
+          </div>
+        </div>
+      </div>
+      <div class="wws-item imf-item" style="--d: 0.3s;">
+        <div class="imf-pin" aria-hidden="true"></div>
+        <div class="wws-stitch imf-thread"></div>
+        <div class="wws-card">
+          <span class="wws-num">02</span>
+          <div class="wws-card-body">
+            <span class="wws-label">EXPORTERS</span>
+            <span class="wws-desc">International standards and timelines.</span>
+          </div>
+        </div>
+      </div>
+      <div class="wws-item imf-item" style="--d: 0.45s;">
+        <div class="imf-pin" aria-hidden="true"></div>
+        <div class="wws-stitch imf-thread"></div>
+        <div class="wws-card">
+          <span class="wws-num">03</span>
+          <div class="wws-card-body">
+            <span class="wws-label">BUYING HOUSES</span>
+            <span class="wws-desc">Spec matching and sampling across clients.</span>
+          </div>
+        </div>
+      </div>
+      <div class="wws-item imf-item" style="--d: 0.6s;">
+        <div class="imf-pin" aria-hidden="true"></div>
+        <div class="wws-stitch imf-thread"></div>
+        <div class="wws-card">
+          <span class="wws-num">04</span>
+          <div class="wws-card-body">
+            <span class="wws-label">FASHION BRANDS</span>
+            <span class="wws-desc">Custom development for specific collections.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <!-- ===== GET IN TOUCH SECTION ===== -->
@@ -418,6 +591,43 @@
       requestAnimationFrame(frame);
     }
     requestAnimationFrame(frame);
+  })();
+  </script>
+  <script>
+  (function() {
+    function initWws() {
+      var section = document.querySelector('.wws-section');
+      if (!section) return;
+      var target = section.querySelector('.wws-items-row') || section;
+
+      if (!('IntersectionObserver' in window)) {
+        section.classList.add('is-visible');
+        return;
+      }
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            section.classList.add('is-visible');
+          } else {
+            var rect = entry.boundingClientRect;
+            if (rect.top > (window.innerHeight || document.documentElement.clientHeight) || rect.bottom < 0) {
+              section.classList.remove('is-visible');
+            }
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      observer.observe(target);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initWws);
+    } else {
+      initWws();
+    }
   })();
   </script>
 </body>
