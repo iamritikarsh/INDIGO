@@ -521,7 +521,7 @@
 .how-we-work-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-rows: 172px 76px 189px auto auto auto;
   margin-bottom: 0;
   width: 100%;
     border-bottom: 1px solid #191A17;
@@ -573,7 +573,7 @@
   border-bottom: 1px solid #191A17;
   grid-row: 1 / 2;
   grid-column: 3 / 4;
-  height: 190px;
+  height: 172px;
 }
 
 .hww-understand-label {
@@ -590,6 +590,7 @@
   line-height: 1.6;
   letter-spacing: -0.05em;
   color: #191A17;
+  box-sizing: border-box;
 }
 
 .hww-understand-text {
@@ -599,7 +600,9 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 20px;
+  height: 189px;
+  padding-top: 84.65625px;
+  box-sizing: border-box;
 }
 
 .hww-source-label {
@@ -889,234 +892,131 @@
 
     /* ===== WHO WE SERVE SECTION ===== */
     .wws-section {
-      display: block;
+      display: grid;
+      grid-template-columns: 49fr 51fr;
+      height: 576px;
       background-color: #141414;
-      width: 100%;
-      position: relative;
-      padding-top: 28px;
-      padding-bottom: 45px;
+      box-shadow: inset 1px 1px 0 0 rgba(211, 209, 200, 0.35);
       box-sizing: border-box;
-      height: auto;
-      min-height: 555px;
       overflow: hidden;
+      position: relative;
+      gap: 0;
+      padding: 0;
     }
 
-    .wws-header-row {
+    .wws-left {
       display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 32px;
-      padding: 0 50px;
-      margin-bottom: 22px;
+      flex-direction: column;
+      height: 100%;
+      padding: 51px 0 0 0;
+      box-sizing: border-box;
+      background-color: #141414;
+    }
+
+    .wws-top {
+      padding: 0 7.5%;
+      margin-bottom: 0;
+      height: 248px;
+      box-sizing: border-box;
     }
 
     .wws-title {
       font-family: 'Raleway', sans-serif;
-      font-size: 60px;
-      font-weight: 400;
+      font-size: 50px;
+      font-weight: 300;
+      font-style: normal;
       color: #D3D1C8;
-      text-transform: uppercase;
+      line-height: 1.2;
       letter-spacing: 0px;
-      line-height: 1.1;
-      margin: 0;
-      flex-shrink: 0;
+      text-transform: uppercase;
+      margin: 0 0 24px 0;
     }
 
-    .wws-intro {
+      .wws-intro {
       font-family: 'Raleway', sans-serif;
-      font-size: 18px;
+      font-size: clamp(15px, 1.2vw, 18px);
       font-weight: 300;
+      font-style: normal;
       color: #D3D1C8;
       line-height: 1.45;
       letter-spacing: -0.02em;
-      max-width: 440px;
+      max-width: 100%;
       margin: 0;
-      text-align: left;
     }
 
-    .wws-tape {
-      width: 100%;
-      height: 64px;
-      background-color: #d4cebd;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      border-top: 1px solid rgba(18, 18, 18, 0.25);
-      background-image:
-        repeating-linear-gradient(90deg, rgba(18, 18, 18, 0.85) 0 1px, transparent 1px 96px),
-        repeating-linear-gradient(90deg, rgba(18, 18, 18, 0.6) 0 1px, transparent 1px 12px);
-      background-size:
-        100% 24px,
-        100% 10px;
-      background-position:
-        bottom left,
-        bottom left;
-      background-repeat:
-        no-repeat,
-        no-repeat;
-      position: relative;
-      z-index: 1;
-      box-sizing: border-box;
+    .wws-intro span {
+      white-space: nowrap;
     }
 
-    .wws-items-row {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      padding: 0 50px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .wws-item,
-    .imf-item {
+    .wws-list {
       display: flex;
       flex-direction: column;
-      position: relative;
-      transform-origin: 28px 0;
-      z-index: 2;
-      opacity: 0;
+      flex: 1;
+      margin: 0;
+      padding: 0;
     }
 
-    .wws-section.is-visible .imf-item {
-      animation: imf-swing 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
-      animation-delay: var(--d, 0s);
-    }
-
-    .imf-item:nth-child(1) { --d: 0.15s; }
-    .imf-item:nth-child(2) { --d: 0.3s; }
-    .imf-item:nth-child(3) { --d: 0.45s; }
-    .imf-item:nth-child(4) { --d: 0.6s; }
-
-    .imf-pin {
-      position: absolute;
-      left: 24px;
-      top: -5px;
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: #d6aa6a;
-      z-index: 2;
-      pointer-events: none;
-    }
-
-    .wws-stitch,
-    .imf-thread {
-      width: 0;
-      height: 56px;
-      margin-left: 28px;
-      border-left: 1px dashed #c79a5b;
-      flex-shrink: 0;
-      clip-path: inset(0 0 100% 0);
-    }
-
-    .wws-section.is-visible .imf-thread {
-      animation: imf-thread 0.7s ease-out both;
-      animation-delay: calc(var(--d, 0s) + 0.1s);
-    }
-
-    .wws-item:nth-child(even) .wws-stitch,
-    .imf-item:nth-child(even) .imf-thread {
-      height: 96px;
-    }
-
-    .wws-card {
-      min-height: 240px;
-      padding: 28px;
+    .wws-item {
+      flex: 1;
       display: flex;
-      flex-direction: column;
-      border: 1px dashed rgba(199, 154, 91, 0.55);
-      border-radius: 2px;
-      background:
-        repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.045) 0 1px, transparent 1px 4px),
-        linear-gradient(180deg, #213548, #16222f);
-      transition: transform 0.45s ease, border-color 0.45s ease;
-      cursor: pointer;
+      align-items: center;
+      padding: 0 7.5%;
+      border-top: 1px solid rgba(211, 209, 200, 0.35);
       box-sizing: border-box;
+      gap: 0;
     }
 
-    .wws-card:hover {
-      transform: translateY(-10px);
-      border-color: rgba(214, 170, 106, 0.95);
+    .wws-item:last-child {
+      border-bottom: 1px solid rgba(211, 209, 200, 0.35);
+      margin-bottom: 0;
     }
 
     .wws-num {
       font-family: 'Raleway', sans-serif;
       font-size: 15px;
       font-weight: 300;
-      color: #c79a5b;
-      letter-spacing: 0.08em;
-      line-height: 1;
-      margin-bottom: auto;
-    }
-
-    .wws-card-body {
-      display: flex;
-      flex-direction: column;
-      margin-top: auto;
+      color: rgba(211, 209, 200, 0.45);
+      letter-spacing: 0px;
+      width: 25px;
+      flex-shrink: 0;
+      margin-right: 60px;
     }
 
     .wws-label {
       font-family: 'Raleway', sans-serif;
       font-size: 17px;
       font-weight: 300;
-      color: #e4e1da;
-      text-transform: uppercase;
+      color: #D1D1D1;
       letter-spacing: -0.01em;
-      line-height: 1.3;
+      text-transform: uppercase;
     }
 
     .wws-desc {
       font-family: 'Raleway', sans-serif;
       font-size: 16px;
       font-weight: 300;
-      color: #a9b4bf;
+      color: #999999;
       letter-spacing: -0.01em;
-      line-height: 1.4;
-      margin-top: 16px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(217, 214, 207, 0.25);
     }
 
-    @keyframes imf-swing {
-      0% {
-        opacity: 0;
-        transform: translateY(-26px) rotate(-6deg);
-      }
-      30% {
-        opacity: 1;
-      }
-      55% {
-        transform: translateY(0) rotate(2.4deg);
-      }
-      76% {
-        transform: rotate(-1deg);
-      }
-      100% {
-        opacity: 1;
-        transform: none;
-      }
+    .wws-right {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      padding: 0;
+      margin: 0;
     }
 
-    @keyframes imf-thread {
-      from {
-        clip-path: inset(0 0 100% 0);
-      }
-      to {
-        clip-path: inset(0 0 0 0);
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .wws-item,
-      .imf-item {
-        opacity: 1 !important;
-        transform: none !important;
-        animation: none !important;
-      }
-      .wws-stitch,
-      .imf-thread {
-        clip-path: inset(0 0 0 0) !important;
-        animation: none !important;
-      }
+    .wws-right img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 60%;
+      display: block;
     }
 
     /* ===== GET IN TOUCH SECTION ===== */
@@ -1266,25 +1166,32 @@
     /* Responsive */
     @media (max-width: 900px) {
       .wws-section {
-        height: auto !important;
-        padding-bottom: 50px;
-      }
-      .wws-header-row {
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-        padding: 0 24px;
+        height: auto;
       }
-      .wws-title {
-        font-size: clamp(32px, 6vw, 48px);
+      .wws-right {
+        width: 100%;
+        height: 60vw;
+        flex: none;
+        position: relative;
       }
-      .wws-items-row {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 0 24px;
+      .wws-right img {
+        position: relative;
+        width: 100%;
+        height: 100%;
       }
-      .wws-item:nth-child(even) .wws-stitch,
-      .imf-item:nth-child(even) .imf-thread {
-        height: 56px;
+      .wws-top {
+        height: auto;
+        padding: 40px 20px 20px 20px;
+        margin-bottom: 30px;
+      }
+      .wws-intro {
+        max-width: 100%;
+      }
+      .wws-item {
+        padding: 20px;
+        height: auto;
       }
       
       .contact-section { flex-direction: column; align-items: flex-start; gap: 50px; }
@@ -1491,56 +1398,32 @@
   
   <!-- ===== WHO WE SERVE SECTION ===== -->
   <section class="wws-section">
-    <div class="wws-header-row">
-      <h2 class="wws-title">WHO WE SERVE</h2>
-      <p class="wws-intro">From manufacturers and exporters to buying houses and fashion brands, each partner needs something different. Our work begins by understanding exactly what that is.</p>
-    </div>
-    <div class="wws-tape" aria-hidden="true"></div>
-    <div class="wws-items-row">
-      <div class="wws-item imf-item" style="--d: 0.15s;">
-        <div class="imf-pin" aria-hidden="true"></div>
-        <div class="wws-stitch imf-thread"></div>
-        <div class="wws-card">
+    <div class="wws-left">
+      <div class="wws-top">
+        <h2 class="wws-title">WHO WE SERVE</h2>
+        <p class="wws-intro"><span>From manufacturers and exporters to buying houses</span><br><span>and fashion brands, each partner needs something</span><br><span>different. Our work begins by understanding exactly</span><br><span>what that is.</span></p>
+      </div>
+      <div class="wws-list">
+        <div class="wws-item">
           <span class="wws-num">01</span>
-          <div class="wws-card-body">
-            <span class="wws-label">GARMENT MANUFACTURERS</span>
-            <span class="wws-desc">Consistent bulk supply and repeat lots.</span>
-          </div>
+          <span class="wws-label">GARMENT MANUFACTURERS</span>
         </div>
-      </div>
-      <div class="wws-item imf-item" style="--d: 0.3s;">
-        <div class="imf-pin" aria-hidden="true"></div>
-        <div class="wws-stitch imf-thread"></div>
-        <div class="wws-card">
+        <div class="wws-item">
           <span class="wws-num">02</span>
-          <div class="wws-card-body">
-            <span class="wws-label">EXPORTERS</span>
-            <span class="wws-desc">International standards and timelines.</span>
-          </div>
+          <span class="wws-label">EXPORTERS</span>
         </div>
-      </div>
-      <div class="wws-item imf-item" style="--d: 0.45s;">
-        <div class="imf-pin" aria-hidden="true"></div>
-        <div class="wws-stitch imf-thread"></div>
-        <div class="wws-card">
+        <div class="wws-item">
           <span class="wws-num">03</span>
-          <div class="wws-card-body">
-            <span class="wws-label">BUYING HOUSES</span>
-            <span class="wws-desc">Spec matching and sampling across clients.</span>
-          </div>
+          <span class="wws-label">BUYING HOUSES</span>
         </div>
-      </div>
-      <div class="wws-item imf-item" style="--d: 0.6s;">
-        <div class="imf-pin" aria-hidden="true"></div>
-        <div class="wws-stitch imf-thread"></div>
-        <div class="wws-card">
+        <div class="wws-item">
           <span class="wws-num">04</span>
-          <div class="wws-card-body">
-            <span class="wws-label">FASHION BRANDS</span>
-            <span class="wws-desc">Custom development for specific collections.</span>
-          </div>
+          <span class="wws-label">FASHION BRANDS</span>
         </div>
       </div>
+    </div>
+    <div class="wws-right">
+      <img src="serve-denim.jpg" alt="Blue denim fabric close-up">
     </div>
   </section>
 
@@ -1577,43 +1460,6 @@
     </div>
   </footer>
 
-  <script>
-  (function() {
-    function initWws() {
-      var section = document.querySelector('.wws-section');
-      if (!section) return;
-      var target = section.querySelector('.wws-items-row') || section;
-
-      if (!('IntersectionObserver' in window)) {
-        section.classList.add('is-visible');
-        return;
-      }
-
-      var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            section.classList.add('is-visible');
-          } else {
-            var rect = entry.boundingClientRect;
-            if (rect.top > (window.innerHeight || document.documentElement.clientHeight) || rect.bottom < 0) {
-              section.classList.remove('is-visible');
-            }
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-
-      observer.observe(target);
-    }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initWws);
-    } else {
-      initWws();
-    }
-  })();
-  </script>
 </body>
 </html>
 

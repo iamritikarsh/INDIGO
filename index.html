@@ -15,6 +15,10 @@
     }
 
     /* HOW WE WORK SWAPPED GRID POSITIONS & UNBROKEN DIVIDERS */
+    .how-we-work-grid {
+      grid-template-rows: 172px 76px 189px auto auto auto !important;
+    }
+
     .hww-title-cell {
       border-bottom: 1px solid #D3D1C8 !important;
       border-right: 1px solid #D3D1C8 !important;
@@ -42,7 +46,7 @@
       border-left: none !important;
       grid-row: 1 / 2 !important;
       grid-column: 3 / 4 !important;
-      height: 190px !important;
+      height: 172px !important;
     }
 
     .hww-understand-label {
@@ -60,6 +64,7 @@
       line-height: 1.6 !important;
       letter-spacing: -0.05em !important;
       color: #D3D1C8 !important;
+      box-sizing: border-box !important;
     }
 
     .hww-understand-text {
@@ -70,7 +75,9 @@
       display: flex !important;
       align-items: flex-start !important;
       justify-content: center !important;
-      padding-top: 20px !important;
+      height: 189px !important;
+      padding-top: 84.65625px !important;
+      box-sizing: border-box !important;
     }
 
     .hww-source-label {
@@ -193,7 +200,7 @@
       <!-- Hero Text -->
       <div class="hero-text">
         <h1>COMFORT, WOVEN<br>BEAUTIFULLY.</h1>
-        <p>25 years of Legacy woven in excellence</p>
+        <p>25 years of legacy woven in excellence</p>
       </div>
 
     </div>
@@ -266,7 +273,7 @@
   <!-- ===== MILL DIRECT ===== -->
   <section class="mill-direct">
     <h2 class="mill-title">MILL-DIRECT</h2>
-    <p class="mill-desc">Sourced from the mills that supply India's and china's leading brands.<br><br>We work directly with Arvind, KG, Ginni, Bhaskar, LNJ and<br>other leading manufacturers &mdash; no intermediaries between<br>your requirement and the production floor.</p>
+    <p class="mill-desc">Sourced from the mills that supply India's and China's leading brands.<br><br>We work directly with Arvind, KG, Ginni, Bhaskar, LNJ and<br>other leading manufacturers &mdash; no intermediaries between<br>your requirement and the production floor.</p>
   </section>
 
   <div class="marquee-container border-t">
@@ -346,56 +353,32 @@
 
   <!-- ===== WHO WE SERVE SECTION ===== -->
   <section class="wws-section">
-    <div class="wws-header-row">
-      <h2 class="wws-title">WHO WE SERVE</h2>
-      <p class="wws-intro">From manufacturers and exporters to buying houses and fashion brands, each partner needs something different. Our work begins by understanding exactly what that is.</p>
-    </div>
-    <div class="wws-tape" aria-hidden="true"></div>
-    <div class="wws-items-row">
-      <div class="wws-item imf-item" style="--d: 0.15s;">
-        <div class="imf-pin" aria-hidden="true"></div>
-        <div class="wws-stitch imf-thread"></div>
-        <div class="wws-card">
+    <div class="wws-left">
+      <div class="wws-top">
+        <h2 class="wws-title">WHO WE SERVE</h2>
+        <p class="wws-intro"><span>From manufacturers and exporters to buying houses</span><br><span>and fashion brands, each partner needs something</span><br><span>different. Our work begins by understanding exactly</span><br><span>what that is.</span></p>
+      </div>
+      <div class="wws-list">
+        <div class="wws-item">
           <span class="wws-num">01</span>
-          <div class="wws-card-body">
-            <span class="wws-label">GARMENT MANUFACTURERS</span>
-            <span class="wws-desc">Consistent bulk supply and repeat lots.</span>
-          </div>
+          <span class="wws-label">GARMENT MANUFACTURERS</span>
         </div>
-      </div>
-      <div class="wws-item imf-item" style="--d: 0.3s;">
-        <div class="imf-pin" aria-hidden="true"></div>
-        <div class="wws-stitch imf-thread"></div>
-        <div class="wws-card">
+        <div class="wws-item">
           <span class="wws-num">02</span>
-          <div class="wws-card-body">
-            <span class="wws-label">EXPORTERS</span>
-            <span class="wws-desc">International standards and timelines.</span>
-          </div>
+          <span class="wws-label">EXPORTERS</span>
         </div>
-      </div>
-      <div class="wws-item imf-item" style="--d: 0.45s;">
-        <div class="imf-pin" aria-hidden="true"></div>
-        <div class="wws-stitch imf-thread"></div>
-        <div class="wws-card">
+        <div class="wws-item">
           <span class="wws-num">03</span>
-          <div class="wws-card-body">
-            <span class="wws-label">BUYING HOUSES</span>
-            <span class="wws-desc">Spec matching and sampling across clients.</span>
-          </div>
+          <span class="wws-label">BUYING HOUSES</span>
         </div>
-      </div>
-      <div class="wws-item imf-item" style="--d: 0.6s;">
-        <div class="imf-pin" aria-hidden="true"></div>
-        <div class="wws-stitch imf-thread"></div>
-        <div class="wws-card">
+        <div class="wws-item">
           <span class="wws-num">04</span>
-          <div class="wws-card-body">
-            <span class="wws-label">FASHION BRANDS</span>
-            <span class="wws-desc">Custom development for specific collections.</span>
-          </div>
+          <span class="wws-label">FASHION BRANDS</span>
         </div>
       </div>
+    </div>
+    <div class="wws-right">
+      <img src="who-we-serve.jpg" alt="Denim fabric close-up">
     </div>
   </section>
   <!-- ===== GET IN TOUCH SECTION ===== -->
@@ -591,43 +574,6 @@
       requestAnimationFrame(frame);
     }
     requestAnimationFrame(frame);
-  })();
-  </script>
-  <script>
-  (function() {
-    function initWws() {
-      var section = document.querySelector('.wws-section');
-      if (!section) return;
-      var target = section.querySelector('.wws-items-row') || section;
-
-      if (!('IntersectionObserver' in window)) {
-        section.classList.add('is-visible');
-        return;
-      }
-
-      var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            section.classList.add('is-visible');
-          } else {
-            var rect = entry.boundingClientRect;
-            if (rect.top > (window.innerHeight || document.documentElement.clientHeight) || rect.bottom < 0) {
-              section.classList.remove('is-visible');
-            }
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-
-      observer.observe(target);
-    }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initWws);
-    } else {
-      initWws();
-    }
   })();
   </script>
 </body>
